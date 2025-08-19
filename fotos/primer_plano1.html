@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primer Plano</title>
+<style>
+  :root{
+    --azul1:#0a3e9b;
+    --azul2:#2a6cd6;
+    --azul3:#0f5ac1;
+    --grisTexto:#1f2937;
+    --grisSuave:#f3f4f6;
+    --amarillo:#facc15;
+  }
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:#e5e7eb;
+    color:var(--grisTexto);
+  }
+  .page{
+    max-width:820px;
+    margin:24px auto;
+    background:#fff;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  
+  /* Banda azul */
+  .band{
+    background:linear-gradient(135deg,var(--azul1),var(--azul3) 50%,var(--azul2));
+    padding:28px;
+    color:#fff;
+  }
+  .band h1{
+    margin:0;
+    font-size:22pt;
+    font-weight:800;
+    text-transform:uppercase;
+    text-align:right;
+  }
+  
+  /* Contenido en dos columnas */
+  .content{
+    padding:24px 28px 36px;
+  }
+  h2{
+    font-size:15pt;
+    margin:0 0 20px 0;
+    color:#0f172a;
+    text-align:left;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas */
+    gap:30px;
+  }
+  .texto p{
+    font-size:12pt;
+    line-height:1.6;
+    margin:0 0 12px 0;
+    text-align:justify;
+  }
+  
+  /* Imagen en la segunda columna */
+  .foto{
+    margin-top:20px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+  }
+  .foto img{
+    max-width:100%;
+    border-radius:10px;
+    display:block;
+  }
+  
+  /* Pie de página */
+  .footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 16px;
+    background:var(--grisSuave);
+    border-top:1px solid #e5e7eb;
+    font-size:11pt;
+    color:#334155;
+  }
+  .chip{
+    background:var(--amarillo);
+    color:#111827;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:20px;
+    min-width:36px;
+    text-align:center;
+  }
+  
+  /* Responsivo */
+  @media (max-width:820px){
+    .grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <!-- Encabezado -->
+    <div class="band">
+      <h1>PRIMER PLANO</h1>
+    </div>
+    
+    <!-- Contenido -->
+    <div class="content">
+      <h2>Aportes científicos al alcance de un clic</h2>
+      <div class="grid">
+        <!-- Columna de texto -->
+        <div class="texto">
+          <p>La dinámica de trabajo en el Instituto Nacional de 
+          Ciencias Forenses de Guatemala -INACIF- es intensa y 
+          continua, propia de un ente auxiliar del sistema de justicia 
+          que, por medio de la verdad, responde los requerimientos 
+          del Ministerio Público y del Organismo Judicial. Tal 
+          función se asienta en cinco ejes estratégicos que rigen la 
+          administración que dirijo.</p>
+
+          <p>En ese marco, la Revista Científica Diálogo Forense, que 
+          hoy alcanza la edición número 11, correspondiente al 
+          primer semestre 2025, siempre con el sello de la 
+          certificación en el catálogo 2.0 de Latindex, bajo el alero 
+          del Departamento de Capacitación se constituye en una 
+          herramienta muy útil en el ámbito académico al dar 
+          espacio a valiosas piezas documentales que explican 
+          procesos científicos.</p>
+
+          <p>Nuestra publicación es coordinada por el Área de 
+          Investigación y Desarrollo Científico del INACIF, y en cada 
+          número patentiza un compromiso editorial al reunir 
+          contenido de alta calidad. La edición de este periodo trae 
+          ocho piezas de las que, dos son textos periodísticos 
+          centrados en eventos mediáticos, cinco cuentan con el 
+          fundamento del rigor de la investigación y la 
+          documentación, a los que se suman las apreciaciones 
+          recogidas en formato de entrevista, a propósito de la 
+          llegada al país de expertos en siniestralidad vial, gracias al 
+          apoyo del gobierno de la República de Corea.</p>
+
+          <p>Sin duda, la Revista Científica Diálogo Forense es un 
+          referente que coadyuva con ampliar y profundizar el 
+          conocimiento en los temas que aborda. Al respecto, es 
+          importante destacar el trabajo de profesionales de 
+          distintas disciplinas que con sus investigaciones 
+          muestran los avances de la ciencia y la incidencia que esta 
+          tiene. Así se aprecia lo producido por el equipo que da 
+          forma al tema sobre “Intoxicación por consumo 
+          combinado de drogas de abuso” o el de “Prevalencia de 
+          alcohol en hechos de tránsito”.</p>
+
+          <p>En la misma línea, el ensayo “México: la perspectiva de 
+          derechos humanos y el enfoque psicosocial como pilares 
+          fundamentales en la valoración psicológica forense en 
+          víctimas”, y los artículos “Úlcera de Marjolin de tipo 
+          histológico: carcinoma epidermoide y reconstrucción 
+          facial por colgajo cérvico-facial de Mustardé” y “La 
+          interseccionalidad y la importancia de aplicarla en delitos 
+          de violencia contra la mujer”.</p>
+
+          <p>Al dejar con usted nuestra propuesta editorial que se 
+          extiende por distintos países y continentes, valoro y 
+          agradezco su acompañamiento lector y confío que 
+          llenemos plenamente sus expectativas. ¡Muchas gracias 
+          por ser parte de quienes leen la Revista Científica 
+          Diálogo Forense!</p>
+        </div>
+        
+        <!-- Columna con la foto -->
+        <div class="foto">
+          <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/dra_primerplano.png" alt="Directora INACIF">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Pie de página -->
+    <div class="footer">
+      <span>PRIMER PLANO</span>
+      <span class="chip">3</span>
+    </div>
+  </div>
+</body>
+</html>
+

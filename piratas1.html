@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Piratas de la muerte — Maqueta 2 páginas</title>
+<style>
+  :root{
+    --amarillo:#f2c94c;           /* pestaña y banda mostaza */
+    --amarillo-oscuro:#d1a836;
+    --azul:#0f5ac1;               /* byline (azul) */
+    --negro:#111827;
+    --gris:#4b5563;
+    --fondo:#e5e7eb;
+    --borde:#e2e8f0;
+    --blanco:#ffffff;
+  }
+  html,body{
+    margin:0;
+    background:var(--fondo);
+    color:var(--negro);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  }
+
+  /* Hoja */
+  .page{
+    width:900px;
+    margin:24px auto;
+    background:var(--blanco);
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+  }
+
+  /* Pestaña vertical izquierda */
+  .ribbon{
+    position:absolute; left:0; top:0; bottom:0; width:42px;
+    background:var(--amarillo);
+    border-right:2px solid var(--amarillo-oscuro);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .ribbon span{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    font-weight:800;
+    letter-spacing:.5px;
+    color:#222;
+  }
+
+  /* Encabezado de títulos */
+  .header{
+    padding:24px 32px 8px 64px; /* espacio para la pestaña */
+  }
+  .title-18{ font-size:18pt; font-weight:900; text-transform:uppercase; margin:0; }
+  .title-16{ font-size:16pt; font-weight:800; margin:6px 0 8px 0; }
+  .byline-13{ font-size:13pt; color:var(--azul); font-weight:600; margin:0 0 8px 0; }
+
+  /* Imagen de cabecera */
+  .hero{ margin:0 32px; border-radius:10px; overflow:hidden; }
+  .hero img{ width:100%; height:auto; display:block; }
+
+  /* Bajada mostaza */
+  .dek{
+    margin:12px 32px 12px 64px;
+    background:var(--amarillo);
+    border-left:6px solid var(--amarillo-oscuro);
+    padding:12px 14px;
+    border-radius:8px;
+    font-size:16pt;
+    line-height:1.35;
+    font-weight:700;
+  }
+
+  /* Cuerpo en dos columnas */
+  .columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    padding:0 32px 32px 64px;
+  }
+  .col p{
+    font-size:12pt;
+    line-height:1.6;
+    text-align:justify;
+    margin:0 0 10px 0;
+    color:var(--gris);
+  }
+  .col h3{
+    font-size:12pt;
+    margin:0 0 6px 0;
+    font-weight:900;
+    color:var(--negro);
+  }
+
+  /* Pie de página */
+  .footer{
+    padding:10px 16px 12px 64px;
+    border-top:1px solid var(--borde);
+    color:#334155;
+    font-size:11pt;
+    display:flex; justify-content:space-between; align-items:center;
+    background:#f8fafc;
+  }
+
+  /* Separación visual y salto al imprimir */
+  .page + .page{ margin-top:32px; }
+  @media print{
+    .page{ box-shadow:none; margin:0 auto; page-break-inside:avoid; }
+    .page + .page{ page-break-before:always; }
+  }
+
+  /* Responsivo */
+  @media (max-width:940px){
+    .page{ width:100%; border-radius:0; }
+  }
+  @media (max-width:760px){
+    .columns{ grid-template-columns:1fr; }
+    .header{ padding-left:48px; }
+    .dek{ margin-left:48px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- =================== PÁGINA 1 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>DESDE ADENTRO</span></div>
+
+    <div class="header">
+      <h1 class="title-18">PIRATAS DE LA MUERTE:</h1>
+      <h2 class="title-16">LAS CIENCIAS FORENSES APORTAN EVIDENCIAS CLAVE.</h2>
+      <p class="byline-13">Ronny Antonio Navas Vásquez / Comunicación Social, Instituto Nacional de Ciencias Forenses de Guatemala -INACIF-.</p>
+    </div>
+
+    <!-- Imagen encabezado -->
+    <figure class="hero">
+      <!-- 🔁 Cambia por la ruta a tu imagen local -->
+      <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/piratas.png" alt="Piratas de la muerte">
+    </figure>
+
+    <!-- Bajada mostaza -->
+    <div class="dek">
+      Uno de los casos judiciales mediáticos involucra a una estructura criminal en el
+      asesinato “sin violencia”, de 23 jóvenes con una característica común: fallecieron
+      después de abordar, en estado de ebriedad, un servicio de transporte.
+    </div>
+
+    <!-- Dos columnas -->
+    <div class="columns">
+      <!-- Columna izquierda -->
+      <div class="col">
+        <p>En abril de este año, el Ministerio Público -MP- sentó en el
+        banquillo a una estructura criminal implicada en una
+        veintena de muertes. Para llevar frente a la justicia a los
+        presuntos responsables fueron clave los dictámenes del
+        Instituto Nacional de Ciencias Forenses de Guatemala
+        -INACIF-, pues aportaron evidencias que permitieron
+        armar un auténtico rompecabezas.</p>
+
+        <p>Las pesquisas de los fiscales lograron determinar el
+        modus operandi, las tácticas y la identidad de los
+        miembros de la red de maleantes identificada como Los
+        piratas de la muerte, a quienes se endilga 23 agresiones
+        mortales, las cuales comenzaban en un centro de
+        conveniencia y terminaban con el asesinato de la víctima.</p>
+
+        <p>Los taxis que operan sin licencia ni autorización
+        municipal, en Guatemala son conocidos como piratas. Y
+        esos son los que servían para el movimiento de la banda.
+        Como parte de la investigación se estableció que el grupo
+        delincuencial contaba con dispositivos POS -Punto de
+        venta, por sus siglas en inglés-. De esa forma realizaron
+        transacciones fraudulentas con las tarjetas de débito o
+        crédito de las víctimas, de las que se apoderaban de entre
+        10 mil y 40 mil quetzales, entre US $1,300 y US $5,200.</p>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="col">
+        <h3><strong>Muerte sobre ruedas y entre bebidas</strong></h3>
+        <p>Para perpetrar sus fechorías, los delincuentes ubicaban a
+        jóvenes que ingerían alcohol en puntos cercanos a
+        gasolineras u otros similares, lo fundamental es que el
+        seleccionado estuviera en estado de ebriedad. El cuadro
+        completo se componía de un día, entre jueves y sábado
+        en fin de quincena o mes; una hora, a partir de las 8:00 de
+        la noche. Asuetos y feriados también eran de la
+        preferencia de los malhechores.</p>
+
+        <p>Después de escoger a la víctima, aparecía uno de los
+        maleantes para, entre múltiples amabilidades, ofrecer el
+        servicio de taxi. Ya en ruta, el piloto se ganaba la confianza
+        del pasajero: complacía con música al gusto y “bebidas de
+        cortesía”, que en su momento el Laboratorio de
+        Fisicoquímica del INACIF determinó que contenían
+        sustancias tóxicas para dejar inconsciente al cliente.
+        Beber lo suministrado favorecía el despojo de
+        pertenencias.</p>
+
+        <p>Y es que pocos minutos después de consumir la bebida,
+        el afectado sufría somnolencia y quedaba inconsciente.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>DESDE ADENTRO</span>
+      <span>4</span>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 2 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>DESDE ADENTRO</span></div>
+
+    <!-- (Si quieres un encabezado aquí, puedes duplicar .header.
+         En tu imagen la página 2 continúa directo con texto, así que vamos a columnas.) -->
+
+    <div class="columns" style="padding-top:24px;">
+      <!-- Columna izquierda -->
+      <div class="col">
+        <p>En ese momento los maleantes se apoderaron de zapatos,  
+        relojes, cadenas, anillos, celulares, dinero y tarjetas de
+        crédito o débito. En la mayoría de los casos por sobredosis
+        en la mezcla ingerida, la víctima entraba en estado de
+        coma que precedía a su muerte. Al quedar tendido en la
+        vía pública y sin documentos, su ingreso en la morgue era
+        como XX.</p>
+
+        <h3><strong>“Cuando los muertos hablan”</strong></h3>
+        <p>Entre abril y agosto de 2024, analistas criminólogos
+        identificaron un nuevo patrón de cuerpos encontrados en
+        la vía pública, coincidiendo con falta de señales de
+        violencia, lo cual llamó la atención. Al enfocarse en estos
+        casos las “coincidencias” se fueron sumando: muertes por
+        abuso de sustancias, intoxicación alcohólica, pancreatitis,
+        embolias pulmonares, entre otras. Esto quedó registrado
+        en los informes de Tanatología Forense Metropolitana del
+        INACIF.</p>
+
+        <p>Sin embargo, después de observar decesos con los
+        mismos signos, los fiscales detectaron una moda
+        estadística en los patrones criminales. Las víctimas siempre
+        aparecían sin zapatos y con los calcetines limpios en fechas
+        cercanas al cobro de salarios.</p>
+
+        <p>Por ello, fiscales del MP generaron un acercamiento con
+        autoridades y peritos del INACIF, para profundizar en la
+        investigación. Como resultado de las conversaciones se
+        acordó integrar una mesa interinstitucional y trazar líneas
+        para las pesquisas. En la coordinación tomaron parte
+        peritos de los laboratorios de toxicología, de acústica, de
+        informática y de medicina forense.</p>
+
+        <p>Una de las primeras acciones fue la identificación de
+        cámaras de vigilancia cerca de los lugares donde se
+        encontraron los cuerpos. Al revisar las imágenes se reveló
+        el primer indicio probatorio que confirmaba la alteración
+        de la estadística criminal.</p>
+
+        <p>Las grabaciones mostraban a un taxi del que descendieron
+        individuos que abandonaron el cuerpo de una de sus
+        víctimas. La investigación determinó que estaba
+        autorizado por la Municipalidad de Chinautla, pues lucía
+        insignias, numeración y permiso de dicha comuna. Luego
+        se ubicaron a otros vehículos con las mismas insignias, por
+        lo que se estableció que una veintena de taxis se usaban
+        para la comisión de actos vandálicos.</p>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="col">
+        <p>Otra línea fue la identificación de familiares de los
+        fallecidos. Luego de entrevistarlos se encontró a un
+        sobreviviente, quien aseguró ser familiar de dos víctimas
+        mortales. En este proceso se dio con otros 16
+        sobrevivientes, quienes ayudaron con su testimonio a la
+        construcción de hipótesis. Con las revelaciones se
+        aumentó la determinación de los peritos de la mesa de
+        investigación interinstitucional.</p>
+
+        <h3><strong>El auxilio de las ciencias forenses</strong></h3>
+        <p>El Laboratorio de Toxicología del INACIF analizó fluidos a
+        las víctimas mortales y sobrevivientes. Esto sirvió para
+        ratificar la presencia de químicos farmacéuticos en las
+        “bebidas de cortesía” que ingirieron las víctimas, entre
+        ellos, benzodiacepinas, clonazepam, zolpidem, Equiliv y
+        clordiazepóxido.</p>
+
+        <p>Estos químicos más la mezcla con bebidas alcohólicas
+        generaron “un coctel mortal” que indujo el colapso del
+        páncreas de las víctimas. Este tipo de fármacos se deben
+        vender bajo receta médica, y entre las recomendaciones
+        de los químicos farmacéuticos está la supervisión en las
+        farmacias para que cumplan con la restricción.</p>
+
+        <p>Por su parte, expertos del Laboratorio de Acústica del
+        INACIF cotejaron voces entre los audios de las escuchas
+        telefónicas intervenidas por fiscales del MP con
+        autorización de juez, y la grabación de algunos sindicados
+        que colaboraron. Los peritos se enfocan en características
+        de sonido con el objeto de aportar prueba científica para
+        fortalecer la investigación criminal.</p>
+
+        <p>Cuando miembros de la supuesta estructura criminal
+        fueron identificados y capturados les fue decomisado el
+        celular. En el Laboratorio de Informática Forense se
+        analizaron los dispositivos móviles incautados, y para el
+        efecto se utilizó una metodología internacional con la que
+        se recabó evidencia para determinar la presencia de los
+        sindicados en el área donde se cometieron los hechos
+        delictivos.</p>
+
+        <p>La intervención de las ciencias forenses, los peritos del
+        INACIF, en esta investigación criminal, ha jugado un papel
+        primordial para esclarecer mediante análisis científico las
+        evidencias objetivas, lo que servirá a los operadores de
+        justicia la procuración de la verdad, y mientras tanto se
+        ventilan las audiencias en el tribunal a cargo del caso.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>DESDE ADENTRO</span>
+      <span>5</span>
+    </div>
+  </section>
+
+</body>
+</html>
+

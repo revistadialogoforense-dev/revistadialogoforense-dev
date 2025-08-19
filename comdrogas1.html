@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Con Fundamento — Maqueta 7 páginas</title>
+<style>
+  :root{
+    --naranja:#f97316;
+    --naranja-suave:#fde6d5;
+    --gris:#4b5563;
+    --gris-osc:#111827;
+    --gris-borde:#e5e7eb;
+    --gris-lig:#f8fafc;
+    --blanco:#ffffff;
+  }
+  html,body{
+    margin:0; background:#e5e7eb; color:var(--gris-osc);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  }
+
+  /* Página */
+  .page{
+    width:900px; margin:24px auto; background:#fff;
+    box-shadow:0 8px 28px rgba(0,0,0,.08);
+    border-radius:10px; overflow:hidden; position:relative;
+  }
+  .page + .page{ margin-top:32px; }
+
+  /* Pestaña naranja lateral */
+  .ribbon{
+    position:absolute; left:0; top:0; bottom:0; width:48px;
+    background:var(--naranja); display:flex; align-items:center; justify-content:center;
+  }
+  .ribbon span{
+    writing-mode:vertical-rl; transform:rotate(180deg);
+    color:#fff; font-weight:800; letter-spacing:.6px;
+  }
+
+  /* Encabezado superior (línea 10pt) */
+  .topline{ font-size:10pt; color:#000; padding:10px 24px 6px 72px; }
+
+  /* Imagen de cabecera */
+  .hero{ margin:8px 24px; border-radius:10px; overflow:hidden; }
+  .hero img{ width:100%; height:auto; display:block; }
+
+  /* Títulos */
+  .t-20{ font-size:20pt; font-weight:900; margin:0 0 8px 0; text-transform:uppercase; }
+  .t-18{ font-size:18pt; font-weight:900; margin:14px 0 8px 0; color:var(--naranja); }
+  .t-16{ font-size:16pt; font-weight:800; margin:6px 0 10px 0; }
+  .label{ color:var(--naranja); font-weight:800; }
+  .kline{ margin:2px 0 10px 0; font-size:12pt; }
+
+  /* Texto */
+  p{ font-size:12pt; line-height:1.6; margin:0 0 10px 0; text-align:justify; color:var(--gris); }
+  .indent p{ text-indent:1.5em; }
+
+  /* Grid 2/3 - 1/3 (pág. 1) */
+  .grid-2-1{ display:grid; grid-template-columns:2fr 1fr; gap:24px; padding:0 24px 24px 72px; }
+
+  /* Columna lateral gris (pág. 1) */
+  .sidebar{
+    background:#f1f5f9; border:1px solid var(--gris-borde);
+    border-radius:10px; padding:16px; color:#111; font-size:9pt; /* tamaño 9 */
+  }
+  .sidebar .badge{
+    background:var(--naranja); color:#fff; font-weight:800; font-size:11pt;
+    padding:8px 10px; border-radius:8px; display:inline-block; margin-bottom:12px;
+  }
+  .sidebar b{ font-weight:800; }
+
+  /* Columnas iguales y variantes */
+  .columns{ display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:0 24px 24px 72px; }
+  .columns-tight{ padding-top:8px; }
+
+  /* Divisor gris */
+  .divider{ height:1px; background:#cbd5e1; margin:14px 24px 14px 72px; }
+
+  /* Sección bicolor (pág. 4) */
+  .band-top{ background:var(--naranja-suave); padding:14px 24px 6px 72px; }
+  .band-top .columns{ padding:4px 0 16px 0; }
+  .band-btm{ padding:8px 24px 24px 72px; }
+
+  /* Imagen alta en columna (pág. 3) */
+  .tall-img{ width:100%; height:auto; border-radius:10px; margin:16px 0; display:block; }
+
+  /* Etiqueta encima de tablas/imagenes */
+  .caption{ font-size:12pt; font-weight:700; margin:0 0 8px 0; color:#111; }
+
+  /* Centro */
+  .center{ text-align:center; }
+  .center img{ max-width:100%; height:auto; border-radius:10px; }
+
+  /* Pie de página */
+  .footer{
+    padding:10px 16px 12px 72px; border-top:1px solid var(--gris-borde);
+    background:var(--gris-lig); color:#334155; font-size:11pt;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+
+  /* Impresión */
+  @media print{
+    .page{ box-shadow:none; margin:0 auto; page-break-inside:avoid; }
+    .page + .page{ page-break-before:always; }
+  }
+
+  /* Responsivo */
+  @media (max-width:940px){ .page{ width:100%; border-radius:0; } }
+  @media (max-width:760px){
+    .grid-2-1{ grid-template-columns:1fr; }
+    .columns{ grid-template-columns:1fr; padding-left:24px; }
+    .band-top,.band-btm,.topline,.footer{ padding-left:24px; }
+    .divider{ margin-left:24px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- =================== PÁGINA 1 (6) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 6-12.</div>
+
+    <figure class="hero">
+      <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/pastillas.png" alt="Imagen pastillas">
+    </figure>
+
+    <div class="grid-2-1">
+      <!-- 2/3 izquierda -->
+      <div>
+        <h1 class="t-20">INTOXICACIÓN POR CONSUMO COMBINADO DE DROGAS DE ABUSO</h1>
+
+        <p class="kline"><span class="label">Palabras clave: </span>intoxicación por drogas, cocaína, morfina, codeína, alcohol.</p>
+        <p class="kline"><span class="label">Keywords: </span>drug intoxication, cocaine, morphine, codeine, alcohol.</p>
+
+        <h2 class="t-18">RESUMEN</h2>
+        <p>El consumo de drogas ha aumentado significativamente en los últimos años y la administración combinada de las mismas es cada vez más frecuente y más peligrosa, dando lugar a sobredosis que en muchas ocasiones produce la muerte. El caso presentado en este artículo es de un hombre de 26 años que se encontraba ingiriendo bebidas alcohólicas, perdiendo el conocimiento súbitamente y falleciendo. Ante la sospecha de una intoxicación por drogas, se procede a analizar la sangre y la orina del fallecido en búsqueda de sustancias volátiles (etanol, metanol, isopropanol y acetona), detectándose etanol, 2.8 g/L (sangre) y etanol, 3.4 g/L (orina). Con respecto al resultado de drogas en sangre y orina, la prueba presuntiva se llevó a cabo mediante un tamizaje de drogas (19 grupos de drogas), mientras que el análisis confirmatorio y posterior cuantificación se realizó a través de Cromatografía de Gases acoplada a Espectrometría de Masas -GC-MS-. Mediante esta técnica pudo detectarse la presencia de cocaína y su metabolito, cocaetileno, levamisol, benzocaína, morfina, codeína, heroína y su metabolito, algunos detectados en ambos fluidos y otros solamente en uno de ellos. Se procedió a cuantificar en sangre, la cocaína (0.04 µg/mL), codeína (0.02 µg/mL), ambas debajo de los valores tóxicos reportados por la literatura; así como morfina (0.53 µg/mL) y metabolito de heroína (6-acetil-morfina, 0.04 µg/mL), ambas dentro de los valores letales reportados por la literatura. Se concluye que el Laboratorio de Toxicología aportó información clave para lograr establecer la causa de muerte del caso en estudio, siendo ésta, intoxicación por drogas de abuso.</p>
+      </div>
+
+      <!-- 1/3 derecha (columna gris) -->
+      <aside class="sidebar">
+        <div class="badge">Diálogo Forense<br>Núm. 11 , Vol. 6, 2025<br>ISSN: 2789-8458</div>
+
+        <p><b>Jennifer Patricia Contreras Rivera</b><br>
+        Laboratorio de Toxicología<br>
+        Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>
+        Ciudad de Guatemala, Guatemala<br>
+        jcontreras@inacif.gob.gt</p><br>
+
+        <p><b>Sender Miguel Cardona Yanes</b><br>
+        Laboratorio de Toxicología<br>
+        Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>
+        Ciudad de Guatemala, Guatemala<br>
+        smcardona@inacif.gob.gt</p><br>
+
+        <p><b>Lesly Yohana Villeda Alvarado</b><br>
+        Laboratorio de Toxicología<br>
+        Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>
+        Ciudad de Guatemala, Guatemala<br>
+        lvilleda@inacif.gob.gt</p><br>
+
+        <p><b>Sara María Pontacq Alfonso</b><br>
+        Laboratorio de Toxicología<br>
+        Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>
+        Ciudad de Guatemala, Guatemala<br>
+        spontacq@inacif.gob.gt</p><br>
+
+        <p><b>Luisa Fernanda Reynoso Aguilar</b><br>
+        Laboratorio de Toxicología<br>
+        Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>
+        Ciudad de Guatemala, Guatemala<br>
+        lreynoso@inacif.gob.gt</p><br>
+
+        <p><b>Recibido:</b> 29/07/2024<br><b>Aceptado:</b> 1/04/2025.</p>
+      </aside>
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>6</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 2 (7) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 7-12</div>
+
+    <h2 class="t-18" style="padding:0 24px 4px 72px;">ABSTRACT</h2>
+    <div class="columns columns-tight">
+      <div>
+        <p>Drug consumption has increased significantly in recent years, with combined drug use becoming increasingly frequent and dangerous, often resulting in fatal overdoses. This article presents the case of a 26-year-old man who was consuming alcoholic beverages when he suddenly lost consciousness and died. Suspecting drug intoxication, we analyzed the deceased's blood and urine for volatile substances (ethanol, methanol, isopropanol, and acetone), detecting ethanol at concentrations of 2.8 g/L in blood and 3.4 g/L in urine. For drug analysis, we performed a presumptive screening test (19 drug groups) followed by confirmatory testing and quantification using.</p>
+      </div>
+      <div>
+        <p>Gas Chromatography-Mass Spectrometry -GC-MS-. This analysis detected cocaine and its metabolite cocaethylene, levamisole, benzocaine, morphine, codeine, heroin, and its metabolite (6-acetylmorphine), with some substances present in both fluids and others in only one. Quantitative blood analysis revealed cocaine (0.04 µg/mL) and codeine (0.02 µg/mL) below toxic thresholds, while morphine (0.53 µg/mL) and 6-acetylmorphine (0.04 µg/mL) fell within lethal ranges reported in the literature. The Toxicology Laboratory's findings were crucial in determining the cause of death: intoxication from drugs of abuse.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="t-18" style="padding:0 24px 4px 72px;">INTRODUCCIÓN</h2>
+    <div class="columns columns-tight">
+      <div>
+        <p>El consumo de drogas de abuso ha aumentado significativamente en Guatemala, con consecuencias graves como la muerte. Estas sustancias al alterar el razonamiento y el juicio, representan riesgos severos para la salud. Entre las drogas de abuso más comunes se encuentra la cocaína, un estimulante potente del sistema nervioso central -SNC- (Baselt, 2017), y los opioides, que según Córdoba (2006) son una clase de medicamentos utilizados para tratar el dolor. Estos últimos, por sus efectos secundarios, han generado un alto nivel de abuso; entre este grupo de drogas pueden mencionarse la morfina, codeína y heroína, la cual está catalogada como droga ilícita. En los Estados Unidos durante el 2022, casi la mitad de las muertes por sobredosis involucran múltiples drogas (Centros para el Control y la prevención de Enfermedades –CDC, por sus siglas en inglés-, 2024). Casi el 74% de todas las muertes por sobredosis relacionadas con la cocaína ahora involucran opioides sintéticos, como el fentanilo. El uso de múltiples drogas en combinación es parte de la crisis de sobredosis que se está manifestando en la actualidad (National Institute for Health Care Management –NIHCM, por sus siglas en inglés-, 2024). En la actualidad es usual encontrar drogodependientes que consumen heroína mezclada con otras drogas con el fin de prolongar e intensificar los efectos de ambos productos, así como experimentar una sensación más</p>
+      </div>
+      <div>
+        <p>placentera que la percibida con cada una de las drogas (Gainza et al., 2003). De acuerdo con Duvauchelle et al. (1998) y Edvardsen et al. (2018) las intoxicaciones por drogas psicoactivas rara vez son causadas por una sola droga y las mezclas pueden aumentar el riesgo de sobredosis. Lo anterior, orienta a que las concentraciones de las sustancias detectadas, así como las combinaciones son esenciales para determinar la causa de muerte. En los casos de sospecha de abuso de estas sustancias, los análisis toxicológicos juegan un papel crucial en la investigación forense. Permiten la identificación de las drogas presentes en el organismo, además de la determinación de las cantidades presentes de éstas, con el fin de establecer su posible rol en la causa de muerte. Según Edvarsen et al. (2018), la carga total de drogas influye en el grado de intoxicación, teniendo en cuenta el nivel de concentración de cada una de ellas. Es por ello que este tipo de casos en los que existe detección múltiple de drogas y en concentraciones peligrosas resulta ser un desafío para los laboratorios forenses, ya que tanto los niveles, como la interacción de las sustancias detectadas coadyuvan para la muerte de la persona que las consume. En el presente artículo, se presenta un caso recibido en el Laboratorio de Toxicología del Instituto Nacional de Ciencias Forenses de Guatemala –INACIF-.</p>
+      </div>
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>7</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 3 (8) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 8-12</div>
+
+    <div class="columns" style="padding-top:8px;">
+      <div>
+        <img class="tall-img"
+             src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/pipeta.png"
+             alt="Foto vertical pipeta">
+      </div>
+      <div>
+        <h2 class="t-18">PRESENTACIÓN DEL CASO</h2>
+        <p>El caso que se presenta es el de un hombre de más de 26 años que fue encontrado inconsciente después de haber consumido bebidas alcohólicas. Según los informes, el individuo perdió súbitamente el conocimiento y cayó sentado. Dado que se sospechaba una posible intoxicación por drogas de abuso, el cuerpo fue remitido al Instituto Nacional de Ciencias Forenses de Guatemala –INACIF- para establecer la causa de muerte, por lo que se realizó necropsia y análisis toxicológico. Se recolectaron muestras de sangre con preservante y anticoagulante, así como de orina, con el fin de llevar a cabo los estudios necesarios para determinar la presencia de sustancias volátiles y drogas terapéuticas o de abuso.</p>
+        <p>El análisis toxicológico se solicitó con el propósito de detectar, identificar y cuantificar posibles sustancias que pudieran haber contribuido al fallecimiento del individuo, por lo que se establecieron los siguientes objetivos:</p>
+        <ul style="margin:0 0 10px 1.2em; padding:0; color:var(--gris);">
+          <li style="margin-bottom:6px;"><p style="margin:0;">Detectar, identificar y cuantificar sustancias volátiles como etanol, metanol, isopropanol y acetona.</p></li>
+          <li style="margin-bottom:6px;"><p style="margin:0;">Detectar e identificar la presencia de drogas en sangre y orina, como oxicodona, opiáceos, opioides, dextrometorfano, meprobamato, anfetaminas, metanfetaminas, metilendioxi metanfetamina, barbitúricos, benzodiazepinas, metadona, fenciclidina, cocaína (benzoilecgonina), antidepresivos tricíclicos, tetrahidrocannabinol, tramadol, fentanilo, buprenorfina y zolpidem.</p></li>
+          <li><p style="margin:0;">Cuantificar los niveles de cocaína, morfina, codeína y el metabolito de heroína en las muestras de sangre con preservante y anticoagulante.</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>8</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 4 (9) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 8-12</div>
+
+    <div class="band-top">
+      <h2 class="t-18" style="margin-top:0;">METODOLOGÍA</h2>
+      <div class="columns" style="padding:0;">
+        <div>
+          <p>Se aplicaron los siguientes métodos para el análisis de las muestras de sangre y orina</p>
+          <p><b>Análisis presuntivo</b><br>
+          Este análisis se llevó a cabo mediante un tamizaje de drogas, utilizando placas de inmunoensayo e inmunoensayo por quimioluminiscencia (RANDOX®). Este método permite la detección cualitativa de drogas o sus metabolitos, empleando complejos de anticuerpos y antígenos que generan un resultado perceptible. Esto basado en el principio de uniones competitivas. Las drogas que pueden estar presentes en la muestra compiten frente a los respectivos conjugados por los puntos de unión al anticuerpo.</p>
+          <p><b>Análisis confirmatorio</b><br>
+          Para el análisis confirmatorio, se empleó un procedimiento de extracción en fase sólida para aislar las drogas terapéuticas o de abuso de la matriz biológica. Las sustancias extraídas se analizaron mediante Cromatografía de Gases acoplada a Espectrometría de Masas -GC/MS-.</p>
+        </div>
+        <div>
+          <p><b>Curva de calibración</b><br>
+          Con el objetivo de identificar si la concentración de los analitos se encontraba dentro del rango terapéutico/normal o tóxico, se prepararon diez puntos de calibración con estándares específicos para cada analito. Estas soluciones se inyectaron en el cromatógrafo de gases acoplado a espectrómetro de masas.</p>
+          <p><b>Detección de Sustancias Volátiles</b><br>
+          Adicionalmente, se utilizó cromatografía de gases acoplada a headspace con detector de ionización de llama para la detección y cuantificación de sustancias volátiles</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="band-btm">
+      <h2 class="t-18">RESULTADOS</h2>
+      <div class="columns" style="padding:0;">
+        <div>
+          <p>Los resultados preliminares del tamizaje de drogas indicaron la presencia de múltiples sustancias en las muestras analizadas. Las pruebas confirmatorias realizadas en el Laboratorio de Toxicología revelaron una variedad de compuestos en las muestras de orina y sangre, entre las que pueden mencionarse etanol, cocaetileno, cocaína y su metabolito, morfina, codeína, heroína y su metabolito, levamisol y benzocaína. Algunas de estas drogas fueron cuantificadas en la muestra de sangre, algunas presentaron concentraciones por debajo de los niveles tóxicos y otras superiores a los letales, tal como se muestra en la tabla 1 y tabla 2.</p>
+        </div>
+        <div>
+          <div class="caption">Tabla 1. Sustancias identificadas en las muestras de orina y sangre a partir de los análisis realizados por el Laboratorio de Toxicología.</div>
+          <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/tabla1.png" alt="Tabla 1" style="width:100%; border-radius:10px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>9</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 5 (10) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 8-12</div>
+
+    <div class="center" style="padding:8px 24px 8px 72px;">
+      <div class="caption" style="text-align:left;">Tabla 2. Resultado de la cuantificación de concentración de sustancias de abuso presentes en las muestras. Los valores de referencia fueron tomados de Molina (2010) y Repetto (2015).</div>
+      <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/tabla2.png" alt="Tabla 2">
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="t-18" style="padding:0 24px 4px 72px;">DISCUSIÓN</h2>
+    <div class="columns columns-tight">
+      <div>
+        <p>Como se observa en la tabla 1, se detectó la presencia de etanol, levamisol, benzocaína, morfina, codeína, heroína y su metabolito (6-acetilmorfina); cocaína y su metabolito, cocaetileno, el cual se forma por la coadministración de cocaína y etanol (ambos presentes en las muestras analizadas) y cuyos efectos son similares, pero menores a los de la cocaína. Es importante mencionar que la mayoría de las sustancias detectadas se encontraban tanto en sangre como en orina. La cuantificación de las drogas consideradas relevantes en este caso se realizó en la sangre con preservante y anticoagulante, a excepción del etanol, cuya cuantificación también se realizó en la orina. El análisis en mención se efectuó en ambos fluidos, ya que se refiere el antecedente de consumo de bebidas alcohólicas. Derivado de lo mencionado anteriormente, se detectó una concentración de 2.8 g/L en sangre y 3.4 g/L en orina. Es importante mencionar que los efectos que una persona manifiesta tras el consumo de etanol pueden variar por diversos factores, como la tolerancia al compuesto, peso, género, raza, estado de salud, grado alcohólico de la bebida consumida, alimentos consumidos, número de libaciones, así como la coadministración de otras sustancias (como ocurre en este caso), entre otros. De acuerdo con Repetto (2015), según la concentración de etanol en sangre detectada en la persona del caso en estudio, ésta podría encontrarse en una estado de estupor; el cual se caracteriza por déficit motor, apatía, inercia, agresividad, falta de coordinación muscular,</p>
+      </div>
+      <div>
+        <p>disminución de la conciencia y trastornos del habla; ahora bien, la presencia de las otras sustancias puede cambiar la sintomatología mencionada anteriormente. La concentración de cocaína encontrada fue de 0.04 μg/mL y la de codeína de 0.02 μg/mL, ambas por debajo de los valores tóxicos. Sin embargo, hubo valores detectados que se encontraban dentro de los rangos letales, siendo éstos, el metabolito de la heroína “6-acetilmorfina” con una concentración de 0.04 μg/mL y la morfina con 0.53 μg/mL (Molina, 2010; Repetto, 2015). Aunque los valores detectados para los opiáceos en este caso son considerados letales, es importante considerar la presencia de otras drogas, especialmente cocaína y etanol. Según Negus et al. (1998) y Gainza et al. (2003), es común que personas drogodependientes combinen heroína con cocaína, una mezcla conocida como speedball para prolongar e intensificar los efectos de ambas drogas. La combinación de estimulantes y depresores puede modificar o enmascarar los efectos de una o ambas sustancias, aumentar el riesgo de sobredosis y causar daño grave a múltiples órganos (Duvauchelle et al., 1998; Centros para el Control y la prevención de Enfermedades –CDC-, 2024). El consumo combinado de cocaína y heroína produce un estímulo complejo farmacológicamente selectivo que incluye aspectos de ambas drogas, que no resulta en un simple efecto aditivo, sino que produce un perfil único que aún no puede explicarse claramente; aún cuando existe evidencia experimental que indica que la activación simultánea de los sistemas opioides y de</p>
+      </div>
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>10</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 6 (11) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 8-12</div>
+
+    <!-- Parte 1 -->
+    <div class="columns" style="padding-top:8px;">
+      <div>
+        <p>dopamina por la coadministración de opioides (morfina, codeína, heroína y su metabolito, que fueron las drogas detectadas) y agonistas de dopamina (cocaína) resulta en efectos potenciados para ambos grupos de drogas (Negus, 1998; Duvauchelle et al., 1998). La mayoría de las muertes por consumo y sobredosis de opioides son accidentales y están relacionadas con depresión respiratoria (Porras, 2004). Ruiz-Quiñonez (2022) refiere que estudios en ratas han demostrado que la combinación de levamisol y morfina puede incrementar el riesgo de muerte al producir anormalidades hematológicas, como leucopenia y neutropenia.</p>
+      </div>
+      <div>
+        <p>Lo anteriormente mencionado, evidencia la importancia de la labor realizada por el Laboratorio de Toxicología proporcionando información crucial que complementa los hallazgos de la necropsia y la historia clínica, mediante la detección y cuantificación de drogas, ya sea de manera individual o combinada, para establecer la causa de muerte en casos donde la información médico-legal es insuficiente. En este caso en particular se encontraron valores en rangos letales que podrían haber llevado a la muerte. Es importante recalcar que estos hallazgos deben de integrarse a todos los indicios de la investigación para establecer la causa de muerte. Sin embargo, según la información obtenida con base en el análisis toxicológico puede concluirse que existió una intoxicación por drogas de abuso.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Parte 2 -->
+    <h2 class="t-18" style="padding:0 24px 4px 72px;">CONCLUSIONES</h2>
+    <div style="padding:0 24px 10px 72px;">
+      <p>En el caso en estudio se determinó la presencia de etanol, cocaína y su metabolito, cocaetileno, levamisol, benzocaína, morfina, codeína, heroína y su metabolito “6-monoacetil-morfina”. Tanto en sangre como en orina se detectó etanol en una concentración de 2.8 g/L y 3.4 g/L, respectivamente. Se detectó una concentración de cocaína de 0.04 µg/mL y codeína de 0.02 µg/mL, valores que se encontraban debajo de los valores tóxicos. Según los datos de referencia los valores detectados de morfina y 6-acetil-morfina son letales. El Laboratorio de Toxicología puede aportar información clave para lograr establecer la causa de muerte del caso en estudio. Puede concluirse una intoxicación por drogas de abuso, con base en los resultados obtenidos.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Parte 3 -->
+    <h2 class="t-18" style="padding:0 24px 4px 72px;">REFERENCIAS</h2>
+    <div class="indent" style="padding:0 24px 16px 72px;">
+      <p>Porras, G. (2004). Intoxicación aguda por heroína. Acta Médica Costarricense, 46(1), 38-41. https://www.scielo.sa.cr/scielo.php?script=sci_arttext&amp;pid=S0001-60022004000100008</p>
+      <p>Gainza, I., Nogué, S., Martínez, C., Hoffman, R., Burillo-Putze, G., Dueñas, A., Gómez, J., y Pinillos, M. (2003). Intoxicación por drogas. Anales del Sistema Sanitario de Navarra, 26(Supl. 1), 99-128. https://scielo.isciii.es/scielo.php?script=sci_arttext&amp;pid=S1137-66272003000200006</p>
+      <p>Negus, S., Gatch, M., Mello, N. (1998). Discriminative simulus effects of a cocaine/heroin “speedball” combination in rhesus monkeys. J Pharmacol Exp Ther. 285(3), 1123-1136. https://pubmed.ncbi.nlm.nih.gov/9618415/</p>
+      <p>Centers for Disease Control and Prevention –CDC-. (16 de abril de 2024). Datos sobre el uso de múltiples sustancias [Archivo PDF]. https://stacks.cdc.gov/view/cdc/137439/cdc_137439_DS1.pdf</p>
+      <p>Duvauchelle, C., Sapoznik, T., Kornetsky, C. (1998). The Synergistic Effects of Combining Cocaine and heroin (“Speedball”) using a Progressive-Ratio Schedule of Drug Reinforcement. Pharmacology Biochemistry and Behavior, 61(3), 297-302. https://www.sciencedirect.com/science/article/pii/S0091305798000987</p>
+      <p>Ruiz-Quiñonez, A., Espinosa-Riquer, Z. P., Carranza-Aguilar C. J., Browne, T., y Cruz, S. L. (2022). Co-administration of morphine and levamisole increases death risk, produces neutropenia and modifies antinociception in mice. Addiction Biology, 27(3). https://doi.org/10.1111/adb.13166</p>
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>11</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 7 (12) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>CON FUNDAMENTO</span></div>
+    <div class="topline">Jennifer Contreras, Sender Cardona, Lesly Villeda, Sara Pontacq y Luisa Reynoso / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 8-12</div>
+
+    <div class="indent" style="padding:8px 24px 10px 72px;">
+      <p>Baselt, R. (2017). Disposition of Toxic Drugs and Chemicals in Man. Biomedical Publications.</p>
+      <p>Córdoba, D. (2006). Toxicología. Editorial Manual Moderna.</p>
+      <p>Molina, D. K. y Hargrove, V. (2010). Handbook of Forensic Toxicology for Medical Examiners. Taylor &amp; Francis Group.</p>
+      <p>Repetto, R. y Repetto, M. (2015). Tabla de concentraciones de xenobióticos en fluidos biológicos humanos como referencia para el diagnóstico toxicológico. http://busca-tox.com/13conc/tabla%20de%20concentraciones%20de%20xenobioticos%20en%20 uidos%20bio logicos%20como%20referencia%20para%20el%20diagnostico%20toxicologico%20repetto.pdf</p>
+      <p>Centers for Disease Control and Prevention –CDC-. (23 julio 2024). Datos sobre el consumo de polisustancias. CDC´s website. https://www.cdc.gov/stop-overdose/es/caring/datos-sobre-el-consumo-de-polisustancias.html</p>
+      <p>National Institute for Health Care Management –NIHCM- Foundation. (2024). Growing Combination Drug Use and The Overdose Crisis. https://nihcm.org/publications/combination-drug-use-opioid-crisis</p>
+      <p>Edvardsen, H., Tverborgvik, T., Frost, J., Rogde, S., Morild, I., Waal, H., Clausen, T., Slordal, L., Vindenes, Vi. (2017). Differences in combinations and concentration of drugs of abuse in fatal intoxication and driving under the influence cases. Forensic Science International, 281, 127-133. https://doi.org/10.1016/j.forsciint.2017.10.045</p>
+    </div>
+
+    <div class="center" style="padding:0 24px 24px 72px;">
+      <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/drogas.png" alt="Imagen drogas" style="width:100%; border-radius:10px;">
+    </div>
+
+    <div class="footer"><span>CON FUNDAMENTO</span><span>12</span></div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Piratas de la muerte — Página 1</title>
+<style>
+  :root{
+    --amarillo: #f2c94c;          /* pestaña y franja mostaza */
+    --amarillo-oscuro:#d1a836;
+    --azul:#0f5ac1;               /* autor (azul) */
+    --negro:#111827;
+    --gris:#4b5563;
+    --fondo:#e5e7eb;
+    --borde:#e2e8f0;
+    --blanco:#ffffff;
+  }
+  html,body{margin:0;background:var(--fondo);color:var(--negro);
+            font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+
+  /* “Hoja” */
+  .page{
+    width: 900px;                 /* ancho de página revista */
+    margin: 24px auto;
+    background: var(--blanco);
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Pestaña vertical izquierda (DESDE ADENTRO) */
+  .ribbon{
+    position: absolute; left: 0; top: 0; bottom: 0; width: 42px;
+    background: var(--amarillo);
+    border-right: 2px solid var(--amarillo-oscuro);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .ribbon span{
+    writing-mode: vertical-rl;     /* texto vertical */
+    transform: rotate(180deg);
+    font-weight: 800; letter-spacing: .5px;
+    color: #222;
+  }
+
+  /* Encabezado de títulos */
+  .header{
+    padding: 24px 32px 8px 64px;   /* deja espacio por la pestaña */
+  }
+  .title-18{ font-size: 18pt; font-weight: 900; text-transform: uppercase; margin: 0; }
+  .title-16{ font-size: 16pt; font-weight: 800; margin: 6px 0 8px 0; }
+  .byline-13{ font-size: 13pt; color: var(--azul); font-weight: 600; margin: 0 0 8px 0; }
+
+  /* Imagen de cabecera */
+  .hero{ margin: 0 32px; border-radius: 10px; overflow: hidden; }
+  .hero img{ width: 100%; height: auto; display:block; }
+
+  /* Franja mostaza debajo de la foto (bajada) */
+  .dek{
+    margin: 12px 32px 12px 64px;
+    background: var(--amarillo);
+    border-left: 6px solid var(--amarillo-oscuro);
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 16pt;               /* solicitado: 16 */
+    line-height: 1.35;
+    font-weight: 700;
+  }
+
+  /* Cuerpo en dos columnas */
+  .columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 0 32px 32px 64px;
+  }
+  .col p{
+    font-size: 12pt;               /* solicitado: 12 */
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0 0 10px 0;
+    color: var(--gris);
+  }
+  .col h3{
+    font-size: 12pt;
+    margin: 0 0 6px 0;
+    font-weight: 900;
+    text-transform: none;
+    color: var(--negro);
+  }
+
+  /* Pie de página (opcional) */
+  .footer{
+    padding: 10px 16px 12px 64px;
+    border-top: 1px solid var(--borde);
+    color:#334155;
+    font-size: 11pt;
+    display:flex; justify-content: space-between; align-items:center;
+    background:#f8fafc;
+  }
+
+  /* Segunda “página” y salto al imprimir/PDF */
+  .page + .page{ margin-top: 32px; }
+  @media print{
+    .page{ box-shadow:none; margin:0 auto; page-break-inside: avoid; }
+    .page + .page{ page-break-before: always; }
+  }
+
+  /* Responsivo básico */
+  @media (max-width: 940px){
+    .page{ width: 100%; border-radius: 0; }
+  }
+  @media (max-width: 760px){
+    .columns{ grid-template-columns: 1fr; }
+    .header{ padding-left: 48px; }
+    .dek{ margin-left: 48px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- =================== PÁGINA 1 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>DESDE ADENTRO</span></div>
+
+    <div class="header">
+      <h1 class="title-18">PIRATAS DE LA MUERTE:</h1>
+      <h2 class="title-16">LAS CIENCIAS FORENSES APORTAN EVIDENCIAS CLAVE.</h2>
+      <p class="byline-13">Ronny Antonio Navas Vásquez / Comunicación Social, Instituto Nacional de Ciencias Forenses de Guatemala -INACIF-.</p>
+    </div>
+
+    <!-- Imagen de encabezado -->
+    <figure class="hero">
+      <!-- 🔁 Cambia la ruta a tu imagen local -->
+      <img src="file:///C:/Users/fdeleon/Documents/Manuscritos%2003-%202025/revista%20html/fotos/piratas.png" alt="Piratas de la muerte">
+    </figure>
+
+    <!-- Bajada mostaza -->
+    <div class="dek">
+      Uno de los casos judiciales mediáticos involucra a una estructura criminal en el
+      asesinato “sin violencia”, de 23 jóvenes con una característica común: fallecieron
+      después de abordar, en estado de ebriedad, un servicio de transporte.
+    </div>
+
+    <!-- Dos columnas -->
+    <div class="columns">
+      <!-- Columna izquierda -->
+      <div class="col">
+        <p>En abril de este año, el Ministerio Público -MP- sentó en el
+        banquillo a una estructura criminal implicada en una
+        veintena de muertes. Para llevar frente a la justicia a los
+        presuntos responsables fueron clave los dictámenes del
+        Instituto Nacional de Ciencias Forenses de Guatemala
+        -INACIF-, pues aportaron evidencias que permitieron
+        armar un auténtico rompecabezas.</p>
+
+        <p>Las pesquisas de los fiscales lograron determinar el
+        modus operandi, las tácticas y la identidad de los
+        miembros de la red de maleantes identificada como Los
+        piratas de la muerte, a quienes se endilga 23 agresiones
+        mortales, las cuales comenzaban en un centro de
+        conveniencia y terminaban con el asesinato de la víctima.</p>
+
+        <p>Los taxis que operan sin licencia ni autorización
+        municipal, en Guatemala son conocidos como piratas. Y
+        esos son los que servían para el movimiento de la banda.
+        Como parte de la investigación se estableció que el grupo
+        delincuencial contaba con dispositivos POS -Punto de
+        venta, por sus siglas en inglés-. De esa forma realizaron
+        transacciones fraudulentas con las tarjetas de débito o
+        crédito de las víctimas, de las que se apoderaban de entre
+        10 mil y 40 mil quetzales, entre US $1,300 y US $5,200.</p>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="col">
+        <h3><strong>Muerte sobre ruedas y entre bebidas</strong></h3>
+        <p>Para perpetrar sus fechorías, los delincuentes ubicaban a
+        jóvenes que ingerían alcohol en puntos cercanos a
+        gasolineras u otros similares, lo fundamental es que el
+        seleccionado estuviera en estado de ebriedad. El cuadro
+        completo se componía de un día, entre jueves y sábado
+        en fin de quincena o mes; una hora, a partir de las 8:00 de
+        la noche. Asuetos y feriados también eran de la
+        preferencia de los malhechores.</p>
+
+        <p>Después de escoger a la víctima, aparecía uno de los
+        maleantes para, entre múltiples amabilidades, ofrecer el
+        servicio de taxi. Ya en ruta, el piloto se ganaba la confianza
+        del pasajero: complacía con música al gusto y “bebidas de
+        cortesía”, que en su momento el Laboratorio de
+        Fisicoquímica del INACIF determinó que contenían
+        sustancias tóxicas para dejar inconsciente al cliente.
+        Beber lo suministrado favorecía el despojo de
+        pertenencias.</p>
+
+        <p>Y es que pocos minutos después de consumir la bebida,
+        el afectado sufría somnolencia y quedaba inconsciente.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>DESDE ADENTRO</span>
+      <span>4</span>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 2 (ejemplo/placeholder) =================== -->
+  <section class="page">
+    <div class="ribbon"><span>DESDE ADENTRO</span></div>
+    <div class="header">
+      <h1 class="title-18">PÁGINA 2</h1>
+      <h2 class="title-16">Subtítulo o continuación</h2>
+      <p class="byline-13">Continúa aquí el contenido de la nota…</p>
+    </div>
+    <div style="padding:0 32px 32px 64px; color:#64748b;">
+      <p style="font-size:12pt; text-align:justify;">
+        (Coloca aquí el contenido de la segunda página. Este bloque existe para que el archivo ya
+        tenga dos “páginas”. Al imprimir o exportar a PDF se separarán gracias al CSS).
+      </p>
+    </div>
+    <div class="footer">
+      <span>DESDE ADENTRO</span>
+      <span>2</span>
+    </div>
+  </section>
+
+</body>
+</html>
