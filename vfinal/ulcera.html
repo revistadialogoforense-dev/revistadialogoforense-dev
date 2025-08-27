@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Úlcera de Marjolin — Maqueta HTML (págs. 37–41)</title>
+  <style>
+    :root{
+      --naranja:#f97316;
+      --gris-osc:#111827;
+      --gris-lig:#f8fafc;
+      --gris-borde:#e5e7eb;
+      --line:#d1d5db;
+    }
+    html,body{margin:0;background:#e5e7eb;color:var(--gris-osc);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+    .sheet{width:900px;margin:24px auto;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.06);}
+    .page{position:relative;min-height:1273px;padding:96px 64px 88px;box-sizing:border-box}
+    .header{position:absolute;top:24px;left:32px;right:32px;font-size:10px;color:#374151}
+    .hr{height:1px;background:var(--line);margin:16px 0}
+    .h18{font-size:18px;line-height:1.25}
+    .h12{font-size:12px}
+    .h10{font-size:10px}
+    .lead12{font-size:12px;line-height:1.7;text-align:justify}
+    .lead12 p{margin:0 0 12px}
+    .bold{font-weight:800}
+    .naranja{color:var(--naranja)}
+    .grid-1-1{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+    .grid-2-1{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+    .side-card{background:#f3f4f6;border:1px solid var(--gris-borde);padding:10px 12px}
+    .side-card .stripe{height:8px;background:var(--naranja);margin:-10px -12px 10px}
+    .side-card .small{font-size:10px;line-height:1.5}
+    .footer{position:absolute;bottom:0;left:0;right:0;height:70px;}
+    .footer .bar{position:absolute;left:0;right:0;bottom:0;height:1px;background:#e5e7eb}
+    .footer .brand{position:absolute;left:64px;bottom:18px;font-weight:800;letter-spacing:.04em}
+    .footer .pg{position:absolute;right:64px;bottom:8px;display:inline-flex;align-items:center}
+    .footer .tab{background:var(--naranja);color:#fff;font-weight:800;padding:10px 12px;border-radius:8px 8px 0 0;}
+    .img{width:100%;height:auto;display:block;border:1px solid var(--gris-borde)}
+    .caption{font-size:10px;color:#6b7280;margin-top:6px}
+    .band{display:flex;flex-direction:column;justify-content:center;margin-bottom:18px}
+    .title18{font-size:18px;font-weight:800;text-align:justify}
+    .kw{font-size:12px;margin-top:8px}
+    .kw b{font-weight:700}
+    .hang p{margin:0 0 10px;text-align:justify;padding-left:20px;text-indent:-20px}
+
+    @media print{
+      body{background:#fff}
+      .sheet{width:auto;margin:0;box-shadow:none}
+      .page{min-height:auto;height:277mm;padding:25mm 18mm 18mm}
+      .footer .tab{border-radius:6px 6px 0 0}
+    }
+  </style>
+</head>
+<body>
+<main class="sheet">
+
+  <!-- PÁGINA 37 -->
+  <section class="page" data-page="37">
+    <div class="header h10">Erik Gonzalez y Mario Pérez / Revista Cientí­ca Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+
+    <!-- 1/3 superior: imagen encabezado -->
+    <div class="band" style="min-height:320px">
+      <img class="img" alt="Imagen encabezado" src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/637b2d2d8b8bafa22da353f9e90b40ecb6f639e1/fotos/corte.PNG" />
+    </div>
+
+    <!-- 1/3 medio: título/keywords + card -->
+    <div class="band" style="min-height:320px">
+      <div class="grid-2-1">
+        <div>
+          <div class="title18 bold">ÚLCERA DE MARJOLIN DE TIPO HISTOLÓGICO: CARCINOMA EPIDERMOIDE Y RECONSTRUCCIÓN FACIAL POR COLGAJO CÉRVICO-FACIAL DE MUSTARDÉ</div>
+          <div class="kw">
+            <b>Palabras clave:</b> úlcera cutánea, carcinoma epidermoide, colgajo, lesión, tipo histológico. 
+            <b>Keywords:</b> skin ulcer, epidermoid carcinoma, flap, injury, histological type
+          </div>
+        </div>
+        <aside class="side-card">
+          <div class="stripe"></div>
+          <div class="small"><b>Diálogo Forense Núm. 11 , Vol. 6, 2025</b><br/>ISSN: 2789-8458</div>
+          <div class="hr" style="margin:10px 0"></div>
+          <div class="small">
+            <b>Erik Josuelí Gonzalez Mux</b><br/>
+            Área de Cirugía, Hospital Sanatorio Casa de la Salud<br/>
+            Santiago Sacatepéquez, Guatemala<br/>
+            josuelee.gm@gmail.com
+            <br/><br/>
+            <b>Mario Gustavo Pérez Rivas</b><br/>
+            Área de Cirugía, Hospital Sanatorio Casa de la Salud<br/>
+            Santiago Sacatepéquez, Guatemala<br/>
+            gustavoperez@dr.com
+            <br/><br/>
+            Recibido: 18/02/2025<br/>
+            Aceptado: 23/05/2025
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- 1/3 inferior: Resumen/Abstract -->
+    <div class="band" style="min-height:320px">
+      <div class="grid-1-1">
+        <div>
+          <div class="h18 bold naranja">RESUMEN</div>
+          <div class="lead12">
+            <p>La úlcera de Marjolin es un hallazgo histopatológico poco frecuente que corresponde a un carcinoma epidermoide con mayores tasas de mortalidad y de metástasis. Este carcinoma tiene una incidencia de 3:1 con predominio en el hombre sobre la mujer. Su etiología subyace en una quemadura o lesión cicatrizal crónica. El tratamiento de elección para esta patología es la extirpación quirúrgica con posterior reconstrucción empleando colgajos cutáneos. Se presenta el caso de un paciente de 70 años con una lesión crónica ulcerada en la región cigomática izquierda al que se le realizó un colgajo cérvico-facial de Mustardé para la reconstrucción facial.</p>
+          </div>
+        </div>
+        <div>
+          <div class="h18 bold naranja">ABSTRACT</div>
+          <div class="lead12">
+            <p>Marjolin's ulcer is a rare histopathological finding that corresponds to squamous cell carcinoma with higher mortality and metastasis rates. This carcinoma shows a 3:1 male to female incidence ratio. Its etiology stems from burns or chronic scar lesions. The treatment of choice for this condition is surgical excision followed by reconstruction using skin flaps. We present the case of a 70-year-old patient with a chronic ulcerated lesion in the left zygomatic region who underwent facial reconstruction with a Mustardé cervico-facial flap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="brand">CON FUNDAMENTO</div>
+      <div class="pg"><span class="tab">37</span></div>
+    </div>
+  </section>
+
+  <!-- PÁGINA 38 -->
+  <section class="page" data-page="38">
+    <div class="header h10">Erik Gonzalez y Mario Pérez / Revista Cientí­ca Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2024/</div>
+
+    <div class="grid-1-1">
+      <div class="lead12">
+        <p>La úlcera de Marjolin es un tumor maligno cutáneo, usualmente raro y agresivo. Un 90 % de estos tumores corresponden histopatológicamente con carcinoma epidermoide o de células escamosas (Segura-Marín et al., 2022). La manifestación clínica en su mayoría es ulcerada y friable que resulta de un cambio agresivo y maligno de lesiones ulcerativas crónicas y cicatrizaciones. Esta lesión se ha evidenciado en tejidos que sufren traumatismos crónicos como quemaduras, según García-Morales et al. (2006) un 2 % de las cicatrices secundarias a quemaduras sufren malignización. El diagnóstico se basa en características morfológicas, de topografía y antecedentes de cada caso, y con la confirmación de una biopsia incisional en aquellas úlceras cutáneas persistentes a más de un trimestre. Al realizar la biopsia se recomienda tomar dos segmentos en lesiones con un área &lt; 2.5 cm, cuatro en lesiones de 2.5-5 cm y hasta seis en tamaños &gt; 5 cm (Hernández et al., 2014). García-Morales et al. (2006) afirma “aunque el término úlcera de Marjolin se relacionaba con neoplasis de cicatrices de quemaduras, actualmente engloba cualquier proceso maligno que surja a partir de un tejido cicatricial” (p. 529), por lo que es importante aclarar que otras lesiones crónicas pueden causar esta manifestación. González y Martínez (2023) indican que “el tratamiento estándar consiste en la resección quirúrgica, con márgenes amplios, dependiendo del tamaño del tumor, la</p>
+      </div>
+      <div class="lead12">
+        <p>localización y el grado de invasión. La versatilidad del colgajo cérvico-facial de Mustardé permite ser utilizado para reparar los defectos anatómicos amplios y así cubrir los defectos” (p. 125). Según Rhodes et al. (2019) esta técnica consiste en realizar un colgajo grande y rotacional, diseñado inicialmente para reparar los párpados inferiores, las mejillas e incluso el ala nasal cuando se encuentra en el sector a reconstruir. Malagón et al. (2013) destaca la versatilidad de este colgajo para la reconstrucción de defectos en la mejilla. Para el caso en cuestión fue importante reducir la tracción del pabellón auricular, así como reducir al máximo la desviación del epicanto externo del ojo izquierdo. Por lo tanto, la descripción del colgajo cérvico-facial en el cierre de defectos en la región cigomática de tamaño moderado a grande, se logra tras la reconstrucción simétrica centrada en la uniformidad del color y la textura de la piel; lo que llevará a la reducción de una cicatrización iatrogénica que implique potencialmente, una segunda intervención. Este reporte de caso permite destacar la aplicación adaptativa del colgajo de Mustardé en un escenario clínico específico. Se realizó una revisión de literatura para contextualizar la utilidad en úlceras de Marjolin. Al ser un aporte técnico basado en evidencia existente, no pretende ser un estudio comparativo.</p>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="h18 bold" style="color:var(--naranja);margin-bottom:8px">PRESENTACIÓN DEL CASO</div>
+    <div class="grid-1-1">
+      <div class="lead12">
+        <p>Paciente masculino de 70 años de edad, antecedentes de quemadura en región cigomática izquierda a los 12 años. Inició hace un año con lesión nodular en la región descrita; dicha lesión fue aumentando de tamaño de 0.5 cm a 2 cm en 6 meses, posteriormente se asocia con prurito, descamación y secreción serosanguinolenta no fétida. En el transcurso del año desarrolla una lesión ulcerada de mayor tamaño, con dimensiones de 4 cm x 4 cm asociado a dolor terebrante (figura 1).</p>
+      </div>
+      <div>
+        <img class="img" alt="Boceto anatómico 1" src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/9d4a876e9791fb989a899eeb3c727fff35613895/fotos/ulcera1.PNG" />
+        <div class="caption">Figura 1. Boceto anatómico esquemático de la región afectada (región cigomática izquierda), representada por una sombra punteada en la figura.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="brand">CON FUNDAMENTO</div>
+      <div class="pg"><span class="tab">38</span></div>
+    </div>
+  </section>
+
+  <!-- PÁGINA 39 -->
+  <section class="page" data-page="39">
+    <div class="header h10">Erik Gonzalez y Mario Pérez / Revista Cientí­ca Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2024/</div>
+
+    <div class="grid-1-1">
+      <div class="lead12">
+        <p>En sala de operaciones se realiza una resección con bordes amplios y se reconstruye el defecto con colgajo cérvico-facial de Mustardé, como lo muestra el bosquejo anatómico esquemático (figura 2) en donde se representa la cicatriz resultante, por una línea punteada. El paciente evoluciona de manera satisfactoria y el resultado tras la cicatrización es completo, con una pequeña costra no complicada.</p>
+      </div>
+      <div>
+        <img class="img" alt="Boceto anatómico 2" src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/32dfb4ee6e35328477f033c114e50cf01961dc22/fotos/ulcera2.PNG" />
+        <div class="caption">Figura 2. Boceto anatómico esquemático de la resección realizada, representada por una línea punteada.</div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="h18 bold naranja">DISCUSIÓN</div>
+    <div class="grid-1-1" style="margin-top:8px">
+      <div class="lead12">
+        <p>García-Morales et al. (2006) afirma que “La ulceración de Marjolin actualmente engloba cualquier proceso neoproliferativo maligno que surja a partir de un tejido cicatricial; se ha calculado que en un porcentaje de casos del 0.7 % al 2 % se originan secundariamente a lesiones ocasionadas por quemaduras” (p. 529). Los grupos etarios más afectados comprenden las edades de 40 a 60 años (García-Morales et al., 2006). De acuerdo a Marietta y Crane (2023) las cicatrices de quemaduras tienden a elevarse por encima de la piel natural, lo que provoca irritación crónica; la reepitelización repetida y el daño local a los mecanismos inmunitarios de la piel, genera una gran disminución de la reducción en la actividad de las células de Langerhans, esto provoca la falta de detección inmunitaria temprana. Cabe resaltar que ciertos factores como la carga genética heredada y las sustancias tóxicas liberadas por el daño celular local pueden influir en la formación de estas cicatrices. Asimismo, la obstrucción de los vasos linfáticos y una circulación sanguínea deficiente pueden comprometer la respuesta inmune en la zona afectada, pudiendo favorecer la transformación maligna (Segura-Marín et al., 2022). García-Morales et al. (2006) menciona que el periodo desde el inicio hacia la degeneración o bien el desarrollo</p>
+      </div>
+      <div class="lead12">
+        <p>de la malignización es en promedio de 5 a 35 años, siendo más frecuente en hombres, cuya relación hombre-mujer es de 3:1, nivel socioeconómico bajo y en países subdesarrollados. Cepeda et al. (2022) mencionan que la resección quirúrgica extensa es la elección del tratamiento, por lo cual la reconstrucción con base a uso de colgajos es la técnica más empleada en defectos extensos o por cánceres de piel, con excelentes resultados que resuelven tanto la funcionalidad y principalmente la estética. Las modificaciones específicas del colgajo son esenciales con el objetivo de evitar el ectropión como retracciones que modifiquen la estética facial del paciente. El rostro de una persona es crucial para su identidad y cometer lesiones permanentes de forma iatrogénica es evitable con dicha técnica. Mureau y Hofer (2009) describen a la técnica del colgajo cérvico-facial de Mustardé como un colgajo de avance y rotación que busca un eficiente suministro de perfusión cutánea, cuyo objetivo es la extensión del colgajo hasta el cuello para lograr la rotación hasta la región cigomática. Existen variantes; una de ellas, de base posterior que utiliza el exceso de piel de la región de la papada facilitando el cierre de defectos en la mejilla anterior, la cual es útil para defectos en la mejilla medial adyacente a los labios o la nariz.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="brand">CON FUNDAMENTO</div>
+      <div class="pg"><span class="tab">39</span></div>
+    </div>
+  </section>
+
+  <!-- PÁGINA 40 -->
+  <section class="page" data-page="40">
+    <div class="header h10">Erik Gonzalez y Mario Pérez / Revista Cientí­ca Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2024/</div>
+
+    <div class="grid-1-1">
+      <div class="lead12">
+        <p>La segunda técnica, de interés para este caso, de base anterior, es utilizada para abordar defectos posteriores. En esta última, se usa la piel de la mejilla, el cuello y la parte anterior del tórax, aprovechando la elasticidad combinada con la gran cantidad de área superficial (Mureau y Hofer, 2009). Los resultados cosméticos y la posibilidad de contar con una cantidad significativa de tejido influyen en la elección de este método de reparación, a pesar de las limitaciones de la técnica relacionadas a la integridad vascular. En este caso, se realizó la extensión del colgajo hasta el cuello para lograr la rotación hasta la región cigomática y cubrir el defecto. Luego de 2 semanas se observa la recuperación completa del paciente. Este resultado se debe a la integridad de la vascularidad y la laxitud de la piel. La longitud de la incisión que se extiende hacia la región del cuello (figura 2) fue determinada por el tamaño de la lesión y la laxitud cutánea del paciente, diseñando un pedículo amplio que no compromete el riego vascular del colgajo. Debido a restricciones éticas, no se incluyen imágenes clínicas del paciente, en su lugar, se incluyen bocetos anatómicos (figuras 1 y 2) que ilustran la técnica y los resultados esperados de la operación. El seguimiento de este procedimiento clínico a corto plazo demostró una completa cicatrización sin recidiva ni parálisis facial. El resultado de la biopsia concluye histológicamente que el tumor es un carcinoma epidermoide poco diferenciado, ulcerado e invasor con bordes quirúrgicos lateral y profundo que se encuentran libres de infiltración. Este resultado es coherente con Marietta y Crane (2023) quienes indican que el 80–90% de este tipo de ulceraciones tiene como hallazgo histológico el carcinoma epidermoide o espinocelular. En el presente caso, se aplicó una adaptación de la técnica clásica descrita por Mureau y Hofer (2009), usando la variante de base anterior, la cual es habitualmente indicada para defectos posteriores, para resolver un</p>
+      </div>
+      <div class="lead12">
+        <p>defecto cigomático amplio. Esta modificación demostró ser efectiva al aprovechar la laxitud cutánea del paciente y rediseñar el eje de rotación del colgajo, lo que permitió cubrir la zona resecada sin tensiones sobre el párpado inferior o el ángulo externo del ojo. Así, aunque el principio fundamental del colgajo de Mustardé se mantuvo, su aplicación en este contexto anatómico específico (región cigomática) representa una innovación práctica, ya que logró resultados estéticos y funcionales óptimos en un área donde tradicionalmente se priorizan otros abordajes. Este enfoque refuerza la idea de que las técnicas reconstructivas deben adaptarse a las características individuales del paciente y la localización del defecto, incluso cuando ello implique desviarse de las indicaciones clásicas. Como en toda patología con alta sospecha de malignidad o neoplásica, es importante tomar en cuenta los factores de riesgo como tabaquismo, tejido cicatricial de cirugías previas o radioterapia, y riesgos de compromiso vascular en la zona ya que tienen el potencial de disminuir el aporte sanguíneo a los nuevos colgajos (Patel et al., 2022), de igual forma se debe tomar en cuenta la cronicidad de la enfermedad, para lograr una intervención oportuna fundamentada en una semiología minuciosa. Esto implica que, al identificar una herida o cicatriz crónica debe de sospecharse una potencial úlcera de Marjolin; adicionalmente, es importante observar otros signos clínicos que orienten, como la formación de una úlcera con tejido de granulación exofítica, sangrado y linfadenopatía regional (Marietta y Crane, 2023). Tomar en cuenta lo anteriormente mencionado, permitirá que las intervenciones clínicas y quirúrgicas tengan resultados altamente satisfactorios con complicaciones mínimas y reversibles, así como prevenir las mismas. La técnica logró los objetivos de resección oncológica completa, reconstrucción estética y preservación funcional, respaldando su uso en contextos similares.</p>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="h18 bold naranja">REFERENCIAS</div>
+    <div class="lead12 hang" style="margin-top:8px">
+      <p>Cepeda, L., Salazar, A., Rodríguez, K. y Mendoza, M. (2022). Cirugía reconstructiva de cánceres de piel y tejidos blandos. Manejo y complicaciones. <i>RECIMUNDO</i>, 6(2), 582–591. https://doi.org/10.26820/recimundo/6.(2).abr.2022.582-591</p>
+      <p>García-Morales, I., Pérez-Gil, A. y Camacho, F. (2006). Úlcera de Marjolin: carcinoma sobre cicatriz por quemadura. <i>Actas Dermo-Sifiliográficas</i>, 97(8), 529–532.  https://www.actasdermo.org/es-ulcera-Marjolin-carcinoma-sobre-cicatriz-articulo-13093754</p>
+      <p>González, A. y Martínez, L. (2023). Colgajo cervicofacial tipo Mustardé: Revisión de la literatura y a propósito de un caso. <i>Revista Paraguaya de Cirugía</i>, 47(2), 123–130. https://cirugia.org.py/index.php/revista/article/view/160</p>
+      <p>Hernández, F. J., González, M. G., y Marín, F. A. D. (2014). Surgery and grafting in the treatment of Marjolin's ulcer: Case report. <i>Dermatología Cosmética, Médica y Quirúrgica</i>, 12, 114–117. https://www.researchgate.net/publication/285197434_Surgery_and_grafting_in_the_treatment_of_Marjolin's_ulcer_Case_report</p>
+      <p>Malagón, H., Moreno, K., Ponce, R., y Ubbelohde, T. (2013). Versatilidad del colgajo cérvico-facial para la reconstrucción de defectos en pacientes con cáncer de piel no melanoma de la mejilla o el párpado inferior (o ambos). <i>Dermatología</i>, 57(1), 3–9. https://dermatologiarevistamexicana.org.mx/article/versatilidad-del-colgajo-cervico-facial-para-la-reconstruccion-de-defectos-en-pacientes-con-cancer-de-piel-no-melanoma-de-la-mejilla-o-el-parpado-inferior-o-ambos/</p>
+      <p>Marietta, M., Crane, J.  (2023). <i>Marjolin Ulcer</i>. StatPearls Publishing. https://www.ncbi.nlm.nih.gov/books/NBK532861/</p>
+      <p>Mureau, M. y Hofer, S. (2009). Maximizing Results in Reconstruction of Cheek Defects. <i>Clinics in Plastic Surgery</i>, 36(3), 461–476. https://www.plasticsurgery.theclinics.com/article/S0094-1298(09)00005-4/abstract</p>
+      <p>Patel, S., Buttars, B., Roy, D. (2022). Colgajo de Mustardé para defecto primario de la pared nasal posterior a cirugía micrográfica de Mohs. <i>JAAD Case Reports</i>, 23, 151–154. https://doi.org/10.1016/j.jdcr.2022.03.014</p>
+      <p>Rhodes, R., Moreau, A., Romano, E. y Cannon, T. (2019). The cervicofacial flap. <i>Operative Techniques in Otolaryngology</i>, 30(2), 145–150. https://www.optecoto.com/article/S1043-1810(19)30034-X/fulltext</p>
+      <p>Segura-Marín, H., Segura Feria, H., López, O., Frutos-Colín, D., Rojas, P. y Pérez, V. (2022). Úlcera de Marjolin, escenario final en la evolución de una úlcera venosa crónica. <i>Revista mexicana de angiología</i>, 50(4), 150–154. https://doi.org/10.24875/rma.22000029</p>
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="brand">CON FUNDAMENTO</div>
+      <div class="pg"><span class="tab">40</span></div>
+    </div>
+  </section>
+
+  <!-- PÁGINA 41 -->
+  <section class="page" data-page="41">
+    <div class="header h10">Erik Gonzalez y Mario Pérez / Revista Cientí­ca Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2024/</div>
+
+    <div class="lead12" style="min-height:940px">
+      <!-- Espacio disponible por si deseas agregar notas finales, agradecimientos o dejar en blanco -->
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="brand">CON FUNDAMENTO</div>
+      <div class="pg"><span class="tab">41</span></div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

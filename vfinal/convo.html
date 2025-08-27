@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Con Fundamento — Páginas 53 a 60</title>
+<style>
+  :root{
+    --celeste:#38bdf8;     /* pestaña */
+    --borde:#e5e7eb;
+    --fondo:#f3f4f6;
+  }
+  html,body{
+    margin:0; background:var(--fondo);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:#0f172a;
+  }
+  .page{
+    width:900px; height:1260px;  /* hoja vertical aprox A4 @ ~96dpi */
+    margin:24px auto; background:#fff; border-radius:12px; overflow:hidden;
+    box-shadow:0 10px 28px rgba(0,0,0,.08); position:relative;
+    display:flex; flex-direction:column;
+  }
+  .fill{
+    flex:1; position:relative; background:#000;
+  }
+  .fill img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .footer{
+    height:48px; border-top:1px solid var(--borde);
+    background:#fafafa; display:flex; align-items:center; justify-content:flex-end; padding:0 14px;
+  }
+  .badge{
+    background:var(--celeste); color:#fff; font-weight:800; padding:6px 14px; border-radius:999px;
+    min-width:44px; text-align:center;
+  }
+  /* Página en blanco (solo estructura) */
+  .blank{
+    flex:1; background:#fff;
+  }
+
+  /* Impresión / salto entre páginas */
+  @media print{
+    .page{ width:auto; height:auto; border-radius:0; box-shadow:none; margin:0; page-break-inside:avoid; }
+    .page + .page{ page-break-before:always; }
+  }
+
+  /* Responsive */
+  @media (max-width:940px){
+    .page{ width:100%; border-radius:0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Página 53 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/88bc6d59973e19e5f27fc7dfc06a721474834aa7/fotos/2.png" alt="Página 53">
+  </div>
+  <div class="footer"><span class="badge">53</span></div>
+</section>
+
+<!-- ===== Página 54 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/88bc6d59973e19e5f27fc7dfc06a721474834aa7/fotos/3.png" alt="Página 54">
+  </div>
+  <div class="footer"><span class="badge">54</span></div>
+</section>
+
+<!-- ===== Página 55 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/88bc6d59973e19e5f27fc7dfc06a721474834aa7/fotos/4.png" alt="Página 55">
+  </div>
+  <div class="footer"><span class="badge">55</span></div>
+</section>
+
+<!-- ===== Página 56 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/88bc6d59973e19e5f27fc7dfc06a721474834aa7/fotos/5.png" alt="Página 56">
+  </div>
+  <div class="footer"><span class="badge">56</span></div>
+</section>
+
+<!-- ===== Página 57 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/4c2757e4f2fdb616906c389c9feedc3b6a59a474/fotos/Mesa%20de%20trabajo%2023%20copia%202%403x.png" alt="Página 57">
+  </div>
+  <div class="footer"><span class="badge">57</span></div>
+</section>
+
+<!-- ===== Página 58 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/88bc6d59973e19e5f27fc7dfc06a721474834aa7/fotos/6.png" alt="Página 58">
+  </div>
+  <div class="footer"><span class="badge">58</span></div>
+</section>
+
+<!-- ===== Página 59 (en blanco) ===== -->
+<section class="page">
+  <div class="blank"></div>
+  <div class="footer"><span class="badge">59</span></div>
+</section>
+
+<!-- ===== Página 60 ===== -->
+<section class="page">
+  <div class="fill">
+    <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/4c2757e4f2fdb616906c389c9feedc3b6a59a474/fotos/Mesa%20de%20trabajo%2040%403x.png" alt="Página 60">
+  </div>
+  <div class="footer"><span class="badge">60</span></div>
+</section>
+
+</body>
+</html>

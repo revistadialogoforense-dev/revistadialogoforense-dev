@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CON FUNDAMENTO — Maqueta 6 páginas</title>
+  <style>
+    :root{
+      --morado:#5b2dab; /* morado institucional */
+      --morado-osc:#441f86;
+      --morado-suave:#efe9fb;
+      --gris:#6b7280;
+      --gris-osc:#111827;
+      --gris-lig:#f3f4f6;
+      --gris-borde:#e5e7eb;
+      --negro:#0b0b0b;
+      --blanco:#ffffff;
+    }
+
+    /* Reseteo básico */
+    *{box-sizing:border-box}
+    html,body{margin:0; background:#e5e7eb; color:var(--gris-osc); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif;}
+
+    /* Simulación de página para pantalla e impresión */
+    .page{ width: 900px; min-height: 1240px; margin: 24px auto; background: #fff; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,.08); padding: 96px 80px 96px 80px; }
+    @media print{
+      body{ background:#fff }
+      .page{ width: 210mm; min-height: 297mm; margin:0; box-shadow:none; page-break-after: always; padding: 28mm 22mm 28mm 22mm; }
+    }
+
+    /* Encabezado y pie fijos dentro de cada página */
+    .header{ position: absolute; top: 24px; left: 80px; right: 80px; font-size: 10pt; color: var(--gris); display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .header .sep{ color: var(--gris); opacity:.45 }
+
+    .footer{ position: absolute; bottom: 24px; left: 80px; right: 80px; display: flex; align-items: center; justify-content: flex-end; gap: 10px; font-size: 10pt; color: var(--gris-osc); }
+    .footer .folio{ background: var(--morado); color: #fff; padding: 6px 12px; border-radius: 16px; font-weight: 700; min-width: 44px; text-align:center; }
+    .footer .legend{ color: var(--gris-osc); font-weight: 600; }
+
+    /* Pestaña lateral (sólo P1) */
+    .side-tab{ position:absolute; top:0; right:0; width: 56px; height: 33%; background: var(--morado); display:flex; align-items:center; justify-content:center; }
+    .side-tab span{ transform: rotate(90deg); color:#fff; letter-spacing:.08em; font-weight:800; }
+
+    /* Utilidades tipográficas */
+    .fs10{ font-size:10pt }
+    .fs12{ font-size:12pt }
+    .fs18{ font-size:18pt }
+    .bold{ font-weight:700 }
+    .semibold{ font-weight:600 }
+    .up{ text-transform:uppercase }
+    .purple{ color: var(--morado) }
+    .justify{ text-align:justify }
+
+    /* Bloques y separadores */
+    .sp-4{ height: 16px }
+    .sp-6{ height: 24px }
+    .sp-8{ height: 32px }
+    .rule{ height:1px; background: var(--gris-borde); margin: 16px 0 8px }
+
+    /* Columnas */
+    .cols{ display:grid; gap: 24px; }
+    .cols-2{ grid-template-columns: 1fr 1fr; }
+    .cols-2-1{ grid-template-columns: 2fr 1fr; }
+    .cols-2-1 .left{ }
+    .cols-2-1 .right{ }
+
+    /* Caja gris con cabecera morada (ficha autora) */
+    .card{ background: var(--gris-lig); border:1px solid var(--gris-borde); border-radius:12px; overflow:hidden }
+    .card .card-head{ background: var(--morado); color:#fff; font-weight:800; padding:10px 14px }
+    .card .card-body{ padding:14px 14px 16px; color: var(--gris-osc); }
+
+    /* Título principal */
+    .title{ font-size:18pt; font-weight:800; text-align:justify }
+
+    /* Banda seccional morada */
+    .band{ background: var(--morado); color:#fff; padding:10px 14px; border-radius:10px; font-weight:800 }
+
+    /* Imagen portada */
+    .hero{ width: 100%; height: auto; border-radius: 10px; border:1px solid var(--gris-borde) }
+
+    /* Listas limpias */
+    ul.clean{ margin:0; padding-left: 18px }
+
+    /* Fuerza salto de página */
+    .page-break{ page-break-before: always }
+  </style>
+</head>
+<body>
+
+  <!-- =================== PÁGINA 1 =================== -->
+  <section class="page">
+    <div class="header fs10">
+      <div>Aura Pérez <span class="sep">/</span> Revista Científica Diálogo Forense <span class="sep">/</span> Núm. 11, Vol. 6 <span class="sep">/</span> enero–junio 2025</div>
+    </div>
+
+    <div class="side-tab"><span>CON FUNDAMENTO</span></div>
+
+    <img class="hero" alt="Imagen de portada" src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/612fa6173a59932535c58d76a64d4f66160b2ef3/fotos/inter.PNG" />
+
+    <div class="sp-6"></div>
+
+    <!-- Dos columnas: izquierda 2/3 (título + palabras clave), derecha 1/3 (ficha) -->
+    <div class="cols cols-2-1">
+      <div class="left">
+        <div class="title bold justify">LA INTERSECCIONALIDAD Y LA IMPORTANCIA DE APLICARLA EN DELITOS DE VIOLENCIA CONTRA LA MUJER</div>
+        <div class="sp-4"></div>
+        <div class="fs10 justify"><span class="semibold">Palabras clave:</span> interseccionalidad, violencia contra la mujer, derechos humanos, prevención en los delitos de violencia contra la mujer, discriminación. <span class="semibold">Keywords:</span> intersectionality, violence against women, human rights, prevention of gender crimes, discrimination.</div>
+      </div>
+      <div class="right">
+        <div class="card">
+          <div class="card-head fs12">Diálogo Forense Núm. 11, Vol. 6, 2025 · ISSN: 2789-8458</div>
+          <div class="card-body fs12">
+            <div><span class="bold">Aura Engracia Pérez Navarro</span></div>
+            <div>Jueza Presidenta del Tribunal de Sentencia Penal del departamento de Sacatepéquez</div>
+            <div>Sacatepéquez, Guatemala</div>
+            <div><a href="mailto:aurae1251@yahoo.com">aurae1251@yahoo.com</a></div>
+            <div class="sp-4"></div>
+            <div>Recibido: 29/07/2024</div>
+            <div>Aceptado: 30/04/2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp-6"></div>
+
+    <!-- Dos columnas: Resumen / Abstract (mismo tamaño) -->
+    <div class="cols cols-2">
+      <div>
+        <div class="fs18 bold purple">RESUMEN</div>
+        <div class="sp-4"></div>
+        <div class="fs12 justify">La violencia contra la mujer, es un fenómeno social global que afecta a las mujeres en todo el mundo, como resultado de las desigualdades históricas entre hombres y mujeres en todos los ámbitos sociales. Esta opresión, arraigada durante siglos por el simple hecho de nacer mujer, exige el uso de mecanismos integrales que permitan prevenir, abordar y eliminar este tipo de violencia. Para erradicarla, es indispensable que se afronte desde todas las aristas que la afectan. Esto se logrará a través de la aplicación de la herramienta de la interseccionalidad, que permitirá una mejor solución a este problema, que ahora es objeto de análisis en el presente ensayo.</div>
+      </div>
+      <div>
+        <div class="fs18 bold purple">ABSTRACT</div>
+        <div class="sp-4"></div>
+        <div class="fs12 justify">Violence against women is a social phenomenon aecting women worldwide, stemming from historical inequalities between men and women across all social spheres. This oppression, entrenched for centuries simply due to being born female, demands comprehensive mechanisms to prevent, address, and eliminate such violence. To eradicate it, the problem must be confronted from all perspectives that contribute to it. This can be achieved through application of the intersectionality framework, which will enable more eective solutions to this issue, the central focus of analysis in the present essay.</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="folio">42</div>
+      <div class="legend">CON FUNDAMENTO</div>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 2 =================== -->
+  <section class="page page-break">
+    <div class="header fs10">
+      <div>Aura Pérez <span class="sep">/</span> Revista Científica Diálogo Forense <span class="sep">/</span> Núm. 11, Vol. 6 <span class="sep">/</span> enero–junio 2025</div>
+    </div>
+
+    <div class="fs18 bold purple">INTRODUCCIÓN</div>
+    <div class="sp-4"></div>
+    <div class="fs12 justify">Este ensayo analiza la violencia contra la mujer desde su origen y evolución hasta sus manifestaciones contemporáneas. Se revisa también lo concerniente a la discriminación como una de las principales causas de la violencia de género. Estudiando la relación que existe entre derechos humanos, delitos de violencia contra la mujer y la violación de los derechos de las mujeres. Finalmente, se aborda el tema de interseccionalidad, lo que se entiende como tal y los beneficios que aporta su aplicación en la prevención y solución de los delitos de violencia contra la mujer, que han afectado a este grupo social a través de los siglos, y que debe estudiarse a través de los diversos aspectos que la confrontan. La interseccionalidad toma en cuenta aspectos como: el género, grupo racial, grado de escolaridad, situación civil, situación cultural, grupo social y el idioma, entre otros. Este enfoque sostiene que dichos factores, al interactuar, generan formas complejas de discriminación de la cual han sido objeto las mujeres a través del tiempo. La figura de la interseccionalidad será un instrumento de gran utilidad que ayudará a dar respuesta y solución a este problema social que afecta a las mujeres del mundo.</div>
+
+    <div class="sp-6"></div>
+    <div class="rule"></div>
+
+    <div class="fs18 bold purple">CONTENIDO</div>
+    <div class="sp-4"></div>
+
+    <div class="cols cols-2 fs12">
+      <div class="justify">
+        Es necesario tener conocimiento claro y preciso de lo que se entiende por violencia de género y la evolución de la cual ha sido objeto a través del tiempo, ya que esto constituye la base fundamental del presente análisis. Respecto a este tema, Jaramillo y Canaval (2020) afirman que “…realizar un análisis de los cambios que ha sufrido el concepto violencia de género, a través del tiempo, permitirá tener un mejor entendimiento y aplicación en otros campos del conocimiento, esto debido a que este término es utilizado de forma indistinta con el de violencia contra la mujer” (p. 179). La violencia contra la mujer constituye toda forma de discriminación que se realice en contra de las mujeres, por el simple hecho de ser mujeres, lo que les ocasiona daños físicos y mentales. Esta discriminación ha persistido a lo largo de la historia en todos los países, derivado de los privilegios otorgados a los hombres, por haber nacido como tales, que se traduce en un trato. Dicha desigualdad se manifiesta en ámbitos como el social, laboral y económico, donde las mujeres desde el nacimiento, hasta la muerte, encuentran todo tipo de obstáculos y prohibiciones por el hecho de ser mujer. Esto les veda la posibilidad de poder disfrutar en igualdad de condiciones todos los derechos que les asisten como seres humanos, y propicia una violación a la dignidad personal, sin permitir un desarrollo integral. Poggi (2019) afirma que desde la década de 1960, los movimientos feministas han adoptado y difundido el
+      </div>
+      <div class="justify">
+        término "género" para diferenciarlo del concepto de "sexo". Mientras que "sexo" se refiere a características biológicas como los cromosomas, los órganos sexuales o las hormonas, el "género" alude a construcciones sociales, históricas y culturales sobre lo que significa ser hombre o mujer. Esta distinción busca separar lo biológico —percibido como natural y constante— de lo social, entendido como variable y cambiante. Además, esta diferenciación ha sido clave para explicar fenómenos como la transexualidad y para cuestionar visiones deterministas basadas exclusivamente en la biología. Entonces, para Poggi (2019) el término "género" hace referencia a una construcción social que se impone sobre los cuerpos según su sexo, y que conlleva una serie de ideas, expectativas, roles y actitudes atribuidos culturalmente a lo masculino o lo femenino. En resumen, el género puede entenderse como un conjunto de estereotipos vinculados a la apariencia sexual de las personas. El estereotipo suele entenderse como un conjunto de ideas preconcebidas, suposiciones y valoraciones que se asignan a las personas por formar parte de un determinado grupo social. Esto significa que, aunque hombres y mujeres nacen libres e iguales, la sociedad impone roles diferenciados, modificando y fijando la forma como las personas deben actuar y comportarse socialmente. Por lo que se le otorga al sexo masculino más privilegios que al sexo femenino, de ahí nace la discriminación hacia la mujer, estos comportamientos que se han venido observando, son
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="folio">43</div>
+      <div class="legend">CON FUNDAMENTO</div>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 3 =================== -->
+  <section class="page page-break">
+    <div class="header fs10">
+      <div>Aura Pérez <span class="sep">/</span> Revista Científica Diálogo Forense <span class="sep">/</span> Núm. 11, Vol. 6 <span class="sep">/</span> enero–junio 2025</div>
+    </div>
+
+    <div class="cols cols-2 fs12">
+      <div class="justify">
+        producto de la tradición y de la costumbre. Estas prácticas, arraigadas en tradiciones y costumbres, se transmiten generacionalmente, perpetuando el machismo y la violencia contra las mujeres, muchas veces inconscientemente. En respuesta a este problema, según Ispanel (2008), el Estado de Guatemala adoptó la Convención sobre la Eliminación de Todas las Formas de Discriminación Contra la Mujer-CEDAW, por sus siglas en inglés-, el dieciséis de mayo de dos mil ocho, la cual fue sancionada por el Presidente de la República de Guatemala el dos de mayo de dos mil de dos mil ocho, y publicada en el Diario Oficial, el siete de mayo de ese mismo año. La CEDAW establece en su primer artículo que el principio de igualdad y no discriminación es fundamental, y que todas las personas, independientemente de su sexo, deben gozar de los mismos derechos y libertades desde su nacimiento, con igual dignidad (CEDAW, 1979). Asimismo, en el párrafo duodécimo reconoce que la participación plena y equitativa de las mujeres en todos los ámbitos de la sociedad, en condiciones de igualdad con los hombres, es esencial no solo para el desarrollo integral de las naciones, sino también para el bienestar global y la consolidación de la paz (CEDAW, 1979). La CEDAW sostiene además, que alcanzar la igualdad real entre hombres y mujeres requiere transformar los roles tradicionales que ambos desempeñan tanto en la sociedad como en el ámbito familiar (CEDAW, 1979, párr. 16). Esto como parte de la evolución que se dio a partir de los años setenta, cuando este fenómeno fue conocido como violencia contra la mujer por la Organización Mundial de la Salud y las Naciones Unidas en el marco de los Derechos Humanos, así como en documentos como la Convención de Belém do Pará, en donde se establecieron directrices para las legislaciones de las diferentes naciones (Organización de los Estados Americanos –OEA–, 1994). Guatemala no fue la excepción, definiendo la Violencia contra la mujer en el artículo 3 del Decreto 22-2008, Ley contra el Femicidio y otras Formas de Violencia contra la Mujer (2008) como
+      </div>
+      <div class="justify">
+        …Toda acción u omisión basada en la pertenencia al sexo femenino que tenga como resultado el daño inmediato o ulterior, sufrimiento físico, sexual, económico o psicológico para la mujer, así como las amenazas de tales actos, la coacción o privación arbitraria de la libertad, tanto si se produce en el ámbito público como en el ámbito privado.
+        <br/><br/>
+        Además, el artículo 7 del Decreto 22-2008, Ley contra el Femicidio y otras Formas de Violencia contra la Mujer establece:
+        <br/><br/>
+        “…comete el delito de Violencia contra la mujer quien, en el ámbito público o privado, ejerza violencia física, sexual o psicológica, valiéndose de las siguientes circunstancias: 
+        <br/><br/>
+        a. Haber pretendido, en forma reiterada o continua, infructuosamente, establecer o restablecer una relación de pareja o de intimidad con la víctima.<br/>
+        b. Mantener en la época en que perpetre el hecho, o haber mantenido con la víctima relaciones familiares, conyugales, de convivencia, de intimidad o noviazgo, amistad, compañerismo o relación laboral, educativa o religiosa.<br/>
+        c. Como resultado de ritos grupales usando o no armas de cualquier tipo. <br/>
+        d. En menosprecio de la del cuerpo de la víctima para satisfacción de instintos sexuales, o conteniendo actos de mutilación genital. <br/>
+        e. Por misoginia…” 
+        <br/><br/>
+        De aquí se establecen algunas de las modalidades de violencia contra la mujer: física, sexual y psicológica, y cómo pueden ser violentadas sólo por el hecho de haber nacido como mujeres.    
+        <br/><br/>
+        <span class="bold">Los Derechos Humanos y los delitos de Violencia Contra la Mujer</span>
+        <br/><br/>
+        Según Rico (1996), se debe analizar el tema de los derechos humanos y la violencia de género contra las mujeres desde un punto de vista que incluya cambios culturales. Dichas transformaciones exigen reconocer que estos problemas están ligados a estructuras de poder desiguales en la sociedad, lo que demanda cambios estructurales profundos.
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="folio">44</div>
+      <div class="legend">CON FUNDAMENTO</div>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 4 =================== -->
+  <section class="page page-break">
+    <div class="header fs10">
+      <div>Aura Pérez <span class="sep">/</span> Revista Científica Diálogo Forense <span class="sep">/</span> Núm. 11, Vol. 6 <span class="sep">/</span> enero–junio 2025</div>
+    </div>
+
+    <div class="cols cols-2 fs12">
+      <div class="justify">
+        Además, los avances hacia el respeto de los derechos de las mujeres deben integrar sus voces, perspectivas y experiencias como eje central de dichas transformaciones. Rico (1996) también afirma que las experiencias históricas y cotidianas deben ser tomadas en cuenta al reformular el contenido y significado de los derechos humanos, pues su definición y aplicación no pueden separarse de la realidad cotidiana. 
+        <br/><br/>
+        Debiéndose entender que la importancia de estudiar las figuras de los derechos humanos y de la violencia contra la mujer, es la de obtener cambios  sobre comportamientos sociales, que se relacionan con la forma desigual en que socialmente se tratan a las mujeres, y que violan sus derechos fundamentales y lograr de esta forma, que se reconozcan y respeten  esos derechos en igualdad de condiciones con el sexo masculino.
+        <br/><br/>
+        Según la Fundación Vives (2010), los derechos humanos se basan en las necesidades de las personas y grupos sociales con los que se relacionan históricamente, así como en sus aspiraciones individuales y colectivas de tener una vida digna. En otras palabras, estos derechos no derivan de un origen divino, de la razón abstracta, ni dependen exclusivamente del reconocimiento estatal o del derecho internacional. Por el contrario, emergen de la existencia material y social, asociándose a las condiciones reales que requieren los individuos, comunidades y pueblos para un desarrollo pleno en la vida cotidiana. Por lo tanto, los derechos humanos están indisolublemente ligados a los contextos específicos en los que viven las personas, buscando siempre garantizar la autonomía, libertad y bienestar. 
+        <br/><br/>
+        De lo anterior se infiere que estos derechos fundamentales de las personas, nacen con ellas y el disfrute de los mismos, no depende de la autorización de nadie y que por lo tanto, los Estados están obligados a velar que se cumpla con el libre  ejercicio de los mismos.  
+        <br/><br/>
+        La Fundación Vives  (2010) analiza lo concerniente a la proclamación en 1948, de la Declaración Universal de Derechos Humanos por la Asamblea General de la Organización de las Naciones Unidas -ONU-, a tres años de haber finalizado la Segunda Guerra Mundial. Este es un documento de cumplimiento moral para las naciones, en el cual se reconoce la igualdad de derechos de los seres humanos por el simple hecho de existir, derechos de todos los seres humanos por el simple hecho de existir, derechos que deben disfrutarse sin limitación alguna. Entre estos derechos se incluyen el derecho a la vida, a la libertad, a la integridad de las personas, a la educación, a la salud, entre otros. Este documento ha servido de base para el nacimiento de otros pactos y tratados, en los  que se reconocen y amplían estos derechos, así como también obligan a los diferentes Estados para que los cumplan (pp. 17-18).
+      </div>
+      <div class="justify">
+        Lo expuesto con anterioridad confirma que el disfrute de estos derechos son para todos los seres humanos en igualdad de condiciones, sin que dependa de autorización alguna para hacerlos efectivos. 
+        <br/><br/>
+        Según González (2018), los derechos humanos son un límite a la acción del Estado en relación con los individuos, garantizándoles un ámbito de libertad, sin injerencias de las autoridades, siempre en línea con su condición inherente como seres humanos. En otras palabras, los derechos humanos, impiden que las autoridades estatales intervengan fácilmente en la esfera personal de los ciudadanos, con el fin de que estos puedan ejercer libremente los derechos adquiridos desde el nacimiento,  evitando  así cualquier forma de arbitrariedad. 
+        <br/><br/>
+        De esto se deriva la importancia de analizar lo concerniente a los derechos humanos,  especialmente en relación con la violencia de género o violencia contra la mujer, análisis que permitirá realizar cambios culturales, sociales y políticos que disminuyan el trato desigual entre hombres y mujeres. Esto ayudará a que se cumpla con el respeto que se debe guardar hacia las mujeres, quienes deben recibir un trato igualitario al de los hombres. Por ello, es necesario profundizar en este tema, con el fin de que las mujeres puedan, en un futuro no lejano, superar la  desigualdad a la que han estado sometidas por siglos y vivir ejerciendo sus derechos libres de violencia.
+        <br/><br/>
+        <span class="bold">La interseccionalidad</span>
+        <br/><br/>
+        Según Cubillos (2015), el concepto de interseccionalidad “…fue acuñado por la jurista Kimberlée Crenshaw (1989:139), quien lo definió como la expresión de un sistema complejo de estructuras de opresión que son múltiples y simultáneas, con el fin de mostrar las  diversas formas en que la raza y el género interactúan para dar forma  a complejas discriminaciones negras en Estados Unidos” (p.122). 
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="folio">45</div>
+      <div class="legend">CON FUNDAMENTO</div>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 5 =================== -->
+  <section class="page page-break">
+    <div class="header fs10">
+      <div>Aura Pérez <span class="sep">/</span> Revista Científica Diálogo Forense <span class="sep">/</span> Núm. 11, Vol. 6 <span class="sep">/</span> enero–junio 2025</div>
+    </div>
+
+    <div class="cols cols-2 fs12">
+      <div class="justify">
+        La interseccionalidad puede abordarse desde dos dimensiones: una estructural y otra política, entendiéndose a la dimensión  estructural como la forma en que distintos sistemas de discriminación como el género, raza y clase social que se interrelacionan y generan efectos concretos en la vida de individuos y colectivos. Desde esta perspectiva, la autora examina cómo las mujeres afrodescendientes enfrentan desigualdades simultáneas derivadas de su raza, su género y su posición socioeconómica (Crenshaw, 1989 y 1991, como se citó en Cubillos, 2015). 
+        <br/><br/>
+        Esto permite establecer que la interseccionalidad es un concepto relativamente reciente, originado por las múltiples formas de discriminación que sufrían las mujeres de color en Estados Unidos de Norte América, por ser mujeres, de clase social baja y de raza negra. Esta situación no se limita a este país, ni a esta línea en la historia, se ha observado en diversas sociedades a lo largo del tiempo, en donde las mujeres han sido víctimas de discriminación debido a la desigualdad estructural frente a los hombres. 
+        <br/><br/>
+        De ahí la importancia de estudiar y aplicar la interseccionalidad como herramienta analítica, ya que permite un análisis profundo y completo de las múltiples  desigualdades que afectan a las mujeres en comparación con los hombres. Esto facilitará una mejor  toma de decisiones  a nivel institucional para abordar estos problemas, lo que eventualmente tiende a reducir las desigualdades y discriminaciones.
+      </div>
+      <div class="justify">
+        Al tener un panorama más amplio del problema, las soluciones serán más efectivas, esto se traduce en el pleno disfrute de los derechos fundamentales que, aunque inherentes a su condición humana, han sido históricamente restringidos por la sociedad. 
+        <br/><br/>
+        Expósito (2012) explica que:
+        <br/><br/>
+        …la interseccionalidad se refiere a la interacción simultánea de diferentes formas de discriminación, que al combinarse, crean experiencias específicas y particulares de desigualdad. En el ámbito académico, este enfoque es una herramienta analítica que permite examinar cómo las instituciones contribuyen a la reproducción de dichas desigualdades. Además, sostiene que la transversalidad y la interseccionalidad no son enfoques excluyentes, sino complementarios en la lucha por la igualdad de género. En particular, la interseccionalidad ayuda a entender con mayor profundidad las diversas situaciones que viven las mujeres, lo que puede traducirse en una acción política más eficaz (Expósito, 2012, p. 205).
+        <br/><br/>
+        Esta es la razón principal para utilizar el enfoque de la interseccionalidad en la solución de delitos contra las mujeres: al comprender las realidades diferenciadas entre mujeres y hombres en una misma sociedad, las medidas políticas deben ser ajustadas a la problemática real. Lo anterior permite soluciones acordes a las realidades que se viven, llevando a una disminución de las desigualdades y por lo tanto, a la erradicación de la discriminación. 
+      </div>
+    </div>
+
+    <div class="sp-8"></div>
+    <div class="band fs18">CONCLUSIONES</div>
+    <div class="sp-6"></div>
+
+    <div class="cols cols-2 fs12">
+      <div class="justify">
+        • La violencia contra la mujer es producto de todas las formas de discriminación, que  han venido sufriendo las mujeres, debido al trato desigual de que son objeto, en comparación con los privilegios que se les otorga a los hombres, en todos los ámbitos de la vida.
+        <br/><br/>
+        • La importancia de analizar los derechos humanos de las personas,  principalmente los derechos de las mujeres y su relación con la violencia a la que son sometidas estriba en lograr cambios culturales, sociales y políticos, que ayudarán a disminuir el trato desigual entre hombres y mujeres, lo que evitará continuar con la violación de sus derechos fundamentales.
+        <br/><br/>
+        • La interseccionalidad, es una importante herramienta de análisis, que permite estudiar, entender y reconocer, lo concerniente al género, relacionado con la violencia que sufren las mujeres y la forma como se entrelaza con múltiples situaciones, que generan discriminación y desigualdad de las mujeres en comparación con los hombres.
+      </div>
+      <div class="justify">
+        • La interseccionalidad es una herramienta que permite comprender la violencia contra las mujeres en toda su complejidad y como los factores de opresión se entrelazan y agravan su vulnerabilidad.
+        <br/><br/>
+        • La interseccionalidad, es una metodología indispensable, cuyo fin es el de procurar el desarrollo y el disfrute sin limitaciones de los derechos humanos de las mujeres, en igualdad de condiciones con los hombres.
+        <br/><br/>
+        • Incorporar la interseccionalidad en el abordaje de los delitos de violencia hacia las mujeres favorece una justicia más justa e inclusiva, permitiendo reconocer y atender las formas de discriminación que sufren las mujeres simultáneamente y evitan enfoques generalizados que las excluyen.
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="folio">46</div>
+      <div class="legend">CON FUNDAMENTO</div>
+    </div>
+  </section>
+
+  <!-- =================== PÁGINA 6 =================== -->
+  <section class="page page-break">
+    <div class="header fs10">
+      <div>Aura Pérez <span class="sep">/</span> Revista Científica Diálogo Forense <span class="sep">/</span> Núm. 11, Vol. 6 <span class="sep">/</span> enero–junio 2025</div>
+    </div>
+
+    <div class="fs18 bold purple">REFERENCIAS</div>
+    <div class="sp-4"></div>
+    <div class="fs12">
+      Comité para la Eliminación de la Discriminación contra la Mujer. (2010). <em>Convención sobre la eliminación de todas las formas de discriminación contra la mujer (CEDAW). Protocolo Facultativo de la Convención sobre la eliminación de todas las formas de discriminación contra la mujer: Observaciones finales a la República de Panamá (1998 y 2010)</em>. https://igm.gob.gt/wp-content/uploads/2017/09/convencion-sobre-la-eliminacion-de-todas-las-formas-de-discriminacion-contra-la-mujer.pdf
+      <br/><br/>
+      Comité para la Eliminación de la Discriminación contra la Mujer –CEDAW–. (1979). <em>Convención sobre la eliminación de todas las formas de discriminación contra la mujer</em>. https://www.ohchr.org/sp/professionalinterest/pages/cedaw.aspx
+      <br/><br/>
+      Organización de los Estados Americanos –OEA–. (1994). <em>Convención Interamericana para prevenir, sancionar y erradicar la violencia contra la mujer ("Convención de Belém do Pará")</em>. https://www.oas.org/juridico/spanish/tratados/a-61.html
+      <br/><br/>
+      Cubillos, J. (2015). La importancia de la interseccionalidad para la investigación feminista. <em>Oxímora: revista internacional de ética y política</em>, (7), 119–137. https://revistes.ub.edu/index.php/oximora/article/view/14502
+      <br/><br/>
+      Expósito, C. (2012). ¿Qué es eso de la interseccionalidad? Aproximación al tratamiento de la diversidad desde la perspectiva de género en España. <em>Investigaciones Feministas</em>, (3), 230–222. http://dx.doi.org/10.5209/rev_INFE.2012.v3.41146
+      <br/><br/>
+      Fundación Juan Vives Suriá. (2010). <em>Derechos Humanos: Historia y Conceptos básicos</em>. http://biblioteca.clacso.edu.ar/Venezuela/fundavives/20170102055815/pdf_132.pdf
+      <br/><br/>
+      González, O. (2018). Derechos humanos y derechos fundamentales. <em>Hechos y Derechos</em>, (45). https://revistas.juridicas.unam.mx/index.php/hechos-y-derechos/article/view/12556/14135
+      <br/><br/>
+      Ispanel, A. (2008). <em>Análisis Jurídico-Doctrinario; Ley contra el Femicidio y otras formas de violencia contra la mujer. Decreto 22-2008 Congreso de la República de Guatemala</em>. https://digi.usac.edu.gt/bvirtual/informes/rapidos2008/INF-2008-038.pdf
+      <br/><br/>
+      Jaramillo, C., &amp; Canaval, G. (2020). Violencia de Género: Un análisis evolutivo del concepto. <em>Universidad y Salud</em>, 22(2), 178–185. https://doi.org/10.22267/rus.202202.189
+      <br/><br/>
+      Ley contra el Femicidio y otras Formas de Violencia Contra la Mujer, Decreto No. 22-2008, <em>Diario de Centro América</em> (Guatemala, 7 de mayo de 2008).
+      <br/><br/>
+      Poggi, F. (2019). Sobre el concepto de violencia de género y su relevancia para el derecho. <em>Doxa. Cuadernos de Filosofía del Derecho</em>, (42), 285–307. https://doi.org/10.14198/DOXA2019.42.12
+      <br/><br/>
+      Rico, N. (1996). Violencia de género: Un problema de derechos humanos. <em>Mujer y Desarrollo</em>, (16), 1–52. https://repositorio.cepal.org/bitstream/handle/11362/5855/1/S9600674_es.pdf
+    </div>
+
+    <div class="footer">
+      <div class="folio">47</div>
+      <div class="legend">CON FUNDAMENTO</div>
+    </div>
+  </section>
+
+</body>
+</html>

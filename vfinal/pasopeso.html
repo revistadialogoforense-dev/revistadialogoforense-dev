@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Página — Conmemoración</title>
+<style>
+  :root{
+    --celeste:#cfe9ff;
+    --gris:#4b5563;
+    --borde:#e5e7eb;
+    --morado:#7c3aed;
+  }
+  html,body{
+    margin:0; background:#f3f4f6; color:#111827;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+
+  /* Página contenedor */
+  .page{
+    width:900px; margin:22px auto; background:#fff; border-radius:12px; overflow:hidden;
+    box-shadow:0 10px 28px rgba(0,0,0,.08); position:relative;
+  }
+
+  /* Mitad superior: imagen + franja celeste para completar 1/2 hoja */
+  .top-half{
+    min-height:50vh; display:flex; flex-direction:column;
+  }
+  .hero{
+    flex:3;              /* ~3/4 de la mitad */
+    display:block; overflow:hidden;
+  }
+  .hero img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .celeste{
+    flex:1;              /* ~1/4 de la mitad */
+    background:var(--celeste);
+    padding:14px 22px;
+    display:flex; align-items:center;
+  }
+  .celeste p{
+    margin:0; font-size:12pt; line-height:1.55; color:#0f172a;
+    text-align:justify;
+  }
+
+  /* Cuerpo en dos columnas */
+  .columns{
+    display:grid; grid-template-columns:1fr 1fr; gap:24px;
+    padding:18px 24px 24px 24px;
+  }
+  .columns p{
+    font-size:12pt; line-height:1.65; color:var(--gris); text-align:justify; margin:0 0 10px 0;
+  }
+
+  /* Pie con pestaña morada */
+  .footer{
+    border-top:1px solid var(--borde); background:#fafafa;
+    padding:10px 16px; display:flex; justify-content:flex-end; align-items:center;
+  }
+  .badge{
+    background:var(--morado); color:#fff; font-weight:800; padding:4px 12px; border-radius:999px;
+  }
+
+  /* Responsive */
+  @media (max-width:940px){ .page{ width:100%; border-radius:0; } }
+  @media (max-width:720px){ .columns{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<section class="page">
+
+  <!-- Mitad superior -->
+  <div class="top-half">
+    <!-- Imagen (usa RAW de GitHub para que cargue públicamente) -->
+    <figure class="hero">
+      <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/95b1a21310f3190f4bbeb2b44345b291ed947c63/fotos/pasopeso.PNG" alt="Conmemoración — Ministerio Público e INACIF" />
+    </figure>
+
+    <!-- Franja celeste con texto -->
+    <div class="celeste">
+      <p>
+        La significativa conmemoración del Día Internacional de la Mujer fue el marco para que el MP recibiera
+        el compendio que describe cómo el Instituto Nacional de Ciencias Forenses de Guatemala auxilia al sistema de justicia
+        y a la población.
+      </p>
+    </div>
+  </div>
+
+  <!-- Dos columnas -->
+  <div class="columns">
+    <!-- Columna izquierda -->
+    <div>
+      <p>
+        Con motivo del Día Internacional de la Mujer, en la sede central del Ministerio Público –MP–, el Instituto Nacional de
+        Ciencias Forenses de Guatemala entregó el “Compendio de 16 guías de los servicios” que el INACIF presta a la población
+        y al sistema de justicia. Correspondió a la directora general, doctora Ingrid Johana Romero Escribá, trasladar a la
+        fiscal general de la República y jefa del Ministerio Público, doctora María Consuelo Porras Argueta, el volumen que abarca a:
+      </p>
+      <p>
+        -Laboratorio de Serología y Genética<br/>
+        -Laboratorio de Toxicología<br/>
+        -Laboratorio de Documentoscopía<br/>
+        -Laboratorio de Lofoscopía<br/>
+        -Laboratorio de Entomología Forense<br/>
+        -Laboratorio de Fisicoquímica<br/>
+        -Laboratorio de Balística<br/>
+        -Laboratorio de Vehículos<br/>
+        -Laboratorio de Acústica Forense<br/>
+        -Laboratorio de Sustancias Controladas
+      </p>
+    </div>
+
+    <!-- Columna derecha -->
+    <div>
+      <p>
+        -Laboratorio de Análisis Ambiental<br/>
+        -Laboratorio de Informática Forense<br/>
+        -Psicología Forense<br/>
+        -Clínica Forense<br/>
+        -Tanatología Forense
+      </p>
+      <p>
+        “Como órgano auxiliar, cuya responsabilidad es emitir, a petición de autoridad competente, dictámenes objetivos e
+        imparciales, tenemos la misión de contribuir a que el Estado promueva una administración pronta y cumplida de la justicia.
+        Nos ocupamos de brindar una asistencia empática, comprometida, eficiente y efectiva regidos por altos estándares de calidad”,
+        expresó la doctora Romero.
+      </p>
+      <p>
+        En esa línea, por medio del material elaborado en el compendio se busca fortalecer los requerimientos que el Ministerio
+        Público considere necesarios en materia científica. Asimismo, cumple con ser una fuente de información para personas
+        individuales y todas aquellas entidades afines que desean conocer los diversos servicios del INACIF.
+      </p>
+    </div>
+  </div>
+
+  <!-- Pie -->
+  <div class="footer">
+    <span class="badge">52</span>
+  </div>
+
+</section>
+
+</body>
+</html>

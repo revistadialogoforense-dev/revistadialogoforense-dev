@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Revista — Panorámica</title>
+<style>
+  :root{
+    /* Paleta ajustada según indicaciones */
+    --azul:#1e88e5;
+    --gris:#6b7280;
+    --gris-osc:#374151;
+    --gris-linea:#d1d5db;
+    --texto:#0f172a;
+    --blanco:#ffffff;
+
+    --verde:#8BC34A;         /* verde tierno */
+    --amarillo:#F4B400;      /* amarillo/ámbar */
+    --naranja:#F39C12;       /* bloque naranja */
+    --naranja-osc:#df8e10;
+    --fuscia:#E91E63;        /* fucsia */
+    --borgoña:#8e1246;       /* fucsia más borgoña */
+    --morado:#5b2dab;        /* para autores */
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; background:#f5f6f9; color:var(--texto); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif}
+  .sheet{width:900px; min-height:1240px; margin:24px auto; background:#fff; box-shadow:0 10px 28px rgba(0,0,0,.08); position:relative; padding:56px 56px 80px 56px}
+  @media print{ body{background:#fff} .sheet{width:210mm; min-height:297mm; margin:0; box-shadow:none; padding:22mm 18mm 26mm 18mm} }
+
+  /* Encabezado Panorámica */
+  .banner{display:inline-flex; align-items:center; gap:12px; background:var(--azul); color:#fff; padding:10px 20px; border-radius:6px; font-weight:800; font-size:24px; letter-spacing:.2px}
+
+  .grid{display:grid; grid-template-columns: 88px 1fr; gap:16px; margin-top:18px}
+
+  /* Columna izquierda de bloques de color (decorativa) */
+  .rail{position:relative; padding-top:24px}
+  .rail .stack{position:absolute; left:16px; top:24px; width:24px; border-radius:6px; overflow:hidden}
+  .rail .seg{height:42px}
+  .rail .seg.seg-verde{background:var(--verde)}
+  .rail .seg.seg-amarillo{background:var(--amarillo)}
+  .rail .seg.seg-naranja{background:var(--naranja)}
+  .rail .seg.seg-fuscia{background:var(--fuscia)}
+  .rail .seg.seg-borgona{background:var(--borgoña)}
+  .rail .seg.seg-morado{background:var(--morado)}
+
+  .guides{margin-left:8px}
+  .head-row{display:grid; grid-template-columns: 70px 1fr; gap:12px; align-items:center; color:var(--gris); font-size:12px; font-weight:700; letter-spacing:.04em}
+  .line{height:2px; background:var(--gris-linea);}
+
+  .item{padding:10px 0}
+  .row{display:grid; grid-template-columns: 56px 1fr; gap:12px; align-items:baseline}
+  .pg{font-size:36px; font-weight:800; color:#7c7f85; line-height:1}
+
+  .ttl{font-size:15pt; font-weight:800; text-transform:uppercase}
+  .sub{font-size:12pt; font-weight:700; color:var(--gris-osc)}
+  .autor{font-size:12pt; color:var(--gris)}
+  .sep-gray{height:2px; background:var(--gris-linea); margin-top:8px}
+
+  /* Bloque CON FUNDAMENTO en naranja */
+  .block-naranja{background: color-mix(in oklab, var(--naranja) 12%, white); border-left:6px solid var(--naranja); padding:16px 16px 8px; border-radius:8px}
+  .line-naranja{height:2px; background:var(--naranja); margin-top:8px}
+
+  /* Líneas por color para las demás secciones */
+  .line-verde{height:2px; background:var(--gris-linea); margin-top:8px}
+  .line-amarillo{height:2px; background:var(--gris-linea); margin-top:8px}
+  .line-fuscia{height:2px; background:var(--gris-linea); margin-top:8px}
+  .line-borgona{height:2px; background:var(--borgoña); margin-top:8px}
+  .line-morado{height:2px; background:var(--morado); margin-top:8px}
+
+  /* Footer */
+  .footer{position:absolute; left:56px; right:56px; bottom:24px; font-size:10pt; color:var(--gris-osc); font-style:italic}
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <div class="banner">Panorámica</div>
+
+    <section class="grid">
+      <!-- Riel cromático -->
+      <aside class="rail" aria-hidden="true">
+        <div class="stack" style="height:520px">
+          <div class="seg seg-verde"></div>
+          <div class="seg seg-amarillo"></div>
+          <div class="seg seg-naranja" style="height:210px"></div>
+          <div class="seg seg-fuscia"></div>
+          <div class="seg seg-borgona"></div>
+          <div class="seg seg-morado"></div>
+        </div>
+      </aside>
+
+      <div class="guides">
+        <div class="head-row"><div>Página</div><div class="line"></div></div>
+
+        <!-- PÁGINA 3 — PRIMER PLANO (VERDE) -->
+        <div class="item">
+          <div class="row">
+            <div class="pg">3</div>
+            <div>
+              <div class="ttl" style="color:var(--verde)">PRIMER PLANO</div>
+              <div class="autor">– Ingrid Johana Romero Escribá</div>
+              <div class="line-verde"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PÁGINA 4 — DESDE ADENTRO (AMARILLO) -->
+        <div class="item">
+          <div class="row">
+            <div class="pg">4</div>
+            <div>
+              <div class="ttl" style="color:var(--amarillo)">DESDE ADENTRO</div>
+              <div class="sub">Piratas de la muerte: las ciencias forenses aportan evidencias clave</div>
+              <div class="autor">– Ronny Antonio Navas Vásquez</div>
+              <div class="line-amarillo"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOQUE NARANJA — CON FUNDAMENTO -->
+        <div class="item block-naranja">
+          <div class="row">
+            <div class="pg"></div>
+            <div>
+              <div class="ttl" style="color:var(--naranja)">CON FUNDAMENTO</div>
+            </div>
+          </div>
+
+          <!-- Ítems dentro del bloque naranja -->
+          <div class="row" style="margin-top:6px">
+            <div class="pg">6</div>
+            <div>
+              <div class="sub">Intoxicación por consumo combinado de drogas de abuso</div>
+              <div class="autor">– Jennifer Patricia Contreras Rivera, Sender Miguel Cardona Yanes, Lesly Yohana Villeda Alvarado, Sara María Pontacq Alfonso y Luisa Fernanda Reynoso Aguilar</div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:6px">
+            <div class="pg">14</div>
+            <div>
+              <div class="sub">Prevalencia de alcohol en hechos de tránsito</div>
+              <div class="autor">– María Eugenia Vásquez Sosa, Nancy Jazzmin Osorio Ortíz, Meily Floridalma Coyote Hernández, Diana Lucía León Solis y Javier Mauricio Contreras Ávila</div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:6px">
+            <div class="pg">21</div>
+            <div>
+              <div class="sub">México: la perspectiva de derechos humanos y el enfoque psicosocial como pilares fundamentales en la valoración psicológica forense en víctimas</div>
+              <div class="autor">– Beatriz Cuautle Hornilla</div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:6px">
+            <div class="pg">37</div>
+            <div>
+              <div class="sub">Úlcera de Marjolin de tipo histológico: carcinoma epidermoide y reconstrucción facial por colgajo cérvico-facial de Mustardé</div>
+              <div class="autor">– Erik Josuelí Gonzalez Mux y Mario Gustavo Pérez Rivas</div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:6px">
+            <div class="pg">42</div>
+            <div>
+              <div class="sub">La interseccionalidad y la importancia de aplicarla en delitos de violencia contra la mujer</div>
+              <div class="autor">– Aura Engracia Pérez Navarro</div>
+            </div>
+          </div>
+
+          <div class="line-naranja"></div>
+        </div>
+
+        <!-- PÁGINA 48 — EN PLÁTICA CON (Fucsia) -->
+        <div class="item">
+          <div class="row">
+            <div class="pg">48</div>
+            <div>
+              <div class="ttl" style="color:var(--fuscia)">EN PLÁTICA CON …</div>
+              <div class="sub">Actores de jornada de capacitación brindada por la República de Corea</div>
+              <div class="autor">– Ronny Antonio Navas Vásquez</div>
+              <div class="line-fuscia"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PÁGINA 52 — PASOS DE PESO (Borgoña) -->
+        <div class="item">
+          <div class="row">
+            <div class="pg">52</div>
+            <div>
+              <div class="ttl" style="color:var(--borgoña)">PASOS DE PESO</div>
+              <div class="sub">Guías de servicios, la mano que extiende el INACIF</div>
+              <div class="autor">– Saulo Fabián Palencia Orellana</div>
+              <div class="line-borgona"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PÁGINA 53 — PARA AUTORES (Morado) -->
+        <div class="item">
+          <div class="row">
+            <div class="pg">53</div>
+            <div>
+              <div class="ttl" style="color:var(--morado)">PARA AUTORES</div>
+              <div class="line-morado"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      El Instituto Nacional de Ciencias Forenses de Guatemala -INACIF- y la Revista Científica Diálogo Forense no se hacen 
+      responsables en ningún caso, de los puntos de vista y opiniones expresadas por los autores, así como del contenido de los 
+      artículos publicados en la revista. La responsabilidad por lo expresado en un artículo, pertenece al autor/autores.
+    </footer>
+  </main>
+</body>
+</html>

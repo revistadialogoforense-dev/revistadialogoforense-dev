@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diálogo Forense — Maqueta HTML (págs. 21–35)</title>
+  <style>
+    :root{
+      --aqua:#14b8b4; /* celeste aqua */
+      --gris:#4b5563;
+      --gris-osc:#111827;
+      --gris-lig:#f3f4f6;
+      --gris-borde:#e5e7eb;
+      --negro:#000;
+    }
+    html,body{margin:0;background:#e5e7eb;color:var(--gris-osc);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;}
+    .sheet{width:900px;margin:24px auto;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.06);}
+    .page{position:relative;padding:96px 64px 88px;min-height:1273px;}
+    .header{position:absolute;top:24px;left:32px;right:32px;font-size:10px;color:#374151;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .hr{height:1px;background:#d1d5db;margin:16px 0}
+    .h-aqua{color:var(--aqua);font-weight:800}
+    .h18{font-size:18px;line-height:1.25}
+    .h12{font-size:12px}
+    .h10{font-size:10px}
+    .lead12{font-size:12px;line-height:1.7;text-align:justify}
+    .lead12 p{margin:0 0 12px}
+    .muted{color:#6b7280}
+    .bold{font-weight:700}
+    .grid-2-1{display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:start}
+    .grid-1-2{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:start}
+    .grid-1-1{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .title-block{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+    .title{font-size:18px;font-weight:800}
+    .kw{margin-top:16px}
+    .kw .tag{display:inline-block;margin-right:6px}
+    .kw .label{color:var(--aqua);font-weight:700}
+    .side-card{background:#f8fafc;border:1px solid var(--gris-borde);padding:12px}
+    .side-card .strip{height:6px;background:var(--aqua);margin-bottom:10px}
+    .side-card .small{font-size:12px;line-height:1.45}
+    .author b{font-weight:800}
+    .footer{position:absolute;bottom:0;left:0;right:0;height:70px;}
+    .footer .bar{position:absolute;left:0;right:0;bottom:0;height:1px;background:#e5e7eb}
+    .footer .brand{position:absolute;left:64px;bottom:18px;font-weight:800;letter-spacing:.04em}
+    .footer .pg{position:absolute;right:64px;bottom:8px;display:inline-flex;align-items:center}
+    .footer .tab{background:var(--aqua);color:#fff;font-weight:800;padding:10px 12px;border-radius:8px 8px 0 0;}
+    .img-cover{width:100%;height:auto;display:block;border:1px solid var(--gris-borde)}
+    .img-note{font-size:10px;color:#6b7280;margin-top:6px}
+    .aqua-line{height:2px;background:var(--aqua);opacity:.15;margin:8px 0 16px}
+    .break{page-break-after:always}
+
+    @media print{
+      body{background:#fff}
+      .sheet{width:auto;margin:0;box-shadow:none}
+      .page{min-height:auto;height:277mm;padding:25mm 18mm 18mm}
+      .footer .pg .tab{border-radius:6px 6px 0 0}
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+
+    <!-- PÁGINA 21 -->
+    <section class="page" data-page="21">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025/ pp. 21-35</div>
+
+      <div class="title-block">
+        <div>
+          <div class="title">
+            <b>MÉXICO: LA PERSPECTIVA DE DERECHOS HUMANOS Y EL ENFOQUE PSICOSOCIAL COMO PILARES FUNDAMENTALES EN LA VALORACIÓN PSICOLÓGICA FORENSE EN VÍCTIMAS</b>
+          </div>
+          <div class="kw h12">
+            <span class="label">Palabras clave:</span>
+            <span class="tag">perspectiva de derechos humanos, perspectiva psicosocial, evaluación psicológica, validez y con­fiabilidad.</span>
+          </div>
+          <div class="kw h12" style="margin-top:8px">
+            <span class="label">Keywords:</span>
+            <span class="tag">human rights perspective, psychosocial perspective, psychology evaluation, validity, and reliability.</span>
+          </div>
+          <div style="margin-top:18px"><span class="h18 h-aqua bold">RESUMEN</span></div>
+          <div class="lead12" style="max-width:100%;margin-top:8px">
+            <p>La psicología forense actual ha centrado su paradigma en las evaluaciones psicológicas y estas, a la aplicación de psicometría como una forma de demostrar su rigor científico ante los juzgados, este paradigma promueve la invisibilización de las víctimas, subordinando su consideración a los preceptos de la abogacía, lo que conduce a la patologización de las víctimas y al uso indiscriminado de pruebas psicológicas. Por ello, el presente ensayo tiene como objetivo replantear y redirigir a la psicología forense hacia un enfoque que priorice el entendimiento desde la otredad (sufrimiento del otro) y no hacia una búsqueda sistemática de sintomatologías específicas como el Trastorno por Estrés Post Traumático -TEPT-  descrito en manuales anglosajones, que dictan lo que debería de ser y tener una víctima. Por consiguiente, se propone incorporar la perspectiva de derechos humanos y la perspectiva psicosocial en las pericias psicológicas. Con el fin de visibilizar, desde la cosmovisión individual una mirada ecosistémica del ser, realidad, afectaciones y necesidades como persona sufriente. Además, se sugiere retomar algunos de los criterios de validez y fiabilidad aplicables a la prueba pericial, como bases metodológicas reconocidas en el ámbito forense.</p>
+          </div>
+        </div>
+        <div>
+          <img class="img-cover" alt="imagen" src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/e99be3c8266127567c9a269382c68d1134d79725/fotos/Beige%20Simple%20Sketch%20Illustration%20Recipe%20Book%20Cover.png"/>
+          <div class="side-card" style="margin-top:16px">
+            <div class="strip"></div>
+            <div class="small">Diálogo Forense Núm. 11 , Vol. 6, 2025<br/>ISSN: 2789-8458</div>
+            <div class="hr" style="margin:10px 0"></div>
+            <div class="small author"><b>Beatriz Cuautle Hornilla</b><br/>Psicóloga Forense<br/>Consultora independiente<br/>Ciudad de México, México<br/>betcuautle@gmail.com<br/>Recibido: 29/01/2025<br/>Aceptado: 12/05/2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">21</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 22 -->
+    <section class="page break" data-page="22">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+
+      <div class="h18 h-aqua bold">ABSTRACT</div>
+      <div class="lead12" style="margin-top:8px">
+        <p>Current forensic psychology has focused its paradigm on psychological evaluations and their psychometric application to demonstrate scientific rigor before courts. This paradigm promotes victim invisibility by subordinating their consideration to legal precepts, leading to victim pathologization and indiscriminate use of psychological tests. This essay aims to redirect forensic psychology toward an approach prioritizing understanding through otherness (the other's suffering) rather than systematic searches for specific symptoms like Post-Traumatic Stress Disorder –PTSD- as described in Anglo-Saxon manuals that dictate victimhood standards. Consequently, we propose incorporating human rights and psychosocial perspectives into forensic psychological assessments. This approach seeks to reveal, through individual worldviews, an ecosystemic perspective of the person's being, reality, impacts, and needs as suffering individuals. Additionally, we suggest reinstating validity and reliability criteria for expert testimony as recognized methodological foundations in forensic practice.</p>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="h18 h-aqua bold">INTRODUCCIÓN</div>
+      <div class="grid-1-1" style="margin-top:12px">
+        <div class="lead12">
+          <p>El presente documento, está basado en un paradigma constructivista, pues busca que se comprenda y se transforme a las estructuras de poder institucionales hegemónicas en torno a cómo han definido los quehaceres y alcances de la psicología forense, en específico las pericias que resultan de evaluaciones psicológicas. Esto mediante una revisión bibliográfica sistemática con búsquedas ad hoc para las variables de perspectiva de derechos humanos y enfoque psicosocial, en específico busca generar un impacto que propicie cambios en el diseño y estructura de las formas en las que se hace una pericia de evaluación psicológica forense de víctimas de delitos a través de la incorporación de la perspectiva de derechos humanos y el enfoque psicosocial. Pues estos elementos se proponen como ejes fundamentales de validez y fiabilidad de dicha pericia (rigor forense) como un contraste con las formas institucionales de la psicología forense, las cuales suelen adoptar un enfoque antagonista. Por lo tanto, el objetivo de este ensayo es invitar al lector a replantear y redirigir la importancia de la atención a las víctimas desde lógicas de análisis diferenciadas y especializadas con la perspectiva</p>
+        </div>
+        <div class="lead12">
+          <p>de derechos humanos y el enfoque psicosocial dentro del ámbito de la psicología forense.</p>
+          <p>Con el propósito de invitar al lector a reflexionar la importancia de la atención a víctimas desde la Psicología Forense con lógicas de análisis diferenciadas y especializadas, debemos de cuestionar: ¿Cómo se puede garantizar una atención psicológica justa y especializada en el sistema judicial a las víctimas de delitos?</p>
+          <p>Este ensayo presenta la incorporación de la perspectiva de derechos humanos y el enfoque psicosocial como directrices esenciales para mejorar la atención a las víctimas y garantizar la validez y fiabilidad de las pericias psicológicas forenses sin que ello represente el uso forzado de pruebas psicológicas. Pues esto surge de un problema crítico: porque las evaluaciones psicológicas forenses actuales han derivado en una atención deficiente hacia las víctimas, debido a la falta de perspectiva de derechos humanos y enfoque psicosocial, lo que de manera significativa conduce a sesgos en los resultados de las evaluaciones.</p>
+        </div>
+      </div>
+
+      <div class="hr" style="margin-top:8px"></div>
+      <div class="h18 h-aqua bold">CONTENIDO</div>
+      <div class="grid-1-1" style="margin-top:12px">
+        <div class="lead12">
+          <p>En primer lugar, conviene establecer que, teóricamente, la psicología se considera una ciencia cuya epistemología se centra en el estudio del comportamiento humano, fundamentando su conocimiento científico en conceptos propios y un lenguaje particular que sustenta tanto sus bases como sus conocimientos específicos (Amaya, 2019), dentro de las investigaciones psicológicas.</p>
+        </div>
+        <div class="lead12">
+          <p>Por lo tanto, el comportamiento humano en cualquiera de sus ámbitos constituye el principal objeto de estudio de la psicología, pero siempre bajo el marco del método científico; es decir, sus procedimientos en cualquiera de sus disciplinas deben de usar métodos y técnicas validadas.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">22</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 23 -->
+    <section class="page break" data-page="23">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1" style="margin-top:0">
+        <div class="lead12">
+          <p>Por lo que, al abordar a la psicología en el ámbito de la impartición de justicia, resulta importante hablar de la psicología jurídica y forense (disciplina derivada de la psicología general), cuyo objetivo de estudio es el comportamiento humano en el marco de los tribunales, enfocado en víctimas, testigos y/o victimarios. Esta disciplina sin duda enfrenta el reto de desarrollar teorías y perspectivas bajo el enfoque de los derechos humanos. De acuerdo con Arce (2005) el Colegio Oficial de Psicólogos (1998) refiere a la psicología jurídica es un “…área de trabajo e investigación psicológica especializada cuyo objeto de estudio es el comportamiento de los actores jurídicos en el ámbito del derecho, la ley y la justicia” (p. 11); un concepto concreto, pero amplio respecto a los alcances y ámbitos de aplicación de esta especialidad.</p>
+          <p>En este contexto, en México la psicología forense ha experimentado su auge en las instancias de procuración de justicia y no en la academia como sería lo deseable, para el avance científico de la disciplina. Sin duda, aunque en los últimos años se ha observado el desarrollo de múltiples publicaciones, no ha sido suficiente para desarrollar teorías explicativas que permitan comprender los fenómenos complejos que afectan a las víctimas, como los impactos derivados de su situación. Incluso, ahora, los resultados de las pericias han tendido a ser reduccionistas, centrándose en documentar las patologías como el único impacto. Al respecto, Martín-Baró (2006) argumenta que se debe luchar por una psicología latinoamericana que analice el comportamiento humano desde su propio contexto y no enraizándola a categorías positivistas estrictamente.</p>
+          <p>Lo anterior ya invita a reflexionar sobre, propiciar análisis profundos de los contextos, de las diferencias e individualidades en las personas para evitar categorizar sistemáticamente a los efectos post traumáticos en un todo único, convidando a que prevalezca el análisis crítico.</p>
+          <p>Específicamente, respecto de las evaluaciones psicológicas forenses que resultan en pericias; instituciones como fiscalías realizan evaluaciones de acuerdo con sus procedimientos internos o manuales de operación, los cuales se basan en teorías angloamericanas o, en algunos casos, en enfoques meramente clínicos que no permiten flexibilidad en dichas pericias. Además,</p>
+        </div>
+        <div class="lead12">
+          <p>tampoco existen escuelas con la experiencia suficiente para formar investigadores en ciencias forenses; sólo se forman peritos que se dedican a hacer pericias en serie, pero que no generan información científica ni crítica. Lo anterior, permite plantear: ¿Por qué se debe retomar este último punto? Justamente porque hoy en día, los profesionales que se formaron bajo una lógica cotidiana, es decir; sin capacidad de pensamiento crítico, ni capacidad de cuestionamiento, siguen utilizando las formas de evaluación de siempre, con pruebas proyectivas (por falta de recursos institucionales o nula capacitación) así como itinerantes estigmatizaciones, o el mejor de los casos el uso indiscriminado de psicometría.</p>
+          <p>En primera instancia, el ciclo disfuncional de una pericia psicológica comienza con el uso de pruebas proyectivas, las cuales carecen de fundamento científico y suelen ser estigmatizantes; en segundo término, la escasa capacitación, refuerza en los peritos la idea de que estas pruebas proyectivas brindan la información suficiente para realizar un análisis forense de los hechos que relata la víctima, impactando profundamente en una invisibilización y una negación sistemática de las personas que son evaluadas, pues ello deriva en la conclusión de qué, si no se detectan entidades nosológicas con la aplicación de este tipo de pruebas, no se considera la calidad de víctima a quién se evalúa. De manera concreta utilizar instrumentos sin rigor científico limita ya una atención certera a los usuarios. Adicionando qué, consecuencia de una formación deficiente fomenta una mala praxis en la psicología forense, lo que genera a su vez una cadena de problemas como los descritos con anterioridad.</p>
+          <p>El siguiente paso en este ciclo disfuncional es el uso de formatos de pericias, cuya elaboración se realiza con base en procedimientos internos históricos de las instituciones con los que; se tiene y debe trabajar, o bien, enfocarse en el cumplimiento de criterios administrativos más que en el análisis de las situaciones psicológico-jurídicas que rodean a la víctima. Siendo por supuesto limitantes para realizar pericias psicológicas con rigor científico.</p>
+          <p>Consecuentemente, este enfoque institucional (uso de pruebas proyectivas) deja de lado a la academia, así como la metodología de la investigación, propiciando documentos psicológicos en serie de carácter reduccionista, que dirime las memorias traumáticas de las</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">23</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 24 -->
+    <section class="page break" data-page="24">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>víctimas y al tiempo pondera una hegemonía, es decir; que sostiene que la aplicación de pruebas psicológicas por lo menos proyectivas, son la única forma en la que se hace una pericia, sólo por el hecho que la institución lo dicta. Pues estas estructuras hegemónicas de poder reproducen las desigualdades, perpetuando el malestar en los sujetos que dicen representar (Escareño Granados et al., 2022 como se citó en Nodal Silva, 2024).</p>
+          <p>Al mismo tiempo, la práctica de la psicología forense en México, como se plasmó en párrafos anteriores, ha sido liderada, en su mayoría, por parte de las instituciones periciales, permeando en que los capacitadores de las escuelas forenses provengan del mismo entorno institucional, es decir; que forman su experiencia como peritos institucionales para posteriormente capacitar desde lo particular, basando la formación del perito habitualmente en la experiencia y no en una formación académica científica.</p>
+          <p>Empero, que la academia de la psicología forense actualmente ha dejado ver qué para el estudio del comportamiento humano en los tribunales, debe realizarse bajo modelos idiográficos en los rubros de: autopsias psicológicas, pericias de tortura, pericias de reparación de daño, pericia sobre feminicidio, pericias sobre parentalidad, pericias con perspectiva de género, pericias sobre evidencia digital (material de abuso sexual en niñez y adolescencia), opiniones técnicas sobre documentos, metaperitajes, contraperitajes, opiniones psicológicas y pericias de credibilidad del testimonio sobre documentos, pericias mixtas, entre otras.</p>
+          <p>De tal forma, que es crucial establecer que aun cuando se evidencie que, el uso de pruebas proyectivas no es dable en el ámbito forense, lo cierto es, que el uso indiscriminado de psicometría, también genera uno de los paradigmas más impetuosos de erradicar dentro de la psicología forense, pues este se fundamenta en que las pericias derivadas de valoraciones psicológicas deben de usar forzosamente pruebas de carácter psicométrico y/o estandarizadas como supuesta prueba de su cientificidad o de respaldo científico.</p>
+        </div>
+        <div class="lead12">
+          <p>Este paradigma, es recurrente en el Derecho y en los tribunales dentro de la práctica del contrainterrogatorio, pues insta a los psicólogos forenses al uso de las pruebas psicométricas para demostrar rigor científico (las</p>
+          <p>preguntas se fundan en que el hecho de demostrar que el no utilizar este tipo de pruebas invalida las pericias). Siendo la psicología como ciencia la que debe de dictar su respaldo científico en sus metodologías.</p>
+          <p>Entonces en este punto, vale la pena destacar que, de manera específica, este paradigma que se funda en el caso de las evaluaciones psicológicas donde se recopila información como forma de evidencia de los impactos de eventos adversos o violentos en la víctima, se caracteriza históricamente por seguir directrices fundamentales en su contenido:</p>
+          <p>1.&nbsp;La entrevista forense.<br/>2.&nbsp;La aplicación de pruebas psicológicas como medio de soporte científico de sus resultados.</p>
+          <p>Por ende, desde esta perspectiva, es importante establecer que se ha forjado la exigencia del uso de pruebas psicológicas para hablar de cientificidad en una pericia.</p>
+          <p>Pues de acuerdo con (Echeburúa y Corral, 2005), una pericia en psicología forense se construye a partir de una entrevista y de la aplicación de pruebas psicológicas validadas y estandarizadas. Así, el informe forense tiene como objetivo, en algunos casos, probar la existencia de un delito y, en otros, reparar el impacto psicológico causado a la víctima. Esto sugiere que las pericias en psicología deben enfocarse en la exploración desde los siguientes puntos:</p>
+          <p>•&nbsp;Línea de adaptación anterior al delito violento.<br/>•&nbsp;Línea actual de adaptación.<br/>•&nbsp;Reacción adaptativa al suceso (afrontamiento del suceso y sus resultados).<br/>•&nbsp;Nexo de causalidad entre la inadaptación actual y la del delito sufrido.<br/>•&nbsp;Pronóstico en relación con el futuro.</p>
+          <p>Además, los mismos autores destacan la importancia de realizar el análisis pericial en torno a la víctima considerando: el antes, los impactos del evento y su modo de afrontamiento. Sin embargo, no señalan las metodologías ni el uso de técnicas, lo cual es algo frecuente no solo en los textos, sino en las propias pericias. Esto se debe a que no se contempla que el peritaje es una actividad procesal de carácter humano,</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">24</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 25 -->
+    <section class="page break" data-page="25">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>desarrollada por encargo judicial y realizada por expertos ajenos a las partes, calificadas por su experiencia o conocimientos técnicos, artísticos o científicos (Vázquez, 2022).</p>
+          <p>Y es que, en esta perspectiva, en la que se plantea que una pericia que resulta de una valoración psicológica forense debe estar respaldada por criterios de validez y fiabilidad a modo de que los documentos garanticen ser un medio de prueba válido en los procesos de administración de justicia, debe dejarse claro que el uso de pruebas psicométricas sólo son una fuente de información, lo que brinda fiabilidad y validez a una pericia es una metodología de carácter científico.</p>
+          <p>Paralelamente a esto, Nodal Silva (2024) refiere que, en los contextos jurídicos tan preponderantemente marcados por el dominio de la abogacía, se corre el riesgo de que la psicología forense y sus practicantes terminen por subordinarse ante los designios de los demás actores jurídicos, tradicionalmente imperiales en la administración de justicia, reforzando que la psicología ha forense ha sido invadida desde otra ciencia que le ha dictado en los juicios cuando es válida y cuando no.</p>
+          <p>Dicho de otro modo, la falta de entendimiento de un perito, sobre lo que implica la ciencia de la psicología y su rol en las investigaciones forenses, insta a un paradigma del falsacionismo científico (datos falsables y búsqueda de refutación), que se ha enraizado en lo  institucional, en el que su base es la consideración que las pruebas psicométricas son el sustento científico de la pericia, dejando de lado la importancia de solidificar las pericias con metodologías reconocidas como parte del rigor científico.</p>
+          <p>Este paradigma psicologizante dominante limita la calidad de víctima a la búsqueda de patologías, extraviando enfoques loables para comprender, describir y explicar el comportamiento humano desde las individualidades de cada persona. Uno de estos enfoques, que debe adoptar el psicólogo forense es la Perspectiva de Derechos Humanos.</p>
+        </div>
+        <div class="lead12">
+          <p><b>(La perspectiva de Derechos Humanos y la Psicología Forense)</b> La psicología jurídica/forense, es una de las áreas de la psicología que está llamada a dar respuestas, a brindar soluciones y a ser un bastión, (Hernández, 2010) desde los tribunales con un amplio espectro de especialidad, en derecho, en estudios del comportamiento, en investigación forense, en delitos, en derechos humanos.</p>
+          <p>En todo análisis de la conducta humana, los derechos humanos deben considerarse como una directriz esencial, sobre todo en la Psicología de los tribunales o la Psicología Forense, por ello, es crucial incorporar la perspectiva de derechos humanos, la cual se define como una herramienta de análisis enfocada a las características, individualidades y diferencias de cada persona, mediante el uso de protocolos de actuación que salvaguarden sus derechos y ponderen su dignidad humana como consideración inherente.</p>
+          <p>Una de las características de la perspectiva de derechos humanos es que, pondera el reconocimiento de las interacciones sociales y sus estructuras, que están basadas en el poder y su ejercicio, por lo tanto y para redefinir dichas relaciones, se deben identificar las diferencias sociales expresadas en desigualdad, garantizando el acceso a los derechos de todas las personas (Nodal Silva, 2024). En consecuencia, la perspectiva de derechos humanos tiene la finalidad de controlar la desigualdad que enfrentan las víctimas ante las estructuras de poder en la búsqueda de justicia. De ahí que, además de visibilizar la necesidad de atención individualizada propicia y salvaguardando la dignidad humana de las personas. Esto permitirá brindar atención conforme al entorno y las desigualdades históricas y estructurales, en situaciones de vulnerabilidad como: niñez, adolescencia, comunidad indígena, población LGBTIQ+, perspectiva de género, interculturalidad, etc.; evitando tratos desiguales, discriminatorios y re victimizantes en la búsqueda de la justicia.</p>
+          <p>Cabe destacar que la perspectiva de derechos humanos ha influido en la transformación de las estructuras políticas tanto en el ámbito jurídico, como en el de salud, ya que en</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">25</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 26 -->
+    <section class="page break" data-page="26">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>México la Ley General de Salud en su reforma en su artículo 72 bis, establece que:</p>
+          <p><i>La atención a la salud mental deberá brindarse con un enfoque comunitario, de recuperación y con estricto respeto a los derechos humanos de los usuarios de estos servicios en apego a principios de interculturalidad, integralidad, interdisciplinariedad, intersectorialidad, perspectiva de género y participación social.</i></p>
+          <p>Derivado de lo anterior, se determina que las políticas en relación a la salud mental deben de desarrollarse a partir de enfoques sociales, ya que la interacción de las personas con su entorno es fundamental para el bienestar mental. En la historia de la humanidad podemos evidenciar, que los modelos médicos han incorporado elementos del contexto social, brindando una atención más efectiva y reduciendo el predominio del enfoque estrictamente médico en el ámbito de la salud mental.</p>
+          <p>En el ámbito internacional, la Corte Interamericana de Derechos Humanos –Corte  IDH- ha emitido pronunciamientos y recomendaciones en los que desarrolla este enfoque, promoviendo su implementación en políticas públicas y decisiones judiciales (Niño et al., 2019). Fijando un preámbulo de máxima protección a la dignidad de las personas en los procesos judiciales o como se ha citado anteriormente dentro de los tribunales.</p>
+          <p>Desde el ámbito internacional, la Corte IDH representa un ejemplo de la implementación y aplicación de la perspectiva de derechos humanos y del enfoque psicosocial en la práctica jurídica.</p>
+          <p>En este contexto, las sentencias de la Corte no solo se enfocan en los aspectos legales del caso, sino  que consideran el impacto social y psicológico de las violaciones de Derechos Humanos. Este enfoque psicosocial permite comprender las consecuencias de las violaciones enriqueciendo las investigaciones y decisiones judiciales. Asimismo, al tomar en cuenta cómo se cruzan las formas de desigualdad, toman la interseccionalidad como un elemento clave, haciendo visible en en las sentencias  como estas formas  no se ponderaron en el acceso a la justicia.</p>
+        </div>
+        <div class="lead12">
+          <p>Siendo los Estados responsables de una reparación que garantice la rehabilitación de las víctimas, la no repetición, la verdad y la justicia.</p>
+          <p>La Corte IDH ha condenado a México en varias ocasiones  por violaciones graves a derechos humanos -VGDH-, extremo que ha impactado en las normas jurídicas e interpretaciones de éstas. Rangel (2011) obligando a legislar por las sistemáticas  VGDH, tomando como base el respeto a los derechos humanos mediante la legislación garantista de reparación y no repetición. Debido a que evidencian omisiones en la protección de estos.</p>
+          <p>Desde los tribunales internacionales estas sentencias, han sido punto clave para la implementación de la perspectiva de derechos humanos en las investigaciones forenses, pero sobre todo en las pericias con enfoque psicosocial. Siendo una oportunidad, para la psicología forense a fin de retomar estas bases para su implementación en el ámbito local, con la garantía de que, si en tribunales a nivel internacional los peritajes con dicha perspectiva y enfoque psicosocial han sido parte fundamental del caso, a nivel local también debe de ser llevada esta práctica, sumada a un estricto rigor forense que busca minimizar las objeciones dentro del razonamiento probatorio.</p>
+          <p>Ahora bien, la reivindicación de la dignidad ante los tribunales, a través del uso de  la perspectiva de derechos humanos, es un elemento central que debe guiar las prácticas de la psicología forense, el punto clave para que psicología forense incorpore dicha perspectiva como pilar fundamental dentro de sus actuaciones, siendo así, una herramienta fundamental en el ámbito forense que permite entender la individualidad y las diferencias de las personas como metodología, desde tres directrices (Coronado y Cervantes, 2018):</p>
+          <p>1.&nbsp;El uso de protocolos<br/>2.&nbsp;Una metodología científica<br/>3.&nbsp;El uso de categorías de análisis</p>
+          <p>De manera que, vale la pena considerar a esta perspectiva como una base fundamental, elemental, teórica, analítica y metodológica para la elaboración de pericias psicológicas, ya que permite diseñar a estas, de acuerdo con las características de cada persona (diferencias o</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">26</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 27 -->
+    <section class="page break" data-page="27">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>interculturalidad) ponderando su dignidad; Pues no es lo mismo, evaluar a una persona adulta víctima de un robo, que a una persona adulta de una comunidad indígena víctima del mismo delito, en este último caso, considerando la evaluación desde la cosmovisión de cada persona.</p>
+          <p>Cabe considerar, por otra parte, como eje rector de la perspectiva de derechos humanos a la interseccionalidad, definida como la interacción de condiciones de identidad como raza, clase y género en las experiencias de vida, especialmente en las experiencias de privilegio y opresión (Gopaldas, 2013).</p>
+          <p>La interseccionalidad convoca a comprender y analizar desde el derecho las particularidades de la discriminación en un caso (Parra y Franco, 2020), tal es el caso de un adolescente indígena migrante que ha sido víctima de tortura sexual, en este caso la interseccionalidad será la base del diseño de la pericia e incluso orientara sobre la necesidad de utilizar o no la psicometría, puesto que estas evaluaciones al buscar la objetividad y estandarización pueden pasar por alto la influencia cultural.</p>
+          <p>En el caso antes mencionado, se hace evidente la necesidad de que la psicología forense, al evaluar casos de tortura en comunidades indígenas, adopte un enfoque integral que considere la cosmovisión indígena, los procesos cognitivos de la adolescencia y los impactos psicológicos y psicosociales, sin depender exclusivamente de pruebas psicológicas. Además, destaca la importancia de evitar enfoques unidimensionales que simplifiquen la complejidad de las desigualdades sociales (Hernández, 2010).</p>
+          <p>La finalidad de describir las dinámicas de violencia que propicia la hegemonía de poder, resultando imprescindible para explicar las desigualdades y abordar el estudio puntual de las afectaciones psicosociales.</p>
+          <p>La psicología forense con perspectiva de Derechos Humanos, no se limita a evaluar a una persona para describir una patología, sino busca comprenderla dentro de un contexto social, todo esto, busca de reconocer las situaciones de violencia, discriminación o exclusión de la persona evaluada, no solo observar síntomas o comportamientos. El informe pericial identificará entonces, el posible daño como consecuencia de una violación de los derechos humanos. De este modo, la</p>
+        </div>
+        <div class="lead12">
+          <p>implementación de dicha perspectiva en el ámbito pericial impulsa la ruptura de paradigmas institucionales, como los que se describen a continuación:</p>
+          <p>•&nbsp;Si una pericia psicológica no está integrada por pruebas psicológicas, es endeble.<br/>•&nbsp;Si una pericia psicológica no completa su batería de pruebas con test proyectivos, es endeble.<br/>•&nbsp;Procurar encontrar psicopatología como único impacto de un evento violento en una víctima es el único fin de la pericia.<br/>•&nbsp;Recomendar únicamente terapia psicológica como reparación integral del daño es el único fin de la pericia psicológica.<br/>•&nbsp;Utilizar una misma metodología para todos los casos.</p>
+          <p>En concreto, la implementación de la perspectiva de Derechos Humanos acompañada de la inherente interseccionalidad en las pericias psicológicas permitirá a los juzgadores comprender vulnerabilidades, violencias, dinámicas de violencias, así como categorías sospechosas como en el caso de las mujeres que, debido a las violencias históricas, la codependencia emocional, condiciones estructurales, baja autoestima permanecen en relaciones violentas o delictivas y, sin esta perspectiva, las pericias en psicología resultan un mero documento que describe los resultados de la psicometría aplicada. Además de considerar que dicha perspectiva debe ser experimental en las pericias, es decir, aplicarse como parte del diseño, así como técnicas de análisis y no sólo como parte del marco teórico y bibliografía.</p>
+          <p>Por último, cabe mencionar que la Psicología Forense con Perspectiva de Derechos Humanos tiene también la tarea  de ordenar identificar y visibilizar los desequilibrios en el ejercicio del poder entre las partes involucradas y el mismo Estado (Turvey y Coronado, 2022, como se citó en Nodal Silva, 2024), tarea compleja que requiere una formación sólida en Derechos Humanos, pero sobre todo en pensamiento crítico e investigación científica.</p>
+          <p><b>El enfoque psicosocial</b></p>
+          <p>Es  imperioso, en primer lugar, reconsiderar los  efectos individuales en el ámbito forense. Las pericias históricamente, han sido interpretadas desde una perspectiva clínica hegemónica. Esta perspectiva ha servido  como base teórica explicativa, incluso cuando su</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">27</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 28 -->
+    <section class="page break" data-page="28">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>respaldo científico se ha basado en el uso pruebas psicométricas cuya validez ha sido argumentada.</p>
+          <p>Por esta razón, una pericia psicológica puede resultar ser reduccionista si se limita a considerar  los aspectos individuales o clínicos del evaluado. Esto impide comprender los efectos de un suceso en la persona, al dejar de lado su dimensión colectiva. Es crucial tener en cuenta que el ser humano es un ser social que interactúa con su entorno y que las interacciones generan efectos en las diferentes esferas.</p>
+          <p>Regularmente el abordaje de los aspectos individuales en un sujeto derivados de un acontecimiento adverso, se realiza desde una perspectiva clínica con enfoque de los efectos postraumáticos. En esa línea, uno de los aspectos a considerar es el de las lesiones psíquicas, entendiéndolo como un tipo de daño psicológico. Echeburúa y Corral (2005) define las lesiones psíquicas como:</p>
+          <p><i>Es una alteración clínica aguda que sufre una persona a consecuencia de haber sufrido un delito violento, y que le incapacita significativamente para hacer frente a los requerimientos de la vida ordinaria a nivel personal, laboral, familiar o social, que es medible por medio de instrumentos de evaluación adecuados, ha sustituido al de daño moral, que es un concepto más impreciso, subjetivo y que implica una percepción personal más de perjuicios a los bienes materiales del honor o de la libertad que de sufrimiento psíquico propiamente dicho</i>(p. 231).</p>
+          <p>Echeburúa y Coral (2025) toca el tema de  las afecciones en diferentes esferas, tanto individuales como colectivas, y en ese mismo contexto añade  las secuelas emocionales como:</p>
+          <p><i>Las secuelas emocionales se refieren a la estabilización del daño psíquico, es decir a una capacidad permanente que no remite con el paso del tiempo ni con un tratamiento adecuado,  por lo que es una alteración irreversible en el funcionamiento psicológico habitual; dicho en otro términos, existe un menoscabo de la salud mental</i> ( p. 231).</p>
+          <p>Pese a estas definiciones multidimensionales del daño, su aplicación en la práctica pericial es limitada, debido a que</p>
+        </div>
+        <div class="lead12">
+          <p>la formación del psicólogo forense se ha perpetuado desde un reduccionismo lombrosiano, centrado en estudiar al ser humano desde la enfermedad. Sin embargo, el daño psicológico puede entenderse desde dos dimensiones. La primera, desde una dimensión individual; que aborda la clínica enfocándose en el trauma psicológico que experimenta una persona a nivel personal, como en el trastorno por estrés post traumático; este enfoque es ampliamente utilizado. La segunda dimensión es la colectiva que considera como las personas viven el dolor dentro de sus entornos, como parte de la memoria colectiva que recoge la experiencia de la otredad (sujeto sufriente en su entorno), por lo que el abordaje se brinda desde el enfoque psicosocial.</p>
+          <p>Lira (1994) refieren que cuando se analiza desde una perspectiva histórica, a la luz de la permanencia de las estructuras político institucionales, resulta adecuado reformular los códigos de interpretación de la realidad y de las relaciones sociales, alterando la confianza básica de los sujetos en la estabilidad de las instituciones.</p>
+          <p>Entendiendo que si bien, los aspectos clínicos o post traumáticos son hallazgos ineludibles, también lo es, que el psicólogo forense tenga la capacidad de explicar las implicaciones o impactos psicosociales en una víctima de delito, desde una dimensión complejo y política. Esto sin duda, obliga a  los psicólogos forenses a conocer los diferentes fenómenos para explicar los efectos sociales e históricos que pueden alterar de manera significativa la vida psicosocial.</p>
+          <p>El enfoque psicosocial entonces, pretende explicar las experiencias traumáticas desde un carácter individual o colectivo, hasta un trauma social que se refiere al impacto que esos hechos colectivos pueden tener en los procesos históricos o en una determinada comunidad o grupo (Martín Baró, 1990 como se citó en Martín Beristain, 2007). Es decir, la resignificación social o colectiva de los impactos individuales.</p>
+          <p>Para puntualizar lo psicosocial como una dimensión vital en el estudio del sujeto,  Nodal Silva (2024) refiere que en lo psicosocial lo importante es reconocer a las personas como individuos que sufren y no como simples objetos de estudio. Es decir que el sujeto que sufre interactúa en estructuras cotidianas desde posicionamientos de total vulnerabilidad y abandono como efecto social.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">28</span></div>
+      </div>
+    </section>
+    <!-- PÁGINA 29 -->
+    <section class="page break" data-page="29">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>Mientras que, por otro lado, para explicar la dimensión colectiva del sujeto Mandariaga y Goñi (2009) señalan:</p>
+          <p><i>No se trata solamente de una interpretación cognitiva de lo que nos rodea, asociada con experiencias afectivas, para dar lugar a una forma de entender la vida. Debemos tener en cuenta también las interacciones colectivas con otros seres sociales activos del entorno con los que se interactúa durante el proceso</i> (p. 96).</p>
+          <p>Entonces, la colectividad del ser humano se puede explorar desde la teoría psicosocial, que analiza la interrelación de diferentes elementos y esferas que rodean al ser humano, a diferencia de lo psicológico centrado en pensamientos, sentimientos y percepciones individuales (Gómez, 2009, p.11). Por lo que en esta coyuntura deben de estudiarse, describirse y explicarse los hallazgos del psicólogo forense en ambas dimensiones, la individual y la colectiva.</p>
+          <p>En consecuencia, es fundamental establecer que la perspectiva psicosocial debe ser un componente esencial en la evaluación psicológica, centrada en poblaciones vulnerables como es el caso de las comunidades indígenas, quiénes deben ser valoradas desde la cosmovisión y sin el uso de pruebas psicométricas, aclarando que en estos casos, excluir el uso de pruebas psicológicas de ninguna forma menoscaba la validez y fiabilidad de las pericias en psicología, como lo demuestran las pericias psicosociales que han sido fundamentales en las sentencias internacionales contra Estados.</p>
+          <p>En otro, ejemplo, la perspectiva psicosocial debe ponderarse en casos de feminicidio, para que los juzgadores tengan un entendimiento de los efectos sociales y transgeneracionales que tiene este delito en el sujeto, pues desde lo individual no hay Trastorno por Estrés Post Traumático que alcance a dimensionar lo efectos de este delito.</p>
+          <p>A continuación, se presentan indicadores psicosociales que se pueden retomar desde lo nomotético en las evaluaciones psicológicas, sin que deban de considerarse como una lista de comprobación, pero sí en carácter de orientadores.</p>
+        </div>
+        <div class="lead12">
+          <p>Gómez (2009) puntualiza al daño al proyecto de vida, desplazamientos, duelos alterados, orfandad colectiva, sobrecarga de roles, daño transgeneracional (dejar de hablar del tema, enojo a la autoridad).</p>
+          <p>Por su lado, González (2016) enlista como indicadores psicosociales al estigma social, desconfianza al estado, discriminación, dificultad en las relaciones sociales, aislamiento, incapacidad de transmitir lo que siente, distanciamiento de sus redes de apoyo, ruptura de creencias, falta de compresión de los acontecimientos violentos, ruptura de creencias, desinterés ante la vida, vida pausada, alto nivel de sufrimiento, búsqueda de sentido a la experiencia.</p>
+          <p>En tanto que Martín Beristain (2007) delimita a los efectos psicosociales en una dialéctica del sujeto con su entorno pudiéndose advertir en los impactos de las creencias básicas, estigma moral, procesos de duelo crónico, efectos colectivos (desplazamientos, desestructura organizacional, estigma, cambios culturales).</p>
+          <p>Para finalizar el enfoque psicosocial, tanto en el ámbito internacional como en el local ha cobrado relevancia y visibilidad en procesos de litigio, para brindar a los operadores de justicia una mejor comprensión de los daños, al tiempo que proponer medidas de reparación congruentes con estos, así como con las necesidades y expectativas de las víctimas (Antillón et al., 2018). La pericia psicológica forense bajo la perspectiva de derechos humanos y el enfoque psicosocial</p>
+          <p>El enfoque psicosocial, en particular, permite explicar el comportamiento humano desde la colectividad, así como su impacto en las esferas psicosociales: familiar, comunitario y social.</p>
+          <p>Estos enfoques y perspectivas pueden aportar a la construcción de las pericias relacionadas con la reparación integral del daño de violaciones graves a los derechos humanos para la implementación de la justicia transicional desde la verdad, la justicia, la no repetición y la reparación, por ejemplo; en las pericias de reparación de daño por el delito de desaparición forzada. Pues la perspectiva psicosocial dialoga con las categorías de los derechos humanos (Antillón et al., 2018).</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">29</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 30 -->
+    <section class="page break" data-page="30">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+ <div class="grid-1-1">
+  <div class="lead12">
+        <p>Debido a que, desde la mirada jurídica, la pericia se puede convertir en un medio de prueba dentro del sistema penal y este permite a los jueces comprender la existencia de hechos, a través de su análisis técnico. Esto plantea una cuestión fundamental: ¿resulta endeble una pericial en psicología forense sin entrevista ni pruebas psicológicas? La respuesta es negativa, pues, como argumenta Lázaro (2022b), el pluralismo epistemológico, las metodologías especializadas y los criterios de validez y fiabilidad son específicos de cada especialidad forense, esto explica que el conocimiento se produce a causa y de modos distintos.</p>
+        <p>Hasta este punto, es fundamental aclarar que los informes forenses no deben integrarse con pruebas proyectivas, como primer punto, dado que, como señala Amaya (2019), estas carecen del respaldo estadístico a diferencia de lo que sí poseen las pruebas psicométricas, además de su inherente ambigüedad interpretativa.</p>
+        <p>Por otro lado, también se debe de considerar que las pruebas psicométricas son manipulables en el ámbito forense por factores como la repetida aplicación de una misma prueba, la exageración de síntomas o fallas en su interpretación entre otras.</p>
+        <p>Por ello, en la integración de los hallazgos del dictamen psicológico no se debe anteponer como pilares de información a las pruebas psicológicas, si no meramente como fuentes de información y fijar como objetivos (Gómez, 2009):</p>
+        <p>1.&nbsp;Demostrar la existencia de daños psicológicos y psicosociales<br/>2.&nbsp;Plantear el grado de correlación entre esos daños y los hechos objeto de la denuncia.</p>
+        <p>Además, la investigación psicológica abarca la observación, experimentación, evaluación y análisis, con el propósito de explorar los procesos biológicos, cognitivos, emocionales, personales y sociales, que subyacen al comportamiento humano. En este contexto, los procesos cognitivos en una persona permiten tomar decisiones de acuerdo con su etapa de desarrollo, evidenciando que la metodología de la investigación garantiza la validez y confiabilidad de los análisis periciales en psicología, diferenciándolos de una prueba psicológica como se ha institucionalizado.</p>
+      </div>
+     <div class="lead12">
+        <p>En tanto que, un aspecto relevante de las pericias es determinar si la metodología y el método implementados son replicables. Como señala Lázaro (2022b), la validez, fiabilidad y/o justificación de la prueba científica radican en el sustrato epistemológico específico de cada especialidad pericial, ya que estas tienen un constructo metodológico según su objeto de estudio. Por lo que habrá que considerar lo que realmente le brinda la validez y confiabilidad a una pericia psicológica. En este caso, los criterios Daubert son un referente clave, más allá de la validez de pruebas psicológicas específicas, bajo tres dimensiones esenciales (Vázquez, 2022, p. 29, 30):</p>
+        <p>1.&nbsp;El perito como sujeto informante:<br/>•&nbsp;Credenciales que acrediten su expertise <br/>•&nbsp;Mecanismos para evitar la parcialidad cognitiva <br/>•&nbsp;Marco normativo que garantice su independencia</p>
+        <p>2.&nbsp;El contenido del informe pericial:<br/>•&nbsp;Fundamentos de las generalizaciones empleadas <br/>•&nbsp;Aplicación adecuada al caso concreto <br/>•&nbsp;Justificación de las conclusiones</p>
+        <p>3.&nbsp;La presentación de la información:<br/>•&nbsp;Calidad informativa del que informa.<br/>•&nbsp;Respuestas sustantivas a las preguntas relevantes planteadas durante el juicio oral<br/>•&nbsp;Resultados de juntas periciales cuando existan </p>
+        <p>De no considerar estas directrices pueden surgir errores sistemáticos en el razonamiento de la información de la pericia; estos errores son considerados como sesgos cognitivos que se dan por la falta de objetividad (Vázquez, 2022). Las conclusiones pueden verse comprometidas en relación con la falta de objetividad.</p>
+        <p>Entonces, considerando a los criterios Daubert y al uso de pruebas psicológicas de índole proyectivo se puede establecer que dichas pruebas carecen de estudios científicos y utilizarlas resta validez como confiabilidad a la pericial de psicología. Estos criterios en la pericia permiten conocer si la técnica aplicada es vigente, válida, fiable y es la más adecuada para el caso objeto de investigación. A continuación, se presentan algunos criterios expuestos por Lázaro (2002a, p. 97):</p>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">30</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 31 -->
+    <section class="page break" data-page="31">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+  <div class="lead12">
+        <p>•&nbsp;¿La metodología aplicada es adecuada al objeto de estudio?<br/>•&nbsp;¿Existe validez epistemológica entre la especialidad pericial, el método, la técnica y el procedimiento utilizado?<br/>•&nbsp;¿El o la perito siguió con rigurosidad el método científico o las metodologías que utilizó en su investigación?<br/>•&nbsp;¿El o la perito aplicó algún protocolo nacional o internacional en su intervención forense?<br/>•&nbsp;¿El o la perito planteó hipótesis que le permiten descartar la posibilidad de otros hechos?<br/>•&nbsp;¿El o la perito sometió a prueba las hipótesis, las contrastó, las verificó y se comprobó?<br/>•&nbsp;¿El o la perito vinculó el análisis de resultados con la cáustica que fue sometida a su consideración?<br/>•&nbsp;Para realizar las conclusiones ¿El o la perito tiene evidencia suficiente que las justifique?<br/>•&nbsp;¿Las referencias bibliográficas del perito son fuentes arbitradas e indexadas?<br/>•&nbsp;¿El o la perito conoce a la comunidad científica que legitima el conocimiento pericial que aplicó en su peritaje?</p>
+        <p>Entonces habría que seguir cuestionando bajo qué preceptos se desarrolla una pericia en psicología y qué paradigmas deben ser cuestionados, así como cuáles deben de respaldar el diseño y aplicación en los tribunales. Por lo tanto, se debe replantear si lo que se desahoga en los tribunales es científico o sólo responde a lo que el derecho quiere conocer.</p>
+        <p>Bajo estos preceptos es que, cualquier peritaje debe de cumplir con cientificidad que se retoman desde la validez y fiabilidad que habrán de estar fundamentadas en la ciencia de la psicología.</p>
+        <p>La fiabilidad científica del dictamen pericial es una característica que permite verificar los resultados obtenidos, ya que estos se alcanzaron por medio de métodos, técnicas y procedimientos validados, estandarizados y homologados, respectivamente (Lázaro, 2024).</p>
+      </div>
+      <div class="lead12">
+        <p>La validez por su parte en el ámbito forense se da entorno la metodología implementada y las bases teóricas, incluyendo la aplicación de protocolos de actuación con base a estándares que justifiquen  las conclusiones a las que se arribaron (Lázaro, 2024)</p>
+        <p>Por su parte la Suprema Corte de Justicia de la Nación –SCJN-, se ha pronunciado en relación con los criterios jurídicos y científicos para determinar la viabilidad de las pericias como medio de prueba:</p>
+        <p><i>… el peritaje es una actividad humana de carácter procesal, desarrollada en virtud de encargo judicial por personas distintas de las partes del proceso, especialmente calificadas por su experiencia o conocimientos técnicos, artísticos o científicos y mediante la cual se suministran al Juez argumentos y razones para la formación de su convencimiento respecto de ciertos hechos, también especiales, cuya percepción o cuyo entendimiento escapa a las aptitudes del común de la gente y requieren esa capacidad particular para su adecuada percepción y la correcta verificación de sus relaciones con otros hechos, de sus causas y de sus efectos o, simplemente, para su apreciación e interpretación</i> (Vázquez, 2022, p. 26).</p>
+        <p>Dicho lo anterior, entonces resulta importante referir que un perito debe contar con conocimientos especializados y experiencia sustentada en teoría e investigación empírica, lo que otorga validez a sus informes, como es el caso de psicología forense (Amaya, 2019). De tal forma que el perito en psicología forense debe allegarse a capacitación constantemente.</p>
+        <p>Esta propuesta se da en el marco de la exploración de la perspectiva de derechos humanos y el enfoque psicosocial como pilares de una evaluación psicológica, con la finalidad de hacer frente a la hegemonía clínica psicolopatologizante de las víctimas en la que cabe la posibilidad de no aplicar pruebas psicométricas, sin que ello dirima el carácter científico de la pericia.</p>
+        <p>Primero porque la psicología forense se ha empeñado en hacer uso de pruebas psicológicas para demostrar rigor científico en sus pericias, con el propósito de alcanzar la objetividad más allá de toda duda razonable y así demostrar la presencia de patologías como forma de respuesta, pero ¿de dónde proviene esto? La respuesta </p>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">31</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 32 -->
+    <section class="page break" data-page="32">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+      <div class="grid-1-1">
+        <div class="lead12">
+          <p>radica en la necesidad del derecho de demostrar sus alegatos, y no ser cuestionados, desde este paradigma positivista en el que “2+2=4” dejando de lado aspectos axiológicos propios de la psicología, hegemonía en la que se plantea que las víctimas sólo deben de tener como impactos ciertas patologías especificadas en manuales, y en contraste con ello, pero desde una lógica idiográfica donde se privilegia el razonamiento y no una mecanización de una pericia. Se retoma como fundamento lo que plantea Martín-Baró (2006) sobre la psicología de la liberación:</p>
+          <p><i>…un análisis positivista del campesino salvadoreño puede llevar a la conclusión de que se trata de una persona machista y fatalista, de manera semejante a como el estudio inteligencia del negro norteamericano lleva a la conclusión de que su coeficiente intelectual se encuentra en un promedio una desviación típica por debajo del cociente intelectual blanco. Considerar que la realidad no es más que lo dado, que el campesino salvadoreño es sin más fatalista o el negro menos inteligente, constituye una ideologización de la realidad que termina consagrando como natural el orden existente</i> (p. 8)</p>
+          <p>Esta perspectiva nos lleva a una doble reflexión: primero, sobre el análisis del contexto individual y el segundo, cumplir con los estándares científicos que garanticen la validez y la fiabilidad en una pericia psicológica.</p>
+          <p>Hasta este punto, entonces ¿Cómo es que se relacionan la validez y la fiabilidad en las pericias psicológicas con perspectiva de derechos humanos y enfoque psicosocial? esto, sin duda cuestiona el paradigma que sostiene que los informes forenses carecen de cientificidad cuando no utilizan pruebas psicológicas, situación que por supuesto es una falacia y una estrategia de litigio utilizada por la abogacía; que tiene éxito cuando el psicólogo no conoce el marco epistemológico de la psicología forense. </p>
+          <p>Precisamente, el enfoque psicosocial se aleja del positivismo estricto (en su concepción tradicional de cientificidad) y el derecho enfrenta mayores dificultades para resolver controversias de manera satisfactoria para todos los actores, debido a componentes axiológicos,</p>
+        </div>
+        <div class="lead12">
+          <p>ideológicos y subjetivos involucrados. Esto se manifiesta cuando los peritajes que omiten pruebas psicológicas estandarizadas son sistemáticamente cuestionados, generando la tarea de combatir la visión en extremo positivista del derecho procesal, abriendo paso a paradigmas más amplio a la comunidad psicológica.</p>
+          <p>Si queremos que la psicología contribuye de una manera significativa a la historia de nuestros pueblos y, como psicólogos,  al desarrollo de los países latinoamericanos, necesitamos replantearnos nuestro bagaje teórico y práctico, pero hacerlo desde la vida misma de nuestras comunidades desde sus sufrimientos, sus aspiraciones y luchas (Martín-Baró, 2006).</p>
+          <p>Por lo tanto, una forma concreta de ejemplificar esta problemática en las pericias psicológicas,-como en  el caso de evaluaciones derivadas de alegaciones de tortura- es cuestionarse las siguientes preguntas: ¿Cómo se ha evaluado a las víctimas de tortura? ¿Se ha buscado diagnosticar un TEPT o se ha procurado entender el impacto del hecho violento en su contexto? Por lo tanto, se considera que una manera adecuada de abordar el problema, tanto a nivel individual como colectivo desde la psicología forense, implica también formularse interrogantes como: ¿Cuál ha sido históricamente el objetivo de las evaluaciones practicadas a las víctimas de tortura? ¿Establecer de forma inequívoca un diagnóstico de TEPT mediante criterios clínicos propios de un contexto occidentalizado, o comprender el impacto que el hecho violento ha generado en la persona  desde su contexto y cosmovisión? </p>
+          <p>Las respuestas a estas interrogantes  derivan en la necesidad de implementar una perspectiva que permita evaluar a las víctimas desde su individualidad, comprendiendo la diversidad de impactos que los hechos violentos pueden provocar, más allá de una visión positivista. De ahí que sea imperativo poner en marcha un enfoque que permita valorar a  cada ser humano desde la singularidad y comprender sus diferencias, pues la actividad humana no está aislada de su dimensión social ni del correspondiente proceso de socialización (Mandariaga y Goñi, 2009).</p>
+          <p>En tanto que la <b>tabla 1</b>, presenta la una propuesta de metodología de la pericia psicológica desde la perspectiva de derechos humanos con un enfoque psicosocial con rigor forense.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">32</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 33 (tabla) -->
+    <section class="page break" data-page="33">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+
+      <div class="h10" style="margin-bottom:6px"><b>Tabla 1. Propuesta de metodología de pericia psicológica desde la perspectiva de derechos humanos y enfoque psicosocial.</b></div>
+      <img class="img-cover" alt="Tabla 1 — metodología" src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/6cafca5cf384006a9562c6ffb95c56d8dbcc46c0/fotos/tabla6.PNG" />
+      <div class="lead12" style="margin-top:12px">
+        <p>La propuesta es enunciativa, más no limitativa, y puede amoldarse a casos específicos. Su finalidad es presentar una estructura que garantice, en el ámbito judicial, el rigor forense conforme a los criterios Daubert, en lo relativo a la validez y fiabilidad de la metodología, desde una perspectiva de derechos humanos y con un enfoque psicosocial.</p>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">33</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 34 (Conclusiones + Referencias 1) -->
+    <section class="page break" data-page="34">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+
+      <div class="h18 h-aqua bold">CONCLUSIONES</div>
+      <div class="grid-1-1" style="margin-top:12px">
+        <div class="lead12">
+          <p>Es necesario reflexionar hasta qué punto las guías y protocolos institucionales generan sistematizaciones en torno al estudio del comportamiento humano y dejan de lado la perspectiva de derechos humanos y el enfoque psicosocial. Si bien resultan útiles en el ámbito forense, no siempre permiten una evaluación basada en un razonamiento idiográfico, crítico, humano y contextualizado. Por ello, se deben priorizar los estudios de casos individuales -tomando en cuenta que cada caso es único- desde su propia singularidad, y   no reducirlos a la psicopatología.</p>
+          <p>Cabe aclarar que la psicopatología puede o no estar presente en una persona debido a diversos factores. Por ello, un informe forense debe explicar de manera integral el impacto en una persona con base en el objetivo de la evaluación, y no se debe caer en conclusiones reduccionistas clínicas. Un ejemplo de esto es asumir que la ausencia de un TEPT afecta la calidad de víctima de una persona dentro del sistema de justicia. </p>
+          <p>En este contexto, es común que los abogados desacrediten a los peritos y sus dictámenes desde la metodología positivista, priorizando el uso de pruebas psicológicas como único criterio de rigor científico. Esto, sin duda, relega la discusión sustantiva de la psicología a un segundo o incluso tercer plano, perdiendo de vista</p>
+        </div>
+        <div class="lead12">
+          <p>la su profundidad y complejidad del estudio del comportamiento humano en el ámbito judicial.</p>
+          <p>La perspectiva de derechos humanos en la psicología forense permite visibilizar la necesidad de evaluar psicológicamente a las personas en función de sus características e individualidades, explorando la imperiosa necesidad de incorporar un enfoque interseccional. Esto posibilita describir y explicar impactos que van más allá del ámbito clínico, es decir, impactos psicosociales  profundos e incluso transgeneracionales, que implican la intermitencia en el desplazamiento de los sujetos dentro de sus entornos, reconociendo que son seres  colectivos.</p>
+          <p>Finalmente, es necesario reflexionar sobre las pericias psicológicas que incluyen el uso de psicometría, especialmente cuando estas se aplican de forma indiscriminada. El exceso en la aplicación de  pruebas psicométricas puede revictimizar al evaluado y generar errores debido a interpretaciones y correlaciones incorrectas que no se apegan a los baremos establecidos. Lo anterior puede afectar directamente la fiabilidad y validez de estas técnicas de obtención de información, desviándose de su objetivo central. Además, con frecuencia, los resultados no guardan coherencia con la narrativa del caso. </p>
+        </div>
+      </div>
+
+      <div class="h18 h-aqua bold" style="margin-top:18px">REFERENCIAS BIBLIOGRÁFICAS</div>
+      <div class="lead12" style="margin-top:8px">
+        <p><b>Antillón, X.</b>, Cortez, O., Escareño, E., González, A., Mora, M., Díaz, J., Ríos, V., Tolentino, L., Gómez, R., Nava, G., Ruiz, A. y Landaverde, A.  (2018). <i>Yo solo quería que amaneciera, Impactos Psicosociales del Caso Ayotzinapa</i>. Fundar, Centro de Análisis e Investigación. https://fundar.org.mx/publicaciones/impactos-psicosociales-de-casoayotzinapa/</p>
+        <p><b>Amaya, S.</b> (2019). <i>Epistemología y Psicología forense</i>. Manual Moderno. https://www.derechopenalenlared.com/libros/epistemologia-psicologia-forense-amaya-nassar.pdf</p>
+        <p><b>Arce, R.</b>, Fariña, F. y Novo, M. (Eds.). (2005). <i>Psicología Jurídica</i>. A Coruña: Consellería de Xustiza Interior e Administración Local. Xunta de Galicia. https://dialnet.unirioja.es/servlet/libro?codigo=884164</p>
+        <p><b>Echeburúa, E.</b> y Corral, P. (2005). ¿Cómo evaluar las lesiones psíquicas y las secuelas emocionales en las víctimas de delitos violentos? <i>Psicopatología Clínica Legal y Forense</i>, 5(1), 57-73. https://dialnet.unirioja.es/servlet/articulo?codigo=2382705</p>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">34</span></div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 35 (Referencias 2) -->
+    <section class="page break" data-page="35">
+      <div class="header h10">Beatriz Cuautle / Revista Cientí­fica Diálogo Forense / Núm. 11, Vol. 6 / enero-junio 2025</div>
+
+      <div class="lead12">
+        <p><b>Gopaldas, A.</b> (2013). Intersectionality 101. <i>Journal of Public Policy & Marketing</i>, 32, 90-94. https://doi.org/10.1509/jppm.12.044</p>
+        <p><b>Coronado, A.</b> y <b>Cervantes, S.</b> (2018). Niveles de análisis en psicología forense. <i>Psicología Criminal y Forense</i>, 22, 10-12.</p>
+        <p><b>Gómez, D.</b> (2009). <i>Peritaje psicosocial por violaciones a derechos humanos</i>. Colección Psicología Social ECAP. https://biblioteca.corteidh.or.cr/engine/download/blob/cidh/168/2023/44/66222.pdf?app=cidh&class=2&id=40370&field=168</p>
+        <p><b>Hernández, G.</b> (2010). Los derechos humanos, una responsabilidad de la Psicología Jurídica. <i>Diversitas: Perspectivas en Psicología</i>, 6(2), 415-428. https://doi.org/10.15332/s1794-9998.2010.0002.1</p>
+        <p><b>González, A.</b> (2016). <i>Guía técnica para el uso de la perspectiva psicosocial en el diagnóstico y el tratamiento de víctimas de la tortura y desaparición forzada en México</i>. Instituto para la Seguridad y la Democracia, A.C.</p>
+        <p><b>Mandariaga, J.</b> y <b>Goñi, A.</b> (2009). Desarrollo psicosocial. <i>Revista de psicodidáctica</i>, 14(1), 95-118. https://www.redalyc.org/articulo.oa?id=17512723007</p>
+        <p><b>Martín Beristain, C.</b> (2007) <i>Manual sobre la perspectiva psicosocial en la investigación de derechos humanos</i>. https://www.corteidh.or.cr/tablas/27117.pdf</p>
+        <p><b>Martín-Baró, I.</b> (2006). Hacia una psicología de la liberación. <i>Revista Electrónica de Intervención Psicosocial y Psicología Comunitaria</i>, 1(2), 7-14. https://dialnet.unirioja.es/servlet/articulo?codigo=2652421</p>
+        <p><b>Niño, N.</b>, Aldana, L. y Zuluaga, M. (2019). Enfoque de Derechos Humanos: Una herramienta para la construcción de paz y un medio para el desarrollo de otros enfoques.  <i>Revista Latinoamericana Estudios de la Paz y el Conflicto</i>, 1, 27-42. https://doi.org/10.5377/rlpc.v0i0.9501</p>
+        <p><b>Nodal Silva, V.</b> (2024). <i>Psicología Forense con Perspectiva de Derechos Humanos: Fundamentos Teóricos y Metodológicos para la Investigación Psicosocial</i> [Tesis Doctoral. Universidad de Guadalajara Red Universitaria e Institución Benemérita de Jalisco].</p>
+        <p><b>Cámara de Diputados del H. Congreso de la Unión.</b> (2022). <i>Ley General de Salud</i>. Diario Oficial de la Federación.</p>
+        <p><b>Lázaro, R.</b> (2022a). <i>El metaperitaje en el procedimiento penal acusatorio</i>. INACIPE.</p>
+        <p><b>Lázaro, R.</b> (2022b). <i>La prueba científica validez y fiabilidad del peritaje en el juicio oral</i>. INACIPE.</p>
+        <p><b>Lázaro, R.</b> (2024). Fundamentos epistemológicos y metodológicos de los metaperitajes. (24), 55-84. INACIPE. DOI: https://revistacienciasinacipe.fgr.org.mx/index.php/02/article/view/786/828</p>
+        <p><b>Lira, E.</b> (1994). Conferencia Análisis de la situación de Derechos Humanos. Facultad de Ciencias Sociales de la Universidad de Costa Rica.</p>
+        <p><b>Rangel, H.</b> (2011). Sentencias condenatorias al Estado Mexicano dictadas por la Corte Interamericana de Derechos Humanos y sus implicaciones en el orden jurídico nacional. <i>Revista IUS</i>, 5(28), 160-186.</p>
+        <p><b>Parra, O.</b> y <b>Franco, F. A.</b>, (2020). El enfoque de interseccionalidad en la protección judicial contra la discriminación: alcances y desafíos del giro de la jurisprudencia interamericana. <i>Anuario de derecho constitucional latinoamericano</i>, 26, 583-621.</p>
+        <p><b>Vázquez, C.</b> (2022). <i>Manual de Prueba Pericial</i>. Suprema Corte de Justicia de la Nación. https://www.scjn.gob.mx/derechos-humanos/sites/default/files/Publicaciones/archivos/2022-04/MANUAL%20DE%20PRUEBA%20PERICIAL_DIGITAL.pdf</p>
+      </div>
+
+      <div class="footer">
+        <div class="bar"></div>
+        <div class="brand">CON FUNDAMENTO</div>
+        <div class="pg"><span class="tab">35</span></div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Prevalencia de alcohol en hechos de tránsito — 7 páginas</title>
+<style>
+  :root{
+    --azul:#0b4fd6;        /* azul pestañas y títulos */
+    --azul-prof:#0739a6;   /* azul profundo para subtítulos */
+    --gris:#4b5563;        /* texto */
+    --gris-borde:#e5e7eb;  /* líneas divisoras */
+    --gris-fondo:#f5f7fb;  /* fondos suaves */
+    --negro:#111827;
+  }
+  html,body{ margin:0; background:#eef1f5; color:var(--negro);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+
+  /* Contenedor de página */
+  .page{
+    width:900px; margin:22px auto; background:#fff;
+    border-radius:12px; overflow:hidden; box-shadow:0 10px 28px rgba(0,0,0,.08);
+    position:relative;
+  }
+  .page + .page{ margin-top:32px; }
+
+  /* Encabezado superior (línea 10pt) */
+  .topline{
+    font-size:10pt; color:#000; padding:10px 24px 8px 72px;
+  }
+
+  /* Pestaña lateral azul (izquierda) */
+  .ribbon{
+    position:absolute; left:0; top:0; bottom:0; width:54px; background:var(--azul);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .ribbon span{
+    writing-mode:vertical-rl; transform:rotate(180deg); color:#fff; font-weight:800; letter-spacing:.6px;
+    text-transform:uppercase;
+  }
+
+  /* Imagen principal/banner */
+  .banner{ position:relative; margin:8px 24px; border-radius:12px; overflow:hidden; }
+  .banner img{ width:100%; height:auto; display:block; }
+
+  /* Pestaña flotante sobre imagen (si se quisiera) */
+  .tag-over{ position:absolute; left:0; top:16px; background:var(--azul); color:#fff;
+    padding:8px 14px; font-weight:800; border-radius:0 10px 10px 0; }
+
+  /* Título principal */
+  .title{ font-size:25pt; font-weight:900; text-align:center; margin:14px 24px; text-transform:uppercase; }
+
+  /* Columnas */
+  .cols-2{ display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:0 24px 24px 72px; }
+  .cols-2.wide-left{ grid-template-columns:2fr 1fr; } /* izquierda más ancha */
+
+  /* Texto estándar */
+  p{ font-size:12pt; line-height:1.6; margin:0 0 10px 0; color:var(--gris); text-align:justify; }
+  .tiny{ font-size:10pt; }
+  .xs{ font-size:8pt; }
+
+  /* Rotulitos azules y títulos de sección */
+  .label{ color:var(--azul); font-weight:800; }
+  .h18{ font-size:18pt; font-weight:900; color:var(--azul-prof); margin:12px 0 8px 0; }
+
+  /* Caja lateral */
+  .pane-blue{ background:var(--azul); color:#fff; font-weight:700; text-align:center;
+    padding:8px 10px; border-radius:10px; font-size:10pt; }
+  .pane-gray{ background:#f1f5f9; border:1px solid var(--gris-borde); border-radius:10px; padding:10px; }
+  .pane-gray b{ font-weight:800; color:#111; }
+
+  /* Divisor */
+  .divider{ height:1px; background:var(--gris-borde); margin:14px 24px 14px 72px; }
+
+  /* Imagen dentro de columna */
+  .img-box img{ width:100%; border-radius:10px; display:block; }
+  .caption{ font-size:10pt; color:#111; margin-top:6px; }
+
+  /* Pie de página con pestaña azul del número */
+  .footer{
+    padding:10px 16px 12px 72px; border-top:1px solid var(--gris-borde);
+    background:var(--gris-fondo); color:#1f2937; display:flex; justify-content:space-between; align-items:center;
+  }
+  .badge{ background:var(--azul); color:#fff; border-radius:999px; padding:4px 12px; font-weight:800; }
+
+  /* Impresión */
+  @media print{
+    .page{ box-shadow:none; margin:0 auto; page-break-inside:avoid; }
+    .page + .page{ page-break-before:always; }
+  }
+
+  /* Responsive básico */
+  @media (max-width:940px){ .page{ width:100%; border-radius:0; } }
+  @media (max-width:760px){
+    .cols-2{ grid-template-columns:1fr; padding-left:24px; }
+    .topline,.footer,.divider{ margin-left:24px; padding-left:24px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- =================== PÁGINA 1 — pp.14 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 14-20</div>
+
+    <!-- Imagen banner con pestaña sobrepuesta (opcional, ya hay ribbon lateral) -->
+    <figure class="banner">
+      <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/f8732b36854697c7e5412027deb1f00f12ad030d/accidentes.PNG" alt="Accidentes de tránsito">
+      <!-- <div class="tag-over">Con fundamento</div> -->
+    </figure>
+
+    <h1 class="title">PREVALENCIA DE ALCOHOL EN HECHOS DE TRÁNSITO</h1>
+
+    <div class="cols-2 wide-left">
+      <!-- Columna izquierda (más ancha) -->
+      <div>
+        <p><span class="label">Palabras clave:</span> alcohol, hechos de tránsito, toxicología, alcoholemia, cromatografía de gases. 
+        <span class="label">Keywords:</span> ethanol, traffic accidents, toxicology, blood alcohol content, gas chromatography</p>
+
+        <h2 class="h18">RESUMEN</h2>
+        <p>El consumo de alcohol, incluso en pequeñas cantidades, incrementa significativamente el riesgo de accidentes de tránsito al afectar funciones críticas como la visión y los reflejos, poniendo en peligro tanto la vida del consumidor como la de terceros. Este estudio descriptivo tuvo como objetivo determinar la presencia de alcohol en los casos relacionados con hechos de tránsito analizados en el Laboratorio de Toxicología del Instituto Nacional de Ciencias Forenses de Guatemala –INACIF- durante el 2023. Se procesaron los resultados de 3,350 casos, excluyendo aquellos con presencia confirmada de drogas terapéuticas o de abuso. Los hallazgos revelaron que, durante el 2023, en el 49 % de los casos se obtuvo resultados positivos y el 51 % negativos para la detección de etanol. Además, se evidenció que el género masculino está predominantemente involucrado en estos incidentes, representando el 87.32 % de los casos analizados, mientras que el género femenino representó el 12.68 %.</p>
+      </div>
+
+      <!-- Columna derecha (lateral gris con badge azul) -->
+      <aside>
+        <div class="pane-blue tiny">Diálogo Forense Núm. 11 , Vol. 6, 2025 &nbsp; ISSN: 2789-8458</div>
+        <div class="pane-gray xs" style="margin-top:10px;">
+          <p><b>María Eugenia Vásquez Sosa</b><br>Laboratorio de Toxicología<br>Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>Ciudad de Guatemala, Guatemala<br>mvasquez@inacif.gob.gt</p><br>
+          <p><b>Nancy Jazzmin Osorio Ortíz</b><br>Laboratorio de Toxicología<br>Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>Ciudad de Guatemala, Guatemala<br>nosorio@inacif.gob.gt</p><br>
+          <p><b>Meily Floridalma Coyote Hernández</b><br>Laboratorio de Toxicología<br>Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>Ciudad de Guatemala, Guatemala<br>mcoyote@inacif.gob.gt</p><br>
+          <p><b>Diana Lucía León Solis</b><br>Laboratorio de Toxicología<br>Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>Ciudad de Guatemala, Guatemala<br>dleon@inacif.gob.gt</p><br>
+          <p><b>Javier Mauricio Contreras Ávila</b><br>Laboratorio de Toxicología<br>Instituto Nacional de Ciencias Forenses de Guatemala -INACIF<br>Ciudad de Guatemala, Guatemala<br>jmcavila@inacif.gob.gt</p><br>
+          <p><b>Recibido:</b> 29/07/2024 &nbsp;&nbsp; <b>Aceptado:</b> 17/03/2025</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">14</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 2 — pp.15 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 15-20</div>
+
+    <h2 class="h18" style="padding:0 24px 4px 72px;">ABSTRACT</h2>
+    <div style="padding:0 24px 8px 72px;">
+      <p>Alcohol consumption, even in minimal amounts, significantly increases the risk of traffic accidents by impairing critical functions such as vision and reflexes, endangering both the drinker and others. This descriptive study aimed to determine the presence of alcohol in traffic-related cases analyzed by the Toxicology Laboratory of the INACIF during 2023. Results of 3,350 cases were processed, excluding those with confirmed presence of therapeutic or illicit drugs. The findings showed that 49 % of the cases tested positive for ethanol, while 51 % were negative. Additionally, males were predominantly involved in these incidents, representing 87.32 % of cases, compared to 12.68 % for females.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="h18" style="padding:0 24px 4px 72px;">INTRODUCCIÓN</h2>
+    <div style="padding:0 24px 8px 72px;">
+      <p>Los accidentes de tránsito son una de las principales causas de muerte en Guatemala, constituyendo un serio problema de salud pública (Patzán, 2023). Esto puede evidenciarse al observar la figura 1 y 2 que muestran la cantidad de conductores y víctimas relacionadas a hechos de tránsito, reportados del 2018 al 2022 a nivel nacional, clasificados por género según datos de la Unidad de Estadísticas y de Seguridad del Instituto Nacional de Estadística de Guatemala, con base en datos de la Policía Nacional Civil.</p>
+    </div>
+
+    <div class="img-box" style="padding:0 24px 0 72px;">
+      <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/5eb665bd611553c3848d98f5316a7aacf5f90680/fotos/tabla3.PNG" alt="Figura 1 - Conductores involucrados">
+      <div class="caption">Figura 1. Adaptado de Conductores involucrados en accidentes de tránsito según sexo, por Instituto Nacional de Estadística, 2023, (https://www.ine.gob.gt/sistema/uploads/2023/11/23/20231123230443etUfmrodsXA9cLw9u Rw50t63azApaVwN.pdf). Obra de dominio público</div>
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">15</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 3 — pp.16 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 15-20</div>
+
+    <div class="img-box" style="padding:8px 24px 0 72px;">
+      <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/200fcdcc3e712931445a42d5fda89afce70a0354/fotos/tabla4.PNG" alt="Figura 2 - Víctimas involucradas">
+      <div class="caption">Figura 2. Adaptado de Conductores involucrados en accidentes de tránsito según sexo, por Instituto Nacional de Estadística, 2023, (https://www.ine.gob.gt/sistema/uploads/2023/11/23/20231123230443etUfmrodsXA9cLw9uRw50t 63azApaVwN.pdf). Obra de dominio público.</div>
+    </div>
+
+    <div class="cols-2" style="padding-top:8px;">
+      <div>
+        <p>En el 2023 según el Programa de las Naciones Unidas para el Desarrollo –PNUD- (2024) se registraron 8218 accidentes de tránsito. Según la Organización Panamericana de la Salud –OPS- (2019) en un informe realizado sobre la situación mundial del alcohol y la salud, menciona “A nivel mundial, se estima que un millón de muertes por traumatismos fueron atribuibles al alcohol…” (p. 14). El consumo de alcohol es uno de los factores de riesgo más comunes en estos accidentes, dado que actúa como un depresor del sistema nervioso central, inhibiendo progresivamente las funciones cerebrales y afectando las capacidades cognitivas, perceptivas y motoras esenciales para la conducción. Esto compromete el juicio, la percepción de la velocidad, la distancia, la posición del vehículo y la capacidad de reacción ante</p>
+      </div>
+      <div>
+        <p>imprevistos. Según la OPS (2010), incluso un consumo moderado de alcohol incrementa considerablemente el riesgo de involucrarse en un accidente de tránsito, tanto para conductores como para peatones. Según Alvarez y del Río (2001), los efectos del alcohol están directamente relacionados con su concentración en sangre; a mayor concentración, mayor es el deterioro de las funciones. En el Laboratorio de Toxicología se utiliza como referencia lo indicado por Repetto en su libro Toxicología Avanzada, utilizando los valores mostrados en el cuadro 1 como referencia para relacionar los síntomas y el estado de una persona, con la concentración de alcohol en sangre (Repetto, 1995).</p>
+      </div>
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">16</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 4 — pp.17 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 15-20</div>
+
+    <div class="img-box" style="padding:8px 24px 0 72px;">
+      <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/c18ab8dc7eddc4ad4c2b3a4523b11322b9708d6a/fotos/tabla5.PNG" alt="Cuadro 1 - Concentración de alcohol">
+      <div class="caption">Cuadro 1. Concentración de alcohol en sangre. Adaptado de Toxicología del alcohol etílico, por M. Repetto, <i>Toxicología Avanzada</i>, 1995.</div>
+    </div>
+
+    <div style="padding:10px 24px 16px 72px;">
+      <p>Cabe mencionar que dichos efectos pueden variar según factores como la edad, peso, sexo, frecuencia y cantidad de consumo, enfermedades, entre otros (Álvarez y del Río, 2001). El presente estudio busca determinar el porcentaje de casos de accidentes de tránsito en los que se detecta la presencia de alcohol (etanol) y otras sustancias volátiles durante el 2023 y sus características. Este dato se obtuvo a partir de las estadísticas generadas de los análisis realizados durante el año 2023, de acuerdo a las solicitudes realizadas por las diferentes autoridades competentes.</p>
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">17</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 5 — pp.18 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 15-20</div>
+
+    <h2 class="h18" style="padding:0 24px 4px 72px;">METODOLOGÍA</h2>
+    <div class="cols-2" style="padding-top:0;">
+      <div>
+        <p>Se llevó a cabo una evaluación utilizando datos estadísticos mensuales sobre resultados obtenidos de indicios provenientes de hechos de tránsito que fueron analizados por el Laboratorio de Toxicología del INACIF durante 2023, identificando 3,350 casos en los cuales se realizó la identificación y cuantificación de alcohol como etanol y otras sustancias volátiles (metanol, acetona e isopropanol), mediante Cromatografía de Gases acoplada a un sistema de espacio de cabeza (headspace) con doble columna y doble detector de ionización de llama (FID/FID). Este método se aplicó a fluidos biológicos enviados al laboratorio junto con la solicitud de análisis emitida por la autoridad competente. Cabe mencionar que este método analítico se encuentra acreditado bajo la norma internacional ISO/IEC 17025:2017.</p>
+      </div>
+      <div>
+        <p>El análisis para la detección de sustancias volátiles se efectuó en fluidos biológicos, los cuales incluyen: sangre con preservante y anticoagulante, orina y humor vítreo. El procedimiento consistió en calentar las muestras a una temperatura constante para volatilizar las sustancias presentes y lograr un equilibrio entre las fases líquida y gaseosa. La fase gaseosa fue transportada por un gas acarreador (nitrógeno) hacia el detector de ionización de llama, donde se obtuvo una respuesta específica para cada analito después de la separación cromatográfica. Para determinar la concentración de la sustancia volátil, la respuesta es comparada con las cantidades detectadas en la curva de calibración.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="h18" style="padding:0 24px 4px 72px;">RESULTADOS</h2>
+    <div class="cols-2" style="padding-top:0;">
+      <div>
+        <p>De acuerdo a los resultados de la Figura 3, el 49 % de los hechos de tránsito tenían relación con el consumo de bebidas alcohólicas, mientras que en el restante 51% se obtuvo resultado negativo en la detección de etanol. Dichos datos fueron obtenidos de un total de 3,350 casos relacionados con accidentes de tránsito y que fueron analizados en el 2023, total del que también fueron excluidos aquellos casos positivos para drogas, independientemente del resultado obtenido para etanol.</p>
+        <div class="img-box" style="margin-top:8px;">
+          <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/cc4f6b975e218b7f747789c096c95ed1a1bb96cc/fotos/grafica1.PNG" alt="Figura 3">
+          <div class="caption">Figura 3. Porcentaje de casos en los que se ha detectado etanol en el Laboratorio de Toxicología del INACIF en 2023, relacionados con hechos de tránsito.</div>
+        </div>
+      </div>
+      <div>
+        <p>Por otro lado, como se observa en la figura 4, la cantidad de casos divididos por sexo y por mes.</p>
+        <div class="img-box" style="margin-top:8px;">
+          <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/f2dc22fc01a7ef5eb07f5850b0e5900f03b0e77d/fotos/grafica2.PNG" alt="Figura 4">
+          <div class="caption">Figura 4. Cantidad de casos relacionados a hechos de tránsito con resultado positivo para etanol y otras sustancias volátiles, analizados en el Laboratorio de Toxicología del INACIF en 2023, segmentados por mes y género.</div>
+        </div>
+        <p style="margin-top:8px;">Derivado de lo anterior, como se ve en la figura 5, el porcentaje de casos relacionados a hechos de tránsito que fueron analizados durante el año 2023 en el Laboratorio de Toxicología, es significativamente mayor en el género masculino.</p>
+      </div>
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">18</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 6 — pp.19 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 15-20</div>
+
+    <div class="cols-2" style="padding-top:8px;">
+      <div class="img-box">
+        <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/6ffc6352eeb4ddea848b0754c64de37bf5712a1e/fotos/grafica3.PNG" alt="Figura 5">
+        <div class="caption">Figura 5. Porcentaje de casos relacionados a hechos de tránsito con resultado positivo para etanol y otras sustancias volátiles, analizados en el Laboratorio de Toxicología del INACIF en 2023, clasificados según género.</div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="h18" style="padding:0 24px 4px 72px;">DISCUSIÓN</h2>
+    <div class="cols-2" style="padding-top:0;">
+      <div>
+        <p>Es crucial señalar que los casos analizados por mes (figura 4) no corresponden necesariamente al mes en que ocurrieron los incidentes, sino al mes en el que fueron analizadas las muestras. Al observar los datos obtenidos y mostrados en la figura 3, notamos que el porcentaje de muestras positivas es menor que el de las detectadas como negativas para etanol. Para interpretar estos resultados es importante tomar en cuenta que un factor crítico en el análisis de los compuestos objeto de esta investigación en personas vivas, es el tiempo transcurrido desde el incidente hasta la toma de la muestra, ya que debe realizarse en un plazo no mayor a 4 horas para evitar la metabolización del etanol (Calabuig, 2004). Una vez tomada la muestra, ésta debe preservarse con cadena de frío para evitar la degradación de la misma. Esto puede ser un factor determinante y que puede explicar el 51% de casos negativos para etanol, frente al 49% de positivos.</p>
+      </div>
+      <div>
+        <p>En la figura 4 destaca que en la mayoría de los casos evaluados relacionados con accidentes de tránsito, el género masculino es el más involucrado. En agosto de 2023, se registró la mayor cantidad de casos analizados para este género, con 418 incidentes, mientras que en el caso de las mujeres, mayo fue el mes con más casos, alcanzando un total de 57. El género masculino representa el 87.32 % de los casos, mientras que el género femenino constituye el 12.68 %. Según literatura consultada, el elevado consumo de alcohol en hombres comparado con mujeres, está relacionado con mayor liberación de dopamina, neurotransmisor que genera efecto de placer (BBC, 2010). Así mismo, las estadísticas publicadas por el Instituto Nacional de Estadística -INE- en 2023 también corrobora que los hombres están más involucrados en hechos de tránsito, tanto como conductores como víctimas (INE, 2023).</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 class="h18" style="padding:0 24px 4px 72px;">CONCLUSIONES</h2>
+    <div class="cols-2" style="padding-top:0;">
+      <div>
+        <p>Mediante la comparación de los casos analizados durante el año 2023, no se obtuvo diferencia significativa en los datos reportados como detectados y no detectados con etanol. El tiempo que transcurre en la toma de la muestra para el análisis de sustancias volátiles, puede afectar el resultado para la detección de las mismas. Según las estadísticas, los hombres se encuentran mayormente involucrados en hechos de tránsito respecto a las mujeres.</p>
+      </div>
+      <div>
+        <p>El estudio realizado únicamente incluye los indicios provenientes de hechos de tránsito que ingresaron al Laboratorio de Toxicología, es decir, no representa la totalidad de accidentes que hayan ocurrido a nivel nacional dado a que no se solicitan estos análisis en todos los casos, constituyendo únicamente una referencia de la prevalencia de etanol en hechos de tránsito y del género de los involucrados. Es importante aclarar que los datos reflejados en las gráficas de detección de etanol excluyen aquellos casos en los que adicional al análisis de sustancias volátiles, se confirmó la presencia de alguna droga de abuso o uso terapéutico.</p>
+      </div>
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">19</span></div>
+  </section>
+
+  <!-- =================== PÁGINA 7 — pp.20 =================== -->
+  <section class="page">
+    <div class="ribbon"><span>Con fundamento</span></div>
+    <div class="topline">María Vásquez, Nancy Osorio, Meily Coyote, Diana León y Javier Contreras / Revista Científica Diálogo Forense / Núm. 11, Vol. 6 /enero-junio 2025/ pp. 15-20</div>
+
+    <h2 class="h18" style="padding:0 24px 8px 72px;">REFERENCIAS</h2>
+    <div style="padding:0 24px 8px 72px;">
+      <p class="xs" style="font-size:12pt;">Álvarez, F. y del Río, M. (2001). Alcohol y accidentes de tráfico: ¿Prevenir qué?. Elsevier, 3 (3), 172-180. Recuperado de: https://www.elsevier.es/es-revista-trastornos-adictivos-182-articulo-alcohol-accidentes-tráfico-prevenir-que-13018532</p>
+      <p class="xs" style="font-size:12pt;">BBC News Mundo. (2010). ¿Por qué hay más hombres alcohólicos?. https://www.bbc.com/mundo/noticias/2010/10/101019_alcoholismo_hombres_men</p>
+      <p class="xs" style="font-size:12pt;">Calabuig, G. (2004). Medicina Legal y Toxicología. Mason Salvar.</p>
+      <p class="xs" style="font-size:12pt;">Instituto Nacional de Estadística de Guatemala –INE–. (2023). Indicadores de Accidentes de Tránsito. https://www.ine.gob.gt/sistema/uploads/2023/11/23/20231123230443etUfmrodsXA9cLw9uRw50t63azApaVwN.pdf</p>
+      <p class="xs" style="font-size:12pt;">Repetto, M. (1995). Toxicología Avanzada. Díaz de Santos, S.A.</p>
+      <p class="xs" style="font-size:12pt;">Organización Panamericana de la Salud –OPS–. (2010). Beber y conducir: Manual de seguridad vial para decisores y profesionales. https://www.paho.org/es/documentos/beber-conducir-manual-seguridad-vial-para-decisores-profesionales</p>
+      <p class="xs" style="font-size:12pt;">Organización Panamericana de la Salud –OPS–. (2019). Informe sobre la situación mundial del alcohol y la salud [Archivo PDF]. https://iris.paho.org/handle/10665.2/51352</p>
+      <p class="xs" style="font-size:12pt;">Programa de las Naciones Unidas para el Desarrollo –PNUD–. (9 de octubre de 2024). Análisis sobre hechos de tránsito en Guatemala, durante 2023. https://pnudguatemala.exposure.co/analisis-sobre-hechos-de-transito-en-guatemala-durante-2023</p>
+      <p class="xs" style="font-size:12pt;">Patzán, J. (2023). Verificamos por Usted: ¿Hay repunte de accidentes por consumo de licor?. Recuperado de: https://www.prensalibre.com/ciudades/guatemala-ciudades/verificamos-por-usted-hay-repunte-de-accidentes-por-consumo-de-licor/</p>
+      <p class="xs" style="font-size:12pt;">Prensa Libre. (2023). Verificamos por usted: ¿Hay repunte de accidentes por consumo de licor? Recuperado de: https://www.prensalibre.com/ciudades/guatemala-ciudades/verificamos-por-usted-hay-repunte-de-accidentes-por-consumo-de-licor</p>
+    </div>
+
+    <!-- Imagen que llena el resto de la página -->
+    <div class="img-box" style="padding:8px 24px 20px 72px;">
+      <img src="https://raw.githubusercontent.com/revistadialogoforense-dev/revistadialogoforense-dev/e99be3c8266127567c9a269382c68d1134d79725/fotos/accidentes1.PNG" alt="Accidentes 1" />
+    </div>
+
+    <div class="footer"><span>Con fundamento</span><span class="badge">20</span></div>
+  </section>
+
+</body>
+</html>
