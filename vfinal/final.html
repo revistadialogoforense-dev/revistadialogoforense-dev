@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Revista — Unificada (vfinal)</title>
+
+<style>
+  :root{
+    --bg:#f3f4f6;
+    --card:#ffffff;
+    --ink:#0f172a;
+    --muted:#64748b;
+    --ring:#e5e7eb;
+    --shadow: 0 10px 28px rgba(0,0,0,.08);
+    --radius: 12px;
+    --maxw: 980px;
+  }
+
+  html, body { margin:0; background:var(--bg); color:var(--ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .container { max-width: var(--maxw); margin: 20px auto 64px; padding: 0 12px; }
+
+  /* Cabecera con índice */
+  .toc {
+    background: var(--card);
+    border: 1px solid var(--ring);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    position: sticky; top: 0; z-index: 5;
+  }
+  .toc h1 { font-size: 18px; margin: 0 0 8px 0; }
+  .toc p { margin: 0 0 10px 0; color: var(--muted); }
+  .toc .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+  .toc a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid var(--ring);
+    border-radius: 10px;
+    color: #0c4a6e;
+    background: #f0f9ff;
+    font-weight: 600;
+  }
+  .toc a:hover { background:#e0f2fe; }
+
+  /* Tarjeta host de cada página */
+  .page-host {
+    background: var(--card);
+    border: 1px solid var(--ring);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 18px 0;
+  }
+  .page-head {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--ring);
+    background: #f8fafc;
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+  }
+  .page-head .title { font-weight: 800; }
+  .page-head a { font-size: 13px; color: #2563eb; text-decoration: none; }
+  .page-body iframe {
+    width: 100%;
+    border: 0;
+    display: block;
+  }
+
+  /* Impresión: una página por bloque (tu maquetación interna manda) */
+  @media print {
+    body { background: #fff; }
+    .toc { display:none; }
+    .page-host {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      border: 0; box-shadow: none; border-radius: 0; margin: 0 0 10mm 0;
+    }
+    .page-head { display:none; }
+    .page-body iframe { height: auto !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Índice de navegación -->
+    <nav class="toc">
+      <h1>Revista — índice (vfinal)</h1>
+      <p>Cada bloque carga tu archivo original y conserva sus estilos.</p>
+      <div class="grid">
+        <a href="#portada">1) portada</a>
+        <a href="#panoramica1">2) panoramica1</a>
+        <a href="#primer_plano3">3) primer_plano3</a>
+        <a href="#piratavf">4) piratavf</a>
+        <a href="#comdrogasvf">5) comdrogasvf</a>
+        <a href="#revista">6) revista</a>
+        <a href="#accidentes">7) accidentes</a>
+        <a href="#mexico">8) mexico</a>
+        <a href="#revista2">9) revista2</a>
+        <a href="#ulcera">10) ulcera</a>
+        <a href="#inter1">11) inter1</a>
+        <a href="#entrevista">12) entrevista</a>
+        <a href="#revista3">13) revista3</a>
+        <a href="#pasopeso">14) pasopeso</a>
+        <a href="#convo">15) convo</a>
+      </div>
+    </nav>
+
+    <!-- 1) portada -->
+    <section class="page-host" id="portada">
+      <header class="page-head">
+        <div class="title">1) portada</div>
+        <a href="portada.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="portada.html" title="portada"></iframe></div>
+    </section>
+
+    <!-- 2) panoramica1 -->
+    <section class="page-host" id="panoramica1">
+      <header class="page-head">
+        <div class="title">2) panoramica1</div>
+        <a href="panoramica1.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="panoramica1.html" title="panoramica1"></iframe></div>
+    </section>
+
+    <!-- 3) primer_plano3 -->
+    <section class="page-host" id="primer_plano3">
+      <header class="page-head">
+        <div class="title">3) primer_plano3</div>
+        <a href="primer_plano3.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="primer_plano3.html" title="primer_plano3"></iframe></div>
+    </section>
+
+    <!-- 4) piratavf -->
+    <section class="page-host" id="piratavf">
+      <header class="page-head">
+        <div class="title">4) piratavf</div>
+        <a href="piratavf.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="piratavf.html" title="piratavf"></iframe></div>
+    </section>
+
+    <!-- 5) comdrogasvf -->
+    <section class="page-host" id="comdrogasvf">
+      <header class="page-head">
+        <div class="title">5) comdrogasvf</div>
+        <a href="comdrogasvf.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="comdrogasvf.html" title="comdrogasvf"></iframe></div>
+    </section>
+
+    <!-- 6) revista -->
+    <section class="page-host" id="revista">
+      <header class="page-head">
+        <div class="title">6) revista</div>
+        <a href="revista.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="revista.html" title="revista"></iframe></div>
+    </section>
+
+    <!-- 7) accidentes -->
+    <section class="page-host" id="accidentes">
+      <header class="page-head">
+        <div class="title">7) accidentes</div>
+        <a href="accidentes.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="accidentes.html" title="accidentes"></iframe></div>
+    </section>
+
+    <!-- 8) mexico -->
+    <section class="page-host" id="mexico">
+      <header class="page-head">
+        <div class="title">8) mexico</div>
+        <a href="mexico.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="mexico.html" title="mexico"></iframe></div>
+    </section>
+
+    <!-- 9) revista2 -->
+    <section class="page-host" id="revista2">
+      <header class="page-head">
+        <div class="title">9) revista2</div>
+        <a href="revista2.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="revista2.html" title="revista2"></iframe></div>
+    </section>
+
+    <!-- 10) ulcera -->
+    <section class="page-host" id="ulcera">
+      <header class="page-head">
+        <div class="title">10) ulcera</div>
+        <a href="ulcera.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="ulcera.html" title="ulcera"></iframe></div>
+    </section>
+
+    <!-- 11) inter1 -->
+    <section class="page-host" id="inter1">
+      <header class="page-head">
+        <div class="title">11) inter1</div>
+        <a href="inter1.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="inter1.html" title="inter1"></iframe></div>
+    </section>
+
+    <!-- 12) entrevista -->
+    <section class="page-host" id="entrevista">
+      <header class="page-head">
+        <div class="title">12) entrevista</div>
+        <a href="entrevista.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="entrevista.html" title="entrevista"></iframe></div>
+    </section>
+
+    <!-- 13) revista3 -->
+    <section class="page-host" id="revista3">
+      <header class="page-head">
+        <div class="title">13) revista3</div>
+        <a href="revista3.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="revista3.html" title="revista3"></iframe></div>
+    </section>
+
+    <!-- 14) pasopeso -->
+    <section class="page-host" id="pasopeso">
+      <header class="page-head">
+        <div class="title">14) pasopeso</div>
+        <a href="pasopeso.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="pasopeso.html" title="pasopeso"></iframe></div>
+    </section>
+
+    <!-- 15) convo -->
+    <section class="page-host" id="convo">
+      <header class="page-head">
+        <div class="title">15) convo</div>
+        <a href="convo.html" target="_blank" rel="noopener">abrir archivo</a>
+      </header>
+      <div class="page-body"><iframe src="convo.html" title="convo"></iframe></div>
+    </section>
+
+  </div>
+
+<script>
+/* Auto-resize de iframes (misma carpeta/origen) */
+function autoResizeFrame(iframe){
+  function setHeight(){
+    try{
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      if(!doc) return;
+      const html = doc.documentElement;
+      const body = doc.body;
+      const h = Math.max(
+        body ? body.scrollHeight : 0,
+        html ? html.scrollHeight : 0,
+        body ? body.offsetHeight : 0,
+        html ? html.offsetHeight : 0
+      );
+      iframe.style.height = (h || 800) + 'px';
+    }catch(e){
+      // si por algo no se puede leer (cross-origin), dejamos una altura por defecto:
+      iframe.style.height = '1200px';
+    }
+  }
+
+  iframe.addEventListener('load', () => {
+    setHeight();
+    try{
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      const ro = new ResizeObserver(setHeight);
+      ro.observe(doc.documentElement);
+      if(doc.body) ro.observe(doc.body);
+    }catch(e){}
+  });
+}
+
+document.querySelectorAll('iframe').forEach(autoResizeFrame);
+</script>
+
+</body>
+</html>
